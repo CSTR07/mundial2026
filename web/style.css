@@ -430,3 +430,58 @@ body{
 .v-edge.pos{background:rgba(201,247,62,.16);color:var(--lime)}
 .v-edge.neg{background:rgba(255,92,138,.12);color:var(--pink)}
 .v-empty{padding:30px 20px;text-align:center;color:var(--txt-mut);font-size:.9rem}
+
+/* ===================== PARLAY (combinada) ===================== */
+.pl-wrap{max-width:var(--maxw);margin:0 auto;padding:6px 20px 40px}
+.pl-grid{display:grid;grid-template-columns:1fr 360px;gap:20px;align-items:start;margin-top:16px}
+@media(max-width:860px){.pl-grid{grid-template-columns:1fr}}
+.pl-builder{min-width:0}
+.pl-match{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-sm);
+  padding:13px 15px;margin-bottom:11px}
+.pl-mhead{display:flex;justify-content:space-between;align-items:center;font-size:.7rem;color:var(--txt-dim);margin-bottom:9px}
+.pl-mteams{display:flex;align-items:center;gap:8px;font-weight:600;font-size:.88rem;margin-bottom:11px}
+.pl-mteams .fl{font-size:1.2rem}
+.pl-mkts{display:flex;flex-wrap:wrap;gap:7px}
+.pl-mkt{font-family:"Inter";font-size:.74rem;font-weight:600;color:var(--txt-mut);
+  background:var(--surface-2);border:1px solid var(--border);border-radius:8px;
+  padding:7px 10px;cursor:pointer;transition:all .14s;display:flex;align-items:center;gap:7px}
+.pl-mkt:hover{border-color:var(--txt-dim);color:var(--txt)}
+.pl-mkt.sel{background:var(--lime);color:#0A0C10;border-color:var(--lime);font-weight:700}
+.pl-mkt .od{font-family:"Space Mono",monospace;font-weight:700;opacity:.85}
+.pl-mkt .pp{font-size:.66rem;opacity:.7}
+
+/* Boleto */
+.pl-slip{position:sticky;top:70px;background:var(--surface);border:1px solid var(--border);
+  border-radius:var(--radius);padding:18px;box-shadow:var(--shadow)}
+.pl-slip h3{font-family:"Archivo";font-weight:800;font-size:1.05rem;margin:0 0 4px;
+  display:flex;align-items:center;justify-content:space-between}
+.pl-count{font-family:"Space Mono",monospace;font-size:.75rem;color:var(--lime);
+  background:rgba(201,247,62,.12);padding:2px 9px;border-radius:999px}
+.pl-legs{margin:14px 0;display:flex;flex-direction:column;gap:8px}
+.pl-leg{display:flex;align-items:flex-start;gap:9px;background:var(--surface-2);
+  border:1px solid var(--border);border-radius:9px;padding:9px 11px}
+.pl-leg-main{flex:1;min-width:0}
+.pl-leg-mk{font-size:.8rem;font-weight:600;color:var(--txt)}
+.pl-leg-mt{font-size:.68rem;color:var(--txt-dim);margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.pl-leg-od{font-family:"Space Mono",monospace;font-weight:700;color:var(--lime);font-size:.84rem}
+.pl-leg-x{background:transparent;border:none;color:var(--txt-dim);cursor:pointer;font-size:1.05rem;
+  line-height:1;padding:0 0 0 4px}
+.pl-leg-x:hover{color:var(--pink)}
+.pl-empty-slip{color:var(--txt-mut);font-size:.84rem;text-align:center;padding:18px 6px;line-height:1.5}
+.pl-summary{border-top:1px solid var(--border);padding-top:14px;margin-top:4px}
+.pl-row{display:flex;justify-content:space-between;align-items:center;font-size:.82rem;margin-bottom:9px}
+.pl-row .lab{color:var(--txt-mut)}
+.pl-row .val{font-family:"Space Mono",monospace;font-weight:700;color:var(--txt)}
+.pl-row.big .val{font-size:1.15rem;color:var(--lime)}
+.pl-row.big .lab{color:var(--txt)}
+.pl-stake{display:flex;align-items:center;gap:8px;margin:12px 0}
+.pl-stake label{font-size:.78rem;color:var(--txt-mut);flex:0 0 auto}
+.pl-stake input{flex:1;background:var(--surface-2);border:1px solid var(--border);border-radius:8px;
+  color:var(--txt);font-family:"Space Mono",monospace;font-size:.9rem;padding:8px 10px;width:100%}
+.pl-stake input:focus{outline:none;border-color:var(--lime)}
+.pl-payout{background:rgba(201,247,62,.07);border:1px solid rgba(201,247,62,.25);
+  border-radius:var(--radius-sm);padding:12px 14px;margin-top:6px}
+.pl-clear{width:100%;margin-top:12px;font-size:.78rem;color:var(--txt-mut);background:transparent;
+  border:1px solid var(--border);border-radius:999px;padding:9px;cursor:pointer}
+.pl-clear:hover{color:var(--pink);border-color:rgba(255,92,138,.4)}
+.pl-note{font-size:.72rem;color:var(--txt-dim);line-height:1.5;margin-top:12px}

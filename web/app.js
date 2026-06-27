@@ -38,6 +38,7 @@ function init() {
   buildRecentResults();
   buildQuiniela();
   buildValuePanel();
+  buildParlay();
   buildStageFilters();
   buildDateFilters();
   buildStatusFilters();
@@ -633,6 +634,171 @@ function buildValuePanel() {
       <thead><tr><th>Partido</th><th>Resultado</th><th>Modelo</th><th>Mercado</th><th>Momio</th><th>Ventaja</th></tr></thead>
       <tbody>${tr}</tbody>
     </table></div></div>`;
+}
+
+/* ===================== Parlay / combinada ===================== */
+const PKEY = "parlay_mundial2026";
+const PL_MARGIN = 0.06;                 // margen típico por selección (línea de referencia)
+const RES_MAP = { home: "local", draw: "empate", away: "visitante" };
+
+function loadParlay() {
+  try {
+    const p = JSON.parse(localStorage.getItem(PKEY) || "{}");
+    if (!p.legs) p.legs = {};
+    if (typeof p.stake !== "number") p.stake = 100;
+    return p;
+  } catch (e) { return { legs: {}, stake: 100 }; }
+}
+function saveParlay(p) { try { localStorage.setItem(PKEY, JSON.stringify(p)); } catch (e) {} }
+
+/* momio de referencia de una selección */
+function odd1x2(m, k) {
+  if (m.odds && m.odds.mercados) {
+    const e = m.odds.mercados.find(x => x.resultado === RES_MAP[k]);
+    if (e && e.momio > 1) return e.momio;
+  }
+  return null;
+}
+function legOdd(m, k, p) {
+  if (k in RES_MAP) { const o = odd1x2(m, k); if (o) return o; }
+  return Math.max(1.01, Math.round((1 / p) / (1 + PL_MARGIN) * 100) / 100);
+}
+function marketOptions(m) {
+  const raw = [
+    ["home", "Gana " + m.home, m.p1x2.home],
+    ["draw", "Empate", m.p1x2.draw],
+    ["away", "Gana " + m.away, m.p1x2.away],
+    ["btts_yes", "Ambos anotan: Sí", m.btts.yes],
+    ["btts_no", "Ambos anotan: No", 1 - m.btts.yes],
+    ["over25", "Más de 2.5 goles", m.over_under["over_2.5"]],
+    ["under25", "Menos de 2.5 goles", 1 - m.over_under["over_2.5"]],
+  ];
+  return raw.filter(([, , p]) => p > 0.02 && p < 0.995)
+    .map(([k, label, p]) => ({ k, label, p, odd: legOdd(m, k, p) }));
+}
+function setLeg(m, opt) {
+  const pl = loadParlay(), id = matchId(m);
+  if (pl.legs[id] && pl.legs[id].k === opt.k) delete pl.legs[id];   // misma = quitar
+  else pl.legs[id] = { mid: id, k: opt.k, label: opt.label,
+                       mt: m.home + " vs " + m.away, date: m.date, p: opt.p, odd: opt.odd };
+  saveParlay(pl); buildParlay();
+}
+function removeLeg(id) { const pl = loadParlay(); delete pl.legs[id]; saveParlay(pl); buildParlay(); }
+
+const fmtP = x => x >= 0.1 ? (x * 100).toFixed(1) + "%" : (x * 100).toFixed(2) + "%";
+const money = n => n.toLocaleString("es-MX", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+
+function buildParlay() {
+  const host = document.getElementById("parlay-panel");
+  if (!host) return;
+  const pl = loadParlay();
+  const matches = DATA.matches.filter(m => m.status === "pendiente");
+  const legs = Object.values(pl.legs);
+
+  // ---- Constructor (lista de partidos con sus mercados) ----
+  let builder;
+  if (!matches.length) {
+    builder = `<div class="v-empty">No hay partidos próximos con equipos confirmados para armar una combinada.
+      En cuanto se definan los siguientes cruces aparecerán aquí.</div>`;
+  } else {
+    builder = matches.map(m => {
+      const id = matchId(m), [, mo, da] = (m.date || "--").split("-");
+      const selK = pl.legs[id] ? pl.legs[id].k : null;
+      const opts = marketOptions(m).map(o =>
+        `<button class="pl-mkt ${selK === o.k ? "sel" : ""}" data-id="${encodeURIComponent(id)}" data-k="${o.k}">
+          ${o.label} <span class="od">${o.odd.toFixed(2)}</span><span class="pp">(${pct(o.p)}%)</span></button>`).join("");
+      return `<div class="pl-match">
+        <div class="pl-mhead"><span>${da}/${mo} · ${m.stage}</span><span>${m.ground || ""}</span></div>
+        <div class="pl-mteams"><span class="fl">${flag(m.home)}</span> ${m.home}
+          <span style="color:var(--txt-dim)">vs</span> ${m.away} <span class="fl">${flag(m.away)}</span></div>
+        <div class="pl-mkts">${opts}</div>
+      </div>`;
+    }).join("");
+  }
+
+  // ---- Boleto ----
+  let pComb = 1, oComb = 1;
+  legs.forEach(l => { pComb *= l.p; oComb *= l.odd; });
+  const stake = pl.stake || 0;
+  const payout = stake * oComb, profit = payout - stake;
+
+  let slipInner;
+  if (!legs.length) {
+    slipInner = `<div class="pl-empty-slip">Tu combinada está vacía.<br>
+      Toca los mercados de la izquierda para agregar selecciones. Puedes combinar resultados de distintos partidos.</div>`;
+  } else {
+    const legRows = legs.map(l => `<div class="pl-leg">
+      <div class="pl-leg-main">
+        <div class="pl-leg-mk">${l.label}</div>
+        <div class="pl-leg-mt">${l.mt} · ${pct(l.p)}% modelo</div>
+      </div>
+      <span class="pl-leg-od">${l.odd.toFixed(2)}</span>
+      <button class="pl-leg-x" data-id="${encodeURIComponent(l.mid)}" title="Quitar">✕</button>
+    </div>`).join("");
+    const impliedOdd = oComb > 0 ? 1 / oComb : 0;
+    slipInner = `
+      <div class="pl-legs">${legRows}</div>
+      <div class="pl-summary">
+        <div class="pl-row"><span class="lab">Selecciones</span><span class="val">${legs.length}</span></div>
+        <div class="pl-row"><span class="lab">Probabilidad (modelo)</span><span class="val">${fmtP(pComb)}</span></div>
+        <div class="pl-row"><span class="lab">Prob. implícita del momio</span><span class="val">${fmtP(impliedOdd)}</span></div>
+        <div class="pl-row big"><span class="lab">Momio combinado</span><span class="val">${oComb.toFixed(2)}</span></div>
+        <div class="pl-stake">
+          <label for="pl-stake-input">Importe</label>
+          <input id="pl-stake-input" type="number" min="0" step="10" value="${stake}" inputmode="decimal">
+        </div>
+        <div class="pl-payout">
+          <div class="pl-row" style="margin-bottom:6px"><span class="lab">Ganancia potencial</span><span class="val" id="pl-profit">${money(profit)}</span></div>
+          <div class="pl-row big" style="margin-bottom:0"><span class="lab">Retorno total</span><span class="val" id="pl-total">${money(payout)}</span></div>
+        </div>
+        <button class="pl-clear" id="pl-clear">Vaciar combinada</button>
+      </div>`;
+  }
+
+  host.innerHTML = `<div class="pl-wrap">
+    <div class="section-head"><h2>🎲 Creador de combinada (parlay)</h2>
+      <p>Combina selecciones de distintos partidos. El sitio multiplica las probabilidades del modelo para estimar
+      qué tan probable es que toda la combinada se cumpla, y calcula el momio de referencia y tu retorno potencial.</p></div>
+    <div class="v-disclaimer"><b>⚠️ Solo informativo.</b> Los momios son una <b>línea de referencia estimada</b>,
+      no provienen de ninguna casa de apuestas en particular ni son momios en vivo. Esto <b>no es consejo de apuestas</b>.
+      El cálculo asume que las selecciones son <b>independientes entre sí</b> (por eso se permite solo una selección por
+      partido). Una combinada es más difícil de acertar conforme agregas selecciones. Apostar implica riesgo real de pérdida.</div>
+    <div class="pl-grid">
+      <div class="pl-builder">${builder}</div>
+      <aside class="pl-slip">
+        <h3>Tu combinada <span class="pl-count">${legs.length} sel.</span></h3>
+        ${slipInner}
+        <p class="pl-note">El momio combinado es el producto de los momios de cada selección. La probabilidad del
+        modelo es el producto de cada probabilidad individual.</p>
+      </aside>
+    </div></div>`;
+
+  // ---- Interacciones ----
+  host.querySelectorAll(".pl-mkt").forEach(b => b.addEventListener("click", () => {
+    const id = decodeURIComponent(b.dataset.id);
+    const m = DATA.matches.find(x => matchId(x) === id);
+    if (!m) return;
+    const opt = marketOptions(m).find(o => o.k === b.dataset.k);
+    if (opt) setLeg(m, opt);
+  }));
+  host.querySelectorAll(".pl-leg-x").forEach(b =>
+    b.addEventListener("click", () => removeLeg(decodeURIComponent(b.dataset.id))));
+  const clr = document.getElementById("pl-clear");
+  if (clr) clr.addEventListener("click", () => {
+    if (confirm("¿Vaciar tu combinada?")) { const p = loadParlay(); p.legs = {}; saveParlay(p); buildParlay(); }
+  });
+  // Importe: actualiza montos sin re-render (no pierde el foco)
+  const stakeInput = document.getElementById("pl-stake-input");
+  if (stakeInput) stakeInput.addEventListener("input", () => {
+    let v = parseFloat(stakeInput.value);
+    if (isNaN(v) || v < 0) v = 0;
+    const p = loadParlay(); p.stake = v; saveParlay(p);
+    const pay = v * oComb;
+    const totalEl = document.getElementById("pl-total");
+    const profitEl = document.getElementById("pl-profit");
+    if (totalEl) totalEl.textContent = money(pay);
+    if (profitEl) profitEl.textContent = money(pay - v);
+  });
 }
 
 document.addEventListener("DOMContentLoaded", init);
