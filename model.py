@@ -540,10 +540,35 @@ def build(teams_db, fixtures):
     }
     return {"meta": meta, "matches": out_matches}
 
+def update_history(pred):
+    """Mantiene una serie de tiempo (una entrada por día) con la precisión del
+    modelo sobre los partidos ya jugados. Construye un historial verificable."""
+    path = os.path.join(DATA, "history.json")
+    try:
+        hist = json.load(open(path, encoding="utf-8"))
+        if not isinstance(hist, list):
+            hist = []
+    except (FileNotFoundError, ValueError):
+        hist = []
+    e = pred["meta"].get("evaluation") or {}
+    if e.get("n"):
+        today = datetime.date.today().isoformat()
+        entry = {"date": today, "n_played": pred["meta"]["n_played"],
+                 "accuracy": e.get("accuracy_1x2"), "brier": e.get("brier_1x2"),
+                 "logloss": e.get("logloss_1x2"), "skill": e.get("skill_score")}
+        hist = [h for h in hist if h.get("date") != today]  # upsert del día
+        hist.append(entry)
+        hist.sort(key=lambda h: h.get("date", ""))
+        hist = hist[-120:]                                  # conserva ~4 meses
+        json.dump(hist, open(path, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+    pred["meta"]["history"] = hist[-60:]                    # los últimos 60 puntos al front
+    return pred
+
 def main():
     teams_db = json.load(open(os.path.join(DATA, "teams.json"), encoding="utf-8"))
     fx = json.load(open(os.path.join(DATA, "fixtures.json"), encoding="utf-8"))
     pred = build(teams_db, fx["matches"])
+    pred = update_history(pred)
     json.dump(pred, open(os.path.join(DATA, "predictions.json"), "w", encoding="utf-8"),
               ensure_ascii=False, indent=2)
     open(os.path.join(DATA, "data.js"), "w", encoding="utf-8").write(

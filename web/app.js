@@ -34,10 +34,44 @@ function init() {
   setFooterDate();
   buildPerformancePanel();
   buildSimPanel();
+  buildHistoryPanel();
+  buildRecentResults();
+  buildQuiniela();
+  buildValuePanel();
   buildStageFilters();
   buildDateFilters();
   buildStatusFilters();
+  initTabs();
   render();
+}
+
+/* ===================== Navegación por pestañas ===================== */
+function initTabs() {
+  const btns = document.querySelectorAll(".tab-btn");
+  btns.forEach(b => b.addEventListener("click", () => {
+    btns.forEach(x => x.classList.remove("active"));
+    document.querySelectorAll(".tab-panel").forEach(p => p.classList.remove("active"));
+    b.classList.add("active");
+    const panel = document.getElementById("tab-" + b.dataset.tab);
+    if (panel) panel.classList.add("active");
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }));
+}
+
+/* Identificador estable de partido (para guardar la quiniela) */
+const matchId = m => `${m.date}|${m.home}|${m.away}`;
+
+/* Pronóstico del modelo para un partido: "home" | "draw" | "away" */
+function modelPick(m) {
+  const p = m.p1x2;
+  return p.home >= p.draw && p.home >= p.away ? "home" : (p.away >= p.draw ? "away" : "draw");
+}
+/* Resultado real: "home" | "draw" | "away" | null */
+function realResult(m) {
+  if (m.status !== "jugado" || !m.real_score) return null;
+  const [gh, ga] = m.real_score.split("-").map(Number);
+  if ([gh, ga].some(isNaN)) return null;
+  return gh > ga ? "home" : (gh < ga ? "away" : "draw");
 }
 
 function setFooterDate() {
@@ -112,6 +146,8 @@ function buildSimPanel() {
       ${rest ? `<button class="sim-more" id="sim-more">Ver las ${entries.length} selecciones ▾</button>` : ""}
     </div>`;
   const body = document.getElementById("sim-body");
+  body.classList.add("open");
+  document.getElementById("sim-toggle").textContent = "🏆 Probabilidades del torneo · simulación Monte Carlo ▴";
   document.getElementById("sim-toggle").onclick = (ev) => {
     const open = body.classList.toggle("open");
     ev.target.textContent = "🏆 Probabilidades del torneo · simulación Monte Carlo " + (open ? "▴" : "▾");
@@ -162,6 +198,8 @@ function buildPerformancePanel() {
       </div>
     </div>`;
   const body = document.getElementById("perf-body");
+  body.classList.add("open");
+  document.getElementById("perf-toggle").textContent = "📊 Rendimiento y calibración del modelo ▴";
   document.getElementById("perf-toggle").onclick = (ev) => {
     const open = body.classList.toggle("open");
     ev.target.textContent = "📊 Rendimiento y calibración del modelo " + (open ? "▴" : "▾");
@@ -359,6 +397,242 @@ function detailHTML(m) {
       <div class="factor-row"><span>Córners (Over 9.5)</span><span class="tag">${pct(m.corners.over_under["over_9.5"])}%</span></div>
       <div class="factor-row"><span>Tarjetas (Over 4.5)</span><span class="tag">${pct(m.cards.over_under["over_4.5"])}%</span></div>
     </div>`;
+}
+
+/* ===================== Historial: evolución de la precisión ===================== */
+function buildHistoryPanel() {
+  const host = document.getElementById("history-panel");
+  if (!host) return;
+  const h = (DATA.meta && DATA.meta.history) || [];
+  const pts = h.filter(d => typeof d.accuracy === "number");
+  if (pts.length < 2) {
+    host.innerHTML = `<div class="hist-card"><h3>Evolución de la precisión</h3>
+      <p class="hist-note">El historial se construye automáticamente: cada día queda registrada la precisión
+      del modelo sobre los partidos ya jugados. En cuanto haya más días de datos, aparecerá aquí la gráfica
+      de evolución. (Puntos registrados: ${pts.length})</p></div>`;
+    return;
+  }
+  const W = 700, H = 220, pad = 38;
+  const accs = pts.map(d => d.accuracy);
+  let lo = Math.min(...accs), hi = Math.max(...accs);
+  if (hi - lo < 0.08) { const m = (hi + lo) / 2; lo = m - 0.05; hi = m + 0.05; }
+  lo = Math.max(0, lo - 0.03); hi = Math.min(1, hi + 0.03);
+  const sx = i => pad + (i / (pts.length - 1)) * (W - 2 * pad);
+  const sy = v => (H - pad) - ((v - lo) / (hi - lo)) * (H - 2 * pad);
+  const line = pts.map((d, i) => `${sx(i)},${sy(d.accuracy)}`).join(" ");
+  const dots = pts.map((d, i) =>
+    `<circle cx="${sx(i)}" cy="${sy(d.accuracy)}" r="3" fill="#C9F73E"/>`).join("");
+  const yTicks = [lo, (lo + hi) / 2, hi].map(v =>
+    `<text x="${pad - 6}" y="${sy(v) + 3}" fill="#5B6373" font-size="9" text-anchor="end">${Math.round(v * 100)}%</text>
+     <line x1="${pad}" y1="${sy(v)}" x2="${W - pad}" y2="${sy(v)}" stroke="#1E232D"/>`).join("");
+  const first = pts[0].date.slice(5), last = pts[pts.length - 1].date.slice(5);
+  host.innerHTML = `<div class="hist-card"><h3>Evolución de la precisión (1X2)</h3>
+    <svg class="hist-svg" viewBox="0 0 ${W} ${H}" role="img" aria-label="Evolución de la precisión">
+      ${yTicks}
+      <polyline points="${line}" fill="none" stroke="#C9F73E" stroke-width="2"/>
+      ${dots}
+      <text x="${pad}" y="${H - 8}" fill="#5B6373" font-size="9">${first}</text>
+      <text x="${W - pad}" y="${H - 8}" fill="#5B6373" font-size="9" text-anchor="end">${last}</text>
+    </svg>
+    <p class="hist-note">Cada punto es un día. Mide qué % de los partidos ya jugados habría acertado el modelo
+    en su pronóstico 1X2. Es un historial real y verificable, no una estimación.</p></div>`;
+}
+
+/* ===================== Resultados recientes ===================== */
+function buildRecentResults() {
+  const host = document.getElementById("recent-results");
+  if (!host) return;
+  const played = DATA.matches.filter(m => m.status === "jugado" && m.real_score)
+    .sort((a, b) => (b.date || "").localeCompare(a.date || "")).slice(0, 16);
+  if (!played.length) { host.innerHTML = ""; return; }
+  const lbl = { home: "Local", draw: "Empate", away: "Visitante" };
+  const rows = played.map(m => {
+    const [, mo, da] = (m.date || "--").split("-");
+    const mp = modelPick(m), rr = realResult(m);
+    const hit = mp === rr;
+    const pickName = mp === "home" ? m.home : mp === "away" ? m.away : "Empate";
+    return `<div class="rr-row">
+      <span class="rr-date">${da}/${mo}</span>
+      <span class="rr-teams">${flag(m.home)} ${m.home} <span class="sc">${m.real_score}</span> ${m.away} ${flag(m.away)}</span>
+      <span class="rr-pick">Modelo: <b>${pickName}</b></span>
+      <span class="rr-mark ${hit ? "hit" : "miss"}">${hit ? "✓" : "✗"}</span>
+    </div>`;
+  }).join("");
+  host.innerHTML = `<div class="section-head"><h2>Resultados recientes</h2>
+    <p>Lo que el modelo pronosticó vs. lo que pasó, en los últimos partidos jugados. Transparencia total: se ven los aciertos y los fallos.</p></div>
+    <div class="rr-wrap">${rows}</div>`;
+}
+
+/* ===================== Tu quiniela (pick'em vs. modelo) ===================== */
+const QKEY = "quiniela_mundial2026";
+function loadPicks() {
+  try { return JSON.parse(localStorage.getItem(QKEY) || "{}") || {}; }
+  catch (e) { return {}; }
+}
+function savePicks(p) {
+  try { localStorage.setItem(QKEY, JSON.stringify(p)); } catch (e) {}
+}
+function setPick(id, choice) {
+  const p = loadPicks();
+  if (p[id] === choice) delete p[id]; else p[id] = choice;  // volver a tocar = quitar
+  savePicks(p);
+  buildQuiniela();
+}
+
+function buildQuiniela() {
+  const host = document.getElementById("quiniela-panel");
+  if (!host) return;
+  const picks = loadPicks();
+  const openMatches = DATA.matches.filter(m => m.status === "pendiente");
+  // partidos ya jugados sobre los que el usuario hizo un pronóstico (para puntuar)
+  const scored = DATA.matches.filter(m => m.status === "jugado" && picks[matchId(m)]);
+
+  let yourHits = 0, modelHits = 0;
+  scored.forEach(m => {
+    const rr = realResult(m);
+    if (picks[matchId(m)] === rr) yourHits++;
+    if (modelPick(m) === rr) modelHits++;
+  });
+  const nPicked = Object.keys(picks).length;
+  const acc = scored.length ? Math.round((yourHits / scored.length) * 100) : null;
+
+  const lblFull = { home: "", draw: "Empate", away: "" };
+  const optBtn = (m, key, label, prob) => {
+    const id = matchId(m), sel = picks[id] === key;
+    return `<button class="q-opt ${sel ? "sel" : ""}" data-id="${encodeURIComponent(id)}" data-k="${key}">
+      ${label}<span class="q-mp">${pct(prob)}%</span></button>`;
+  };
+
+  let summary = "";
+  if (scored.length) {
+    const youWin = yourHits > modelHits, tie = yourHits === modelHits;
+    summary = `<div class="q-summary">
+      <div class="q-tile"><div class="qv">${nPicked}</div><div class="ql">Pronósticos</div></div>
+      <div class="q-tile"><div class="qv">${yourHits}/${scored.length}</div><div class="ql">Tus aciertos</div></div>
+      <div class="q-tile"><div class="qv pink">${modelHits}/${scored.length}</div><div class="ql">Acertó el modelo</div></div>
+      <div class="q-tile"><div class="qv">${acc}%</div><div class="ql">Tu precisión</div></div>
+    </div>
+    <p class="q-vs">${tie ? "Vas <b>empatado</b> con el modelo" :
+      youWin ? "¡Vas <b class='win'>ganándole</b> al modelo!" : "El <b class='lose'>modelo</b> va arriba por ahora"}</p>`;
+  } else {
+    summary = `<div class="q-summary">
+      <div class="q-tile"><div class="qv">${nPicked}</div><div class="ql">Pronósticos hechos</div></div>
+      <div class="q-tile"><div class="qv">${openMatches.length}</div><div class="ql">Partidos por pronosticar</div></div>
+    </div>`;
+  }
+
+  const openCards = openMatches.map(m => {
+    const id = matchId(m), mp = modelPick(m);
+    const mpName = mp === "home" ? m.home : mp === "away" ? m.away : "Empate";
+    const [, mo, da] = (m.date || "--").split("-");
+    return `<div class="q-match">
+      <div class="q-top"><span>${da}/${mo} · ${m.stage}</span><span>${m.ground || ""}</span></div>
+      <div class="q-teams-line"><span class="fl">${flag(m.home)}</span> ${m.home}
+        <span style="color:var(--txt-dim)">vs</span> ${m.away} <span class="fl">${flag(m.away)}</span></div>
+      <div class="q-opts">
+        ${optBtn(m, "home", "Gana " + m.home, m.p1x2.home)}
+        ${optBtn(m, "draw", "Empate", m.p1x2.draw)}
+        ${optBtn(m, "away", "Gana " + m.away, m.p1x2.away)}
+      </div>
+      <p class="q-model-pick">El modelo dice: <b>${mpName}</b></p>
+    </div>`;
+  }).join("");
+
+  const scoredCards = scored.sort((a, b) => (b.date || "").localeCompare(a.date || "")).map(m => {
+    const id = matchId(m), rr = realResult(m), yp = picks[id], mp = modelPick(m);
+    const nm = k => k === "home" ? m.home : k === "away" ? m.away : "Empate";
+    const youOk = yp === rr, modelOk = mp === rr;
+    return `<div class="q-match">
+      <div class="q-top"><span>${m.stage}</span><span>Final ${m.real_score}</span></div>
+      <div class="q-teams-line"><span class="fl">${flag(m.home)}</span> ${m.home}
+        <span class="sc" style="font-family:'Space Mono';margin:0 6px">${m.real_score}</span>
+        ${m.away} <span class="fl">${flag(m.away)}</span></div>
+      <div class="q-result">
+        <span>Tú: <b>${nm(yp)}</b> <span class="q-badge ${youOk ? "ok" : "no"}">${youOk ? "ACERTASTE" : "fallaste"}</span></span>
+        <span>Modelo: <b>${nm(mp)}</b> <span class="q-badge ${modelOk ? "ok" : "no"}">${modelOk ? "✓" : "✗"}</span></span>
+      </div>
+    </div>`;
+  }).join("");
+
+  let body;
+  if (!openMatches.length && !scored.length) {
+    body = `<div class="q-empty">No hay partidos disponibles para pronosticar en este momento.
+      Cuando se confirmen los próximos cruces, aparecerán aquí para que hagas tu quiniela.</div>`;
+  } else {
+    body = `${summary}
+      ${openCards ? `<div class="section-head" style="margin-top:18px"><h2>Haz tu pronóstico</h2>
+        <p>Elige quién gana cada partido. Tus pronósticos se guardan en tu dispositivo y se califican solos cuando se juega el partido. Compites contra el modelo.</p></div>${openCards}` : ""}
+      ${scoredCards ? `<div class="section-head" style="margin-top:18px"><h2>Tus partidos calificados</h2>
+        <p>Resultados de los partidos que pronosticaste.</p></div>${scoredCards}
+        <button class="q-reset" id="q-reset">Borrar mis pronósticos</button>` : ""}`;
+  }
+
+  host.innerHTML = `<div class="q-wrap">
+    <div class="section-head"><h2>🎯 Tu quiniela</h2>
+      <p>Pronostica los partidos y mide tu acierto contra el modelo. Todo se guarda en tu navegador, sin cuentas ni registros.</p></div>
+    ${body}</div>`;
+
+  host.querySelectorAll(".q-opt").forEach(b => b.addEventListener("click", () =>
+    setPick(decodeURIComponent(b.dataset.id), b.dataset.k)));
+  const rb = document.getElementById("q-reset");
+  if (rb) rb.addEventListener("click", () => {
+    if (confirm("¿Borrar todos tus pronósticos guardados?")) { savePicks({}); buildQuiniela(); }
+  });
+}
+
+/* ===================== Valor: modelo vs. mercado de referencia ===================== */
+function buildValuePanel() {
+  const host = document.getElementById("value-panel");
+  if (!host) return;
+  const lbl = { local: "Local", empate: "Empate", visitante: "Visitante" };
+  const rows = [];
+  DATA.matches.filter(m => m.status === "pendiente" && m.odds && m.odds.mercados).forEach(m => {
+    m.odds.mercados.forEach(mk => {
+      if (mk.ventaja_modelo > 0.02 || mk.apuesta_de_valor) {
+        const pickName = mk.resultado === "local" ? m.home : mk.resultado === "visitante" ? m.away : "Empate";
+        rows.push({ m, mk, pickName, edge: mk.ventaja_modelo });
+      }
+    });
+  });
+  rows.sort((a, b) => b.edge - a.edge);
+
+  const disclaimer = `<div class="v-disclaimer"><b>⚠️ Solo informativo.</b> Los momios mostrados son una
+    <b>línea de referencia estimada</b> por el propio modelo, no provienen de una casa de apuestas real ni son
+    momios en vivo. Esto <b>no es consejo de apuestas</b>. "Valor" significa solo que el modelo asigna más
+    probabilidad a ese resultado que la línea de referencia. Apostar implica riesgo real de pérdida.</div>`;
+
+  if (!rows.length) {
+    host.innerHTML = `<div class="v-wrap">
+      <div class="section-head"><h2>💎 Valor: modelo vs. mercado</h2>
+        <p>Dónde el modelo y la línea de referencia discrepan más entre los próximos partidos.</p></div>
+      ${disclaimer}
+      <div class="v-empty">Por ahora no hay diferencias destacables entre el modelo y la línea de referencia
+      en los partidos próximos. Vuelve cuando se confirmen más cruces.</div></div>`;
+    return;
+  }
+
+  const tr = rows.map(({ m, mk, pickName, edge }) => {
+    const [, mo, da] = (m.date || "--").split("-");
+    const e = edge * 100;
+    return `<tr>
+      <td class="vm">${flag(m.home)} ${m.home} vs ${m.away} ${flag(m.away)}<br>
+        <span style="color:var(--txt-dim);font-size:.72rem">${da}/${mo} · ${m.stage}</span></td>
+      <td class="vpick">${pickName}</td>
+      <td class="num">${pct(mk.prob_modelo)}%</td>
+      <td class="num">${pct(mk.prob_mercado)}%</td>
+      <td class="num">${mk.momio.toFixed(2)}</td>
+      <td><span class="v-edge ${e >= 0 ? "pos" : "neg"}">${e >= 0 ? "+" : ""}${e.toFixed(0)}%</span></td>
+    </tr>`;
+  }).join("");
+
+  host.innerHTML = `<div class="v-wrap">
+    <div class="section-head"><h2>💎 Valor: modelo vs. mercado</h2>
+      <p>Dónde el modelo asigna más probabilidad que la línea de referencia, entre los próximos partidos. Ordenado por diferencia.</p></div>
+    ${disclaimer}
+    <div class="v-table-wrap"><table class="v-table">
+      <thead><tr><th>Partido</th><th>Resultado</th><th>Modelo</th><th>Mercado</th><th>Momio</th><th>Ventaja</th></tr></thead>
+      <tbody>${tr}</tbody>
+    </table></div></div>`;
 }
 
 document.addEventListener("DOMContentLoaded", init);

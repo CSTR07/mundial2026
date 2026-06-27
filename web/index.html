@@ -89,14 +89,43 @@
     </div>
   </header>
 
-  <nav class="filters" id="stage-filters" aria-label="Filtrar por fase"></nav>
-  <nav class="filters" id="date-filters" aria-label="Filtrar por fecha"></nav>
-  <nav class="filters status-filters" id="status-filters" aria-label="Filtrar por estado"></nav>
+  <nav class="tabbar" id="tabbar" role="tablist" aria-label="Secciones">
+    <button class="tab-btn active" data-tab="partidos" role="tab">⚽ Partidos</button>
+    <button class="tab-btn" data-tab="quiniela" role="tab">🎯 Tu quiniela</button>
+    <button class="tab-btn" data-tab="precision" role="tab">📊 Precisión</button>
+    <button class="tab-btn" data-tab="probabilidades" role="tab">🏆 Probabilidades</button>
+    <button class="tab-btn" data-tab="valor" role="tab">💎 Valor</button>
+  </nav>
 
-  <section id="perf-panel" class="perf-panel"></section>
-  <section id="sim-panel" class="perf-panel"></section>
+  <!-- TAB: Partidos -->
+  <section class="tab-panel active" id="tab-partidos" role="tabpanel">
+    <nav class="filters" id="stage-filters" aria-label="Filtrar por fase"></nav>
+    <nav class="filters" id="date-filters" aria-label="Filtrar por fecha"></nav>
+    <nav class="filters status-filters" id="status-filters" aria-label="Filtrar por estado"></nav>
+    <main id="match-grid" class="match-grid"></main>
+  </section>
 
-  <main id="match-grid" class="match-grid"></main>
+  <!-- TAB: Quiniela -->
+  <section class="tab-panel" id="tab-quiniela" role="tabpanel">
+    <div id="quiniela-panel"></div>
+  </section>
+
+  <!-- TAB: Precisión (historial / track record) -->
+  <section class="tab-panel" id="tab-precision" role="tabpanel">
+    <section id="perf-panel" class="perf-panel"></section>
+    <div id="history-panel"></div>
+    <div id="recent-results"></div>
+  </section>
+
+  <!-- TAB: Probabilidades (Monte Carlo) -->
+  <section class="tab-panel" id="tab-probabilidades" role="tabpanel">
+    <section id="sim-panel" class="perf-panel"></section>
+  </section>
+
+  <!-- TAB: Valor -->
+  <section class="tab-panel" id="tab-valor" role="tabpanel">
+    <div id="value-panel"></div>
+  </section>
 
   <!-- Disclaimer Banner -->
   <div class="disclaimer-banner">
