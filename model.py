@@ -524,7 +524,7 @@ def build(teams_db, fixtures):
     simulation = simulate_tournament(teams, pts, a_hat, b_hat, fixtures)
     played = sum(1 for m in out_matches if m["status"] == "jugado")
     meta = {
-        "generated_at": datetime.date.today().isoformat(),
+        "generated_at": datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
         "n_matches": len(out_matches), "n_played": played,
         "confederations": teams_db["confederations"],
         "model": ("Ranking FIFA (oficial) + Elo din\u00e1mico \u00b7 confederaci\u00f3n \u00b7 goles "

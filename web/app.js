@@ -43,9 +43,15 @@ function init() {
 function setFooterDate() {
   const el = document.getElementById("data-timestamp");
   if (!el || !DATA.meta || !DATA.meta.generated_at) return;
-  const d = new Date(DATA.meta.generated_at + "T00:00:00");
-  el.textContent = "Datos actualizados: " + (isNaN(d) ? DATA.meta.generated_at :
-    d.toLocaleDateString("es-MX", { year: "numeric", month: "long", day: "numeric" }));
+  const raw = DATA.meta.generated_at;
+  // Compatible con formato viejo (solo fecha) y nuevo (fecha+hora ISO)
+  const d = new Date(raw.includes("T") ? raw : raw + "T00:00:00Z");
+  if (isNaN(d)) { el.textContent = "Datos actualizados: " + raw; return; }
+  const hasTime = raw.includes("T");
+  const opts = hasTime
+    ? { year: "numeric", month: "long", day: "numeric", hour: "2-digit", minute: "2-digit", timeZone: "America/Mexico_City" }
+    : { year: "numeric", month: "long", day: "numeric" };
+  el.textContent = "Datos actualizados: " + d.toLocaleString("es-MX", opts) + (hasTime ? " (CDMX)" : "");
 }
 
 function reliabilitySVG(rel) {
