@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Predicciones · Mundial 2026</title>
+  
+  <!-- SEO: Meta description -->
+  <meta name="description" content="Predicciones estadísticas del Mundial 2026: 72 partidos de fase de grupos con probabilidades 1X2, goles esperados, anotadores, marcadores probables y comparación modelo vs. mercado. Modelo Dixon-Coles + Elo.">
+  
+  <!-- Open Graph (redes sociales) -->
+  <meta property="og:title" content="Predicciones Mundial 2026">
+  <meta property="og:description" content="Análisis estadístico de los 72 partidos de la fase de grupos del Mundial 2026 con predicciones, probabilidades y goles esperados.">
+  <meta property="og:image" content="https://funny-biscochitos-6524ce.netlify.app/og-image.png">
+  <meta property="og:url" content="https://funny-biscochitos-6524ce.netlify.app/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_MX">
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Predicciones Mundial 2026">
+  <meta name="twitter:description" content="Análisis estadístico de predicciones del Mundial 2026">
+  <meta name="twitter:image" content="https://funny-biscochitos-6524ce.netlify.app/og-image.png">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  
+  <!-- Canonical -->
+  <link rel="canonical" href="https://funny-biscochitos-6524ce.netlify.app/">
+  
+  <!-- Structured Data (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Predicciones Mundial 2026",
+    "description": "Análisis estadístico de predicciones del Mundial 2026 usando modelo Dixon-Coles",
+    "url": "https://funny-biscochitos-6524ce.netlify.app/",
+    "applicationCategory": "SportApplication",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "datePublished": "2026-06-11",
+    "dateModified": "2026-06-24"
+  }
+  </script>
+  
+  <!--
+    Google Analytics (DESACTIVADO por defecto).
+    Para activarlo:
+    1) Crea una propiedad en https://analytics.google.com y copia tu ID (formato G-ABC123).
+    2) Borra esta línea de apertura del comentario y la de cierre.
+    3) Sustituye las dos apariciones de G-TU_ID_AQUI por tu ID real.
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-TU_ID_AQUI"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-TU_ID_AQUI', { 'anonymize_ip': true });
+  </script>
+
+  -->
+  
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;800;900&family=Inter:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="masthead">
+    <div class="masthead-inner">
+      <div class="brand">
+        <span class="brand-mark">26</span>
+        <div class="brand-text">
+          <h1>Predicciones Mundial</h1>
+          <p id="meta-line">Modelo estadístico · Norteamérica 2026</p>
+        </div>
+      </div>
+      <div class="legend">
+        <span class="legend-item"><i class="dot dot-home"></i>Local</span>
+        <span class="legend-item"><i class="dot dot-draw"></i>Empate</span>
+        <span class="legend-item"><i class="dot dot-away"></i>Visitante</span>
+      </div>
+    </div>
+  </header>
+
+  <nav class="filters" id="stage-filters" aria-label="Filtrar por fase"></nav>
+  <nav class="filters" id="date-filters" aria-label="Filtrar por fecha"></nav>
+  <nav class="filters status-filters" id="status-filters" aria-label="Filtrar por estado"></nav>
+
+  <section id="perf-panel" class="perf-panel"></section>
+  <section id="sim-panel" class="perf-panel"></section>
+
+  <main id="match-grid" class="match-grid"></main>
+
+  <!-- Disclaimer Banner -->
+  <div class="disclaimer-banner">
+    <div class="disclaimer-content">
+      <strong>⚠️ Aviso importante:</strong>
+      <p>Este sitio ofrece <strong>análisis estadísticos con fines informativos</strong> sobre el Mundial 2026.
+      No es consejo de apuestas, inversión ni financiero. Las predicciones son probabilidades, no certezas:
+      ningún modelo puede predecir resultados de fútbol sin margen de error. Los momios son una
+      <strong>referencia estimada</strong> para comparar contra el modelo y no corresponden a una casa de apuestas real.
+      Apostar implica riesgo real de pérdida.</p>
+    </div>
+  </div>
+
+  <footer class="site-foot">
+    <div class="footer-content">
+      <p>Probabilidades calculadas con un modelo Dixon-Coles + Elo. La columna de mercado es una línea de referencia estimada para comparar, no momios reales.</p>
+      <p class="footer-date" id="data-timestamp"></p>
+      <p class="copyright">&copy; 2026 · Análisis estadístico con fines informativos.</p>
+    </div>
+  </footer>
+
+  <!-- Carga sin servidor: data.js define window.PREDICTIONS -->
+  <script src="data/data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
