@@ -1,5 +1,5 @@
 {
- "fetched_at": "2026-06-27T03:01:20.300368+00:00",
+ "fetched_at": "2026-06-27T06:30:50.379344+00:00",
  "source": "openfootball/worldcup.json (dominio público)",
  "matches": [
   {
@@ -1035,8 +1035,8 @@
    "stage": "Grupo G",
    "stage_key": "group",
    "group": "G",
-   "score": null,
-   "status": "pendiente",
+   "score": "1-1",
+   "status": "jugado",
    "ground": "Seattle"
   },
   {
@@ -1052,8 +1052,8 @@
    "stage": "Grupo G",
    "stage_key": "group",
    "group": "G",
-   "score": null,
-   "status": "pendiente",
+   "score": "1-5",
+   "status": "jugado",
    "ground": "Vancouver"
   },
   {
