@@ -2,7 +2,7 @@ name: Actualizar predicciones Mundial 2026
 
 on:
   schedule:
-    - cron: '0 */4 * * *'  # Cada 4 horas
+    - cron: '0 */2 * * *'  # Cada 2 horas
   workflow_dispatch:  # Permite ejecución manual
 
 permissions:
