@@ -100,9 +100,20 @@
 
   <!-- TAB: Partidos -->
   <section class="tab-panel active" id="tab-partidos" role="tabpanel">
-    <nav class="filters" id="stage-filters" aria-label="Filtrar por fase"></nav>
-    <nav class="filters" id="date-filters" aria-label="Filtrar por fecha"></nav>
-    <nav class="filters status-filters" id="status-filters" aria-label="Filtrar por estado"></nav>
+    <div class="filter-bar">
+      <div class="filter-row">
+        <span class="filter-label">Fase</span>
+        <nav class="filters" id="stage-filters" aria-label="Filtrar por fase"></nav>
+      </div>
+      <div class="filter-row">
+        <span class="filter-label">Fecha</span>
+        <nav class="filters scroll-x" id="date-filters" aria-label="Filtrar por fecha"></nav>
+      </div>
+      <div class="filter-row">
+        <span class="filter-label">Estado</span>
+        <nav class="filters status-filters" id="status-filters" aria-label="Filtrar por estado"></nav>
+      </div>
+    </div>
     <main id="match-grid" class="match-grid"></main>
   </section>
 
