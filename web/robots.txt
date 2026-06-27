@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://funny-biscochitos-6524ce.netlify.app/sitemap.xml
+Sitemap: https://probcstr.netlify.app/sitemap.xml
