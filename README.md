@@ -2,39 +2,39 @@
 
 Modelo estadístico para predicciones del Mundial 2026 (Norteamérica) usando Elo dinámico, Poisson calibrado y Dixon-Coles.
 
-**Sitio en vivo:** https://probcstr.netlify.app (temporal, mira abajo)
+**Sitio en vivo:** https://cstr07.github.io/mundial2026/
 
-## Migración a GitHub Pages (IMPORTANTE)
+## Hosting
 
-El sitio está en Netlify pero quema créditos rápidamente (cada actualización de datos = créditos gastados). 
+El sitio se publica con **GitHub Pages** de forma gratuita y sin límites de créditos. El despliegue es automático mediante GitHub Actions: cada vez que se regeneran las predicciones o se actualiza la carpeta `web/`, el sitio se vuelve a desplegar solo.
 
-**Para cambiar a GitHub Pages (gratis, sin límites):**
+Para habilitarlo (una sola vez): en el repositorio, ve a **Settings -> Pages -> Build and deployment -> Source** y selecciona **"GitHub Actions"**. El workflow `deploy.yml` se encarga del resto.
 
-👉 **Lee [GITHUB_PAGES_SETUP.md](./GITHUB_PAGES_SETUP.md)** — son 5 minutos y tu sitio estará en `https://cstr07.github.io/mundial2026/` de forma permanente y sin costo.
+## Caracteristicas
 
-## Características
-
-- ⚽ **104 partidos** — grupos + eliminatorias
-- 📊 **Paneles interactivos** — partidos, quiniela, precisión, probabilidades, valor
-- 🎲 **Creador de parlay** — combina selecciones, calcula momios y retorno
-- 🔄 **Actualizaciones automáticas** — GitHub Actions cada 6 horas
-- 📈 **Historial verificable** — evolución de la precisión del modelo
+- **104 partidos** — grupos + eliminatorias
+- **Paneles interactivos** — partidos, quiniela, precision, probabilidades, valor
+- **Creador de parlay** — combina selecciones, calcula momios y retorno
+- **Actualizaciones automaticas** — GitHub Actions cada 6 horas
+- **Historial verificable** — evolucion de la precision del modelo
 
 ## Stack
 
 - **Backend**: Python 3 (Elo + Poisson + Dixon-Coles + Monte Carlo)
 - **Frontend**: HTML/CSS/JS vanilla (sin dependencias)
-- **Datos**: openfootball/worldcup.json (dominio público)
+- **Datos**: openfootball/worldcup.json (dominio publico)
 - **CI/CD**: GitHub Actions (gratuito)
-- **Hosting**: GitHub Pages (gratuito) o Netlify
+- **Hosting**: GitHub Pages (gratuito)
 
 ## Archivos principales
 
 ```
-model.py           # Modelo estadístico
-update.py          # Descarga datos y regenera predicciones
-.github/workflows/  # GitHub Actions (cada 6 horas)
-web/                # Sitio estático (lo que ves)
+model.py            # Modelo estadistico
+update.py           # Descarga datos y regenera predicciones
+.github/workflows/
+  update.yml        # Regenera predicciones cada 6 horas
+  deploy.yml        # Despliega a GitHub Pages
+web/                # Sitio estatico (lo que ves)
   index.html
   app.js
   style.css
@@ -43,7 +43,7 @@ web/                # Sitio estático (lo que ves)
     data.js
 ```
 
-## Cómo ejecutar localmente
+## Como ejecutar localmente
 
 ```bash
 python3 update.py
@@ -53,8 +53,4 @@ python3 update.py
 
 ## Licencia
 
-Análisis estadístico con fines informativos. No es consejo de apuestas ni inversión.
-
----
-
-**Nota**: Para evitar gastar créditos Netlify, **habilita GitHub Pages** (instrucciones arriba).
+Analisis estadistico con fines informativos. No es consejo de apuestas ni inversion.

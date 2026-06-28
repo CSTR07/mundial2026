@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://probcstr.netlify.app/sitemap.xml
+Sitemap: https://cstr07.github.io/mundial2026/sitemap.xml
