@@ -1,5 +1,5 @@
 {
- "fetched_at": "2026-06-28T21:45:09.739554+00:00",
+ "fetched_at": "2026-06-29T14:39:57.079835+00:00",
  "source": "openfootball/worldcup.json (dominio público)",
  "matches": [
   {
@@ -1519,11 +1519,11 @@
    "match_id": 90,
    "date": "2026-07-04",
    "time": "12:00 UTC-5",
-   "home": null,
+   "home": "Canada",
    "away": null,
-   "home_raw": "W73",
+   "home_raw": "Canada",
    "away_raw": "W75",
-   "home_hint": "Ganador M73",
+   "home_hint": "Por definir",
    "away_hint": "Ganador M75",
    "stage": "8vos",
    "stage_key": "r16",

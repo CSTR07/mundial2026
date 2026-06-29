@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-06-28T21:45:11Z",
+    "generated_at": "2026-06-29T14:39:59Z",
     "n_matches": 104,
     "n_played": 73,
     "confederations": {
@@ -550,6 +550,14 @@
       },
       {
         "date": "2026-06-28",
+        "n_played": 73,
+        "accuracy": 0.6027,
+        "brier": 0.5127,
+        "logloss": 0.8664,
+        "skill": 0.1833
+      },
+      {
+        "date": "2026-06-29",
         "n_played": 73,
         "accuracy": 0.6027,
         "brier": 0.5127,
@@ -14392,7 +14400,7 @@
       "stage_key": "r16",
       "group": null,
       "ground": "Houston",
-      "home": "Ganador M73",
+      "home": "Por definir",
       "away": "Ganador M75",
       "status": "proximo",
       "real_score": null
