@@ -1,8 +1,8 @@
 {
   "meta": {
-    "generated_at": "2026-06-29T14:39:59Z",
+    "generated_at": "2026-06-29T22:17:42Z",
     "n_matches": 104,
-    "n_played": 73,
+    "n_played": 74,
     "confederations": {
       "CONMEBOL": 1.15,
       "UEFA": 1.12,
@@ -31,7 +31,7 @@
       },
       {
         "team": "Brazil",
-        "rating": 1785.2
+        "rating": 1808.9
       },
       {
         "team": "Morocco",
@@ -74,12 +74,12 @@
         "rating": 1676.0
       },
       {
-        "team": "Japan",
-        "rating": 1673.7
-      },
-      {
         "team": "Senegal",
         "rating": 1653.4
+      },
+      {
+        "team": "Japan",
+        "rating": 1650.0
       },
       {
         "team": "Uruguay",
@@ -207,20 +207,20 @@
       }
     ],
     "calibration": {
-      "a": 0.2448,
-      "b": 0.2027,
-      "n_samples": 73,
+      "a": 0.2473,
+      "b": 0.2026,
+      "n_samples": 74,
       "temperature": 0.8,
       "half_life_days": 14.0
     },
     "evaluation": {
-      "n": 73,
-      "brier_1x2": 0.5127,
-      "logloss_1x2": 0.8664,
-      "accuracy_1x2": 0.6027,
-      "logloss_baseline": 1.0609,
-      "skill_score": 0.1833,
-      "ece_1x2": 0.0566,
+      "n": 74,
+      "brier_1x2": 0.5101,
+      "logloss_1x2": 0.863,
+      "accuracy_1x2": 0.6081,
+      "logloss_baseline": 1.0568,
+      "skill_score": 0.1834,
+      "ece_1x2": 0.0593,
       "reliability": [
         {
           "pred": 0.049,
@@ -229,13 +229,13 @@
         },
         {
           "pred": 0.145,
-          "obs": 0.22,
-          "n": 41
+          "obs": 0.214,
+          "n": 42
         },
         {
           "pred": 0.253,
-          "obs": 0.208,
-          "n": 53
+          "obs": 0.204,
+          "n": 54
         },
         {
           "pred": 0.332,
@@ -243,14 +243,14 @@
           "n": 20
         },
         {
-          "pred": 0.442,
+          "pred": 0.443,
           "obs": 0.333,
           "n": 12
         },
         {
-          "pred": 0.533,
-          "obs": 0.556,
-          "n": 9
+          "pred": 0.534,
+          "obs": 0.6,
+          "n": 10
         },
         {
           "pred": 0.648,
@@ -258,14 +258,14 @@
           "n": 21
         },
         {
-          "pred": 0.75,
-          "obs": 0.667,
-          "n": 12
+          "pred": 0.746,
+          "obs": 0.636,
+          "n": 11
         },
         {
-          "pred": 0.818,
-          "obs": 0.8,
-          "n": 5
+          "pred": 0.816,
+          "obs": 0.833,
+          "n": 6
         },
         {
           "pred": 0.932,
@@ -273,236 +273,204 @@
           "n": 9
         }
       ],
-      "brier_over25": 0.2397,
-      "logloss_over25": 0.6722,
-      "brier_btts": 0.2542,
-      "logloss_btts": 0.7022
+      "brier_over25": 0.2406,
+      "logloss_over25": 0.674,
+      "brier_btts": 0.2539,
+      "logloss_btts": 0.7016
     },
     "simulation": {
       "n_sims": 20000,
       "teams": {
         "Argentina": {
           "r32": 1.0,
-          "r16": 0.979,
-          "qf": 0.9044,
-          "sf": 0.7256,
-          "final": 0.4996,
-          "champion": 0.3048
+          "r16": 0.9776,
+          "qf": 0.9052,
+          "sf": 0.7295,
+          "final": 0.4852,
+          "champion": 0.2923
         },
         "France": {
           "r32": 1.0,
-          "r16": 0.9376,
-          "qf": 0.751,
-          "sf": 0.5786,
-          "final": 0.3872,
-          "champion": 0.2291
+          "r16": 0.9377,
+          "qf": 0.759,
+          "sf": 0.5859,
+          "final": 0.3895,
+          "champion": 0.2265
         },
         "Spain": {
           "r32": 1.0,
-          "r16": 0.8716,
-          "qf": 0.6194,
-          "sf": 0.4892,
-          "final": 0.2731,
+          "r16": 0.8711,
+          "qf": 0.6196,
+          "sf": 0.4873,
+          "final": 0.2795,
           "champion": 0.1517
-        },
-        "England": {
-          "r32": 1.0,
-          "r16": 0.9286,
-          "qf": 0.6248,
-          "sf": 0.4316,
-          "final": 0.2026,
-          "champion": 0.0987
         },
         "Brazil": {
           "r32": 1.0,
-          "r16": 0.7169,
-          "qf": 0.5816,
-          "sf": 0.2928,
-          "final": 0.1179,
-          "champion": 0.0492
+          "r16": 1.0,
+          "qf": 0.8356,
+          "sf": 0.4511,
+          "final": 0.1918,
+          "champion": 0.0891
+        },
+        "England": {
+          "r32": 1.0,
+          "r16": 0.9282,
+          "qf": 0.6233,
+          "sf": 0.371,
+          "final": 0.1756,
+          "champion": 0.0862
         },
         "Netherlands": {
           "r32": 1.0,
-          "r16": 0.5424,
-          "qf": 0.4107,
-          "sf": 0.1538,
-          "final": 0.0746,
-          "champion": 0.029
+          "r16": 0.5431,
+          "qf": 0.4132,
+          "sf": 0.154,
+          "final": 0.0742,
+          "champion": 0.0276
         },
         "Colombia": {
           "r32": 1.0,
-          "r16": 0.9313,
-          "qf": 0.6069,
-          "sf": 0.1735,
-          "final": 0.0748,
-          "champion": 0.0248
+          "r16": 0.9331,
+          "qf": 0.606,
+          "sf": 0.1703,
+          "final": 0.0654,
+          "champion": 0.0232
         },
         "Portugal": {
           "r32": 1.0,
-          "r16": 0.57,
-          "qf": 0.2104,
-          "sf": 0.1336,
-          "final": 0.0508,
-          "champion": 0.0192
-        },
-        "Morocco": {
-          "r32": 1.0,
-          "r16": 0.4576,
-          "qf": 0.3339,
-          "sf": 0.1154,
-          "final": 0.0516,
-          "champion": 0.0185
-        },
-        "Mexico": {
-          "r32": 1.0,
-          "r16": 0.7595,
-          "qf": 0.3156,
-          "sf": 0.1583,
-          "final": 0.0573,
-          "champion": 0.0169
+          "r16": 0.5744,
+          "qf": 0.2112,
+          "sf": 0.134,
+          "final": 0.0525,
+          "champion": 0.0193
         },
         "Belgium": {
           "r32": 1.0,
-          "r16": 0.6736,
-          "qf": 0.3896,
-          "sf": 0.1375,
-          "final": 0.0475,
-          "champion": 0.0149
+          "r16": 0.6773,
+          "qf": 0.3982,
+          "sf": 0.1433,
+          "final": 0.0493,
+          "champion": 0.0169
+        },
+        "Mexico": {
+          "r32": 1.0,
+          "r16": 0.7625,
+          "qf": 0.3162,
+          "sf": 0.1309,
+          "final": 0.0488,
+          "champion": 0.0158
+        },
+        "Morocco": {
+          "r32": 1.0,
+          "r16": 0.457,
+          "qf": 0.3302,
+          "sf": 0.1085,
+          "final": 0.046,
+          "champion": 0.0152
         },
         "Germany": {
           "r32": 1.0,
-          "r16": 0.7986,
-          "qf": 0.2139,
-          "sf": 0.1108,
-          "final": 0.0445,
-          "champion": 0.0134
-        },
-        "United States": {
-          "r32": 1.0,
-          "r16": 0.891,
-          "qf": 0.4607,
-          "sf": 0.1168,
-          "final": 0.0274,
-          "champion": 0.0082
+          "r16": 0.7942,
+          "qf": 0.2069,
+          "sf": 0.109,
+          "final": 0.041,
+          "champion": 0.0118
         },
         "Croatia": {
           "r32": 1.0,
-          "r16": 0.43,
-          "qf": 0.1368,
-          "sf": 0.0789,
-          "final": 0.0253,
-          "champion": 0.0073
+          "r16": 0.4256,
+          "qf": 0.1338,
+          "sf": 0.0745,
+          "final": 0.0242,
+          "champion": 0.0078
+        },
+        "United States": {
+          "r32": 1.0,
+          "r16": 0.8886,
+          "qf": 0.4525,
+          "sf": 0.1168,
+          "final": 0.0267,
+          "champion": 0.0076
         },
         "Switzerland": {
           "r32": 1.0,
-          "r16": 0.7034,
-          "qf": 0.3087,
-          "sf": 0.0669,
-          "final": 0.0213,
-          "champion": 0.0055
+          "r16": 0.7004,
+          "qf": 0.3083,
+          "sf": 0.065,
+          "final": 0.02,
+          "champion": 0.0044
         },
-        "Japan": {
+        "Senegal": {
           "r32": 1.0,
-          "r16": 0.2831,
-          "qf": 0.1815,
-          "sf": 0.0532,
-          "final": 0.0115,
-          "champion": 0.0027
+          "r16": 0.3227,
+          "qf": 0.1357,
+          "sf": 0.0303,
+          "final": 0.006,
+          "champion": 0.0015
         },
         "Canada": {
           "r32": 1.0,
           "r16": 1.0,
-          "qf": 0.2554,
-          "sf": 0.0333,
-          "final": 0.0078,
-          "champion": 0.0014
-        },
-        "Senegal": {
-          "r32": 1.0,
-          "r16": 0.3264,
-          "qf": 0.1363,
-          "sf": 0.0307,
-          "final": 0.0063,
-          "champion": 0.0012
-        },
-        "Norway": {
-          "r32": 1.0,
-          "r16": 0.5921,
-          "qf": 0.1545,
-          "sf": 0.0321,
-          "final": 0.005,
-          "champion": 0.001
-        },
-        "Austria": {
-          "r32": 1.0,
-          "r16": 0.1285,
-          "qf": 0.0333,
-          "sf": 0.0123,
-          "final": 0.0024,
-          "champion": 0.0006
-        },
-        "Egypt": {
-          "r32": 1.0,
-          "r16": 0.4907,
-          "qf": 0.0448,
-          "sf": 0.0117,
-          "final": 0.0023,
-          "champion": 0.0004
-        },
-        "Ivory Coast": {
-          "r32": 1.0,
-          "r16": 0.4078,
-          "qf": 0.0824,
-          "sf": 0.0135,
-          "final": 0.0015,
-          "champion": 0.0003
-        },
-        "Ecuador": {
-          "r32": 1.0,
-          "r16": 0.2404,
-          "qf": 0.0488,
-          "sf": 0.0167,
-          "final": 0.0024,
-          "champion": 0.0003
+          "qf": 0.2566,
+          "sf": 0.0348,
+          "final": 0.0073,
+          "champion": 0.0011
         },
         "Australia": {
           "r32": 1.0,
-          "r16": 0.5093,
-          "qf": 0.0461,
-          "sf": 0.0126,
-          "final": 0.0022,
+          "r16": 0.5121,
+          "qf": 0.0481,
+          "sf": 0.0153,
+          "final": 0.0026,
+          "champion": 0.0006
+        },
+        "Norway": {
+          "r32": 1.0,
+          "r16": 0.602,
+          "qf": 0.1114,
+          "sf": 0.0248,
+          "final": 0.004,
+          "champion": 0.0006
+        },
+        "Ecuador": {
+          "r32": 1.0,
+          "r16": 0.2374,
+          "qf": 0.0472,
+          "sf": 0.0114,
+          "final": 0.0016,
+          "champion": 0.0004
+        },
+        "Austria": {
+          "r32": 1.0,
+          "r16": 0.1288,
+          "qf": 0.0354,
+          "sf": 0.0132,
+          "final": 0.0027,
           "champion": 0.0003
+        },
+        "Ivory Coast": {
+          "r32": 1.0,
+          "r16": 0.398,
+          "qf": 0.0529,
+          "sf": 0.0094,
+          "final": 0.0013,
+          "champion": 0.0002
         },
         "Algeria": {
           "r32": 1.0,
-          "r16": 0.2967,
-          "qf": 0.0741,
-          "sf": 0.0092,
+          "r16": 0.2997,
+          "qf": 0.0766,
+          "sf": 0.0083,
           "final": 0.0015,
-          "champion": 0.0002
-        },
-        "Bosnia and Herzegovina": {
-          "r32": 1.0,
-          "r16": 0.109,
-          "qf": 0.0134,
-          "sf": 0.0009,
-          "final": 0.0001,
           "champion": 0.0001
         },
-        "DR Congo": {
+        "Egypt": {
           "r32": 1.0,
-          "r16": 0.0713,
-          "qf": 0.0108,
-          "sf": 0.0019,
-          "final": 0.0001,
-          "champion": 0.0001
-        },
-        "Sweden": {
-          "r32": 1.0,
-          "r16": 0.0624,
-          "qf": 0.0168,
-          "sf": 0.0037,
-          "final": 0.0008,
+          "r16": 0.4879,
+          "qf": 0.0421,
+          "sf": 0.0108,
+          "final": 0.0022,
           "champion": 0.0001
         },
         "South Africa": {
@@ -513,28 +481,60 @@
           "final": 0.0,
           "champion": 0.0
         },
+        "Bosnia and Herzegovina": {
+          "r32": 1.0,
+          "r16": 0.1114,
+          "qf": 0.0136,
+          "sf": 0.0006,
+          "final": 0.0001,
+          "champion": 0.0
+        },
         "Cape Verde": {
           "r32": 1.0,
-          "r16": 0.0209,
+          "r16": 0.0224,
           "qf": 0.0047,
-          "sf": 0.0003,
+          "sf": 0.0006,
+          "final": 0.0,
+          "champion": 0.0
+        },
+        "Japan": {
+          "r32": 1.0,
+          "r16": 0.0,
+          "qf": 0.0,
+          "sf": 0.0,
           "final": 0.0,
           "champion": 0.0
         },
         "Ghana": {
           "r32": 1.0,
-          "r16": 0.0687,
-          "qf": 0.0103,
+          "r16": 0.0669,
+          "qf": 0.0091,
           "sf": 0.0003,
           "final": 0.0,
           "champion": 0.0
         },
         "Paraguay": {
           "r32": 1.0,
-          "r16": 0.2014,
-          "qf": 0.0184,
-          "sf": 0.0045,
-          "final": 0.0004,
+          "r16": 0.2058,
+          "qf": 0.0188,
+          "sf": 0.0044,
+          "final": 0.0007,
+          "champion": 0.0
+        },
+        "DR Congo": {
+          "r32": 1.0,
+          "r16": 0.0718,
+          "qf": 0.0133,
+          "sf": 0.0016,
+          "final": 0.0001,
+          "champion": 0.0
+        },
+        "Sweden": {
+          "r32": 1.0,
+          "r16": 0.0622,
+          "qf": 0.0152,
+          "sf": 0.0034,
+          "final": 0.0005,
           "champion": 0.0
         }
       }
@@ -558,11 +558,11 @@
       },
       {
         "date": "2026-06-29",
-        "n_played": 73,
-        "accuracy": 0.6027,
-        "brier": 0.5127,
-        "logloss": 0.8664,
-        "skill": 0.1833
+        "n_played": 74,
+        "accuracy": 0.6081,
+        "brier": 0.5101,
+        "logloss": 0.863,
+        "skill": 0.1834
       }
     ]
   },
@@ -578,23 +578,23 @@
       "status": "jugado",
       "real_score": "2-0",
       "p1x2": {
-        "home": 0.784,
+        "home": 0.785,
         "draw": 0.161,
-        "away": 0.055
+        "away": 0.054
       },
       "xg": {
         "home": 2.32,
         "away": 0.56,
-        "total": 2.88
+        "total": 2.89
       },
       "over_under": {
-        "over_1.5": 0.814,
-        "over_2.5": 0.562,
-        "over_3.5": 0.319
+        "over_1.5": 0.815,
+        "over_2.5": 0.564,
+        "over_3.5": 0.321
       },
       "btts": {
-        "yes": 0.416,
-        "no": 0.584
+        "yes": 0.417,
+        "no": 0.583
       },
       "scorelines": [
         {
@@ -607,7 +607,7 @@
         },
         {
           "score": "1-0",
-          "p": 0.118
+          "p": 0.117
         },
         {
           "score": "2-1",
@@ -628,7 +628,7 @@
       "cards": {
         "expected_total": 3.9,
         "competitividad": 0.27,
-        "goles_esperados": 3.1,
+        "goles_esperados": 3.11,
         "over_under": {
           "over_3.5": 0.547,
           "over_4.5": 0.352,
@@ -696,11 +696,11 @@
         "mercados": [
           {
             "resultado": "local",
-            "prob_modelo": 0.784,
+            "prob_modelo": 0.785,
             "prob_mercado": 0.801,
             "momio": 1.18,
-            "ventaja_modelo": -0.017,
-            "valor_esperado": -0.075,
+            "ventaja_modelo": -0.016,
+            "valor_esperado": -0.074,
             "apuesta_de_valor": false
           },
           {
@@ -714,11 +714,11 @@
           },
           {
             "resultado": "visitante",
-            "prob_modelo": 0.055,
-            "prob_mercado": 0.044,
-            "momio": 21.48,
+            "prob_modelo": 0.054,
+            "prob_mercado": 0.043,
+            "momio": 21.91,
             "ventaja_modelo": 0.011,
-            "valor_esperado": 0.181,
+            "valor_esperado": 0.183,
             "apuesta_de_valor": true
           }
         ]
@@ -740,18 +740,18 @@
         "away": 0.256
       },
       "xg": {
-        "home": 1.34,
+        "home": 1.35,
         "away": 1.0,
-        "total": 2.34
+        "total": 2.35
       },
       "over_under": {
-        "over_1.5": 0.713,
-        "over_2.5": 0.418,
-        "over_3.5": 0.198
+        "over_1.5": 0.714,
+        "over_2.5": 0.42,
+        "over_3.5": 0.2
       },
       "btts": {
-        "yes": 0.517,
-        "no": 0.483
+        "yes": 0.519,
+        "no": 0.481
       },
       "scorelines": [
         {
@@ -760,7 +760,7 @@
         },
         {
           "score": "1-0",
-          "p": 0.115
+          "p": 0.114
         },
         {
           "score": "2-1",
@@ -768,7 +768,7 @@
         },
         {
           "score": "0-0",
-          "p": 0.094
+          "p": 0.093
         }
       ],
       "corners": {
@@ -893,22 +893,22 @@
       "real_score": "1-1",
       "p1x2": {
         "home": 0.634,
-        "draw": 0.244,
+        "draw": 0.243,
         "away": 0.122
       },
       "xg": {
         "home": 1.81,
-        "away": 0.73,
-        "total": 2.54
+        "away": 0.74,
+        "total": 2.55
       },
       "over_under": {
-        "over_1.5": 0.754,
-        "over_2.5": 0.473,
-        "over_3.5": 0.241
+        "over_1.5": 0.756,
+        "over_2.5": 0.475,
+        "over_3.5": 0.243
       },
       "btts": {
-        "yes": 0.475,
-        "no": 0.525
+        "yes": 0.477,
+        "no": 0.523
       },
       "scorelines": [
         {
@@ -917,7 +917,7 @@
         },
         {
           "score": "1-0",
-          "p": 0.131
+          "p": 0.13
         },
         {
           "score": "1-1",
@@ -942,7 +942,7 @@
       "cards": {
         "expected_total": 4.3,
         "competitividad": 0.49,
-        "goles_esperados": 2.77,
+        "goles_esperados": 2.78,
         "over_under": {
           "over_3.5": 0.623,
           "over_4.5": 0.43,
@@ -1019,20 +1019,20 @@
           },
           {
             "resultado": "empate",
-            "prob_modelo": 0.244,
+            "prob_modelo": 0.243,
             "prob_mercado": 0.213,
-            "momio": 4.43,
-            "ventaja_modelo": 0.031,
-            "valor_esperado": 0.081,
+            "momio": 4.44,
+            "ventaja_modelo": 0.03,
+            "valor_esperado": 0.079,
             "apuesta_de_valor": true
           },
           {
             "resultado": "visitante",
             "prob_modelo": 0.122,
             "prob_mercado": 0.128,
-            "momio": 7.39,
+            "momio": 7.38,
             "ventaja_modelo": -0.006,
-            "valor_esperado": -0.098,
+            "valor_esperado": -0.1,
             "apuesta_de_valor": false
           }
         ]
@@ -1049,28 +1049,28 @@
       "status": "jugado",
       "real_score": "4-1",
       "p1x2": {
-        "home": 0.619,
+        "home": 0.62,
         "draw": 0.25,
         "away": 0.13
       },
       "xg": {
         "home": 1.77,
         "away": 0.75,
-        "total": 2.52
+        "total": 2.53
       },
       "over_under": {
-        "over_1.5": 0.75,
-        "over_2.5": 0.467,
-        "over_3.5": 0.236
+        "over_1.5": 0.751,
+        "over_2.5": 0.469,
+        "over_3.5": 0.238
       },
       "btts": {
-        "yes": 0.48,
-        "no": 0.52
+        "yes": 0.481,
+        "no": 0.519
       },
       "scorelines": [
         {
           "score": "2-0",
-          "p": 0.133
+          "p": 0.132
         },
         {
           "score": "1-1",
@@ -1078,7 +1078,7 @@
         },
         {
           "score": "1-0",
-          "p": 0.131
+          "p": 0.13
         },
         {
           "score": "2-1",
@@ -1099,7 +1099,7 @@
       "cards": {
         "expected_total": 4.3,
         "competitividad": 0.51,
-        "goles_esperados": 2.75,
+        "goles_esperados": 2.76,
         "over_under": {
           "over_3.5": 0.623,
           "over_4.5": 0.43,
@@ -1167,11 +1167,11 @@
         "mercados": [
           {
             "resultado": "local",
-            "prob_modelo": 0.619,
+            "prob_modelo": 0.62,
             "prob_mercado": 0.636,
             "momio": 1.47,
-            "ventaja_modelo": -0.017,
-            "valor_esperado": -0.09,
+            "ventaja_modelo": -0.016,
+            "valor_esperado": -0.089,
             "apuesta_de_valor": false
           },
           {
@@ -1187,9 +1187,9 @@
             "resultado": "visitante",
             "prob_modelo": 0.13,
             "prob_mercado": 0.114,
-            "momio": 8.23,
+            "momio": 8.24,
             "ventaja_modelo": 0.016,
-            "valor_esperado": 0.07,
+            "valor_esperado": 0.071,
             "apuesta_de_valor": true
           }
         ]
@@ -1208,21 +1208,21 @@
       "p1x2": {
         "home": 0.109,
         "draw": 0.231,
-        "away": 0.659
+        "away": 0.66
       },
       "xg": {
-        "home": 0.7,
-        "away": 1.88,
+        "home": 0.71,
+        "away": 1.89,
         "total": 2.59
       },
       "over_under": {
-        "over_1.5": 0.763,
-        "over_2.5": 0.485,
-        "over_3.5": 0.251
+        "over_1.5": 0.764,
+        "over_2.5": 0.487,
+        "over_3.5": 0.252
       },
       "btts": {
-        "yes": 0.467,
-        "no": 0.533
+        "yes": 0.468,
+        "no": 0.532
       },
       "scorelines": [
         {
@@ -1256,7 +1256,7 @@
       "cards": {
         "expected_total": 4.2,
         "competitividad": 0.45,
-        "goles_esperados": 2.81,
+        "goles_esperados": 2.82,
         "over_under": {
           "over_3.5": 0.605,
           "over_4.5": 0.41,
@@ -1326,27 +1326,27 @@
             "resultado": "local",
             "prob_modelo": 0.109,
             "prob_mercado": 0.113,
-            "momio": 8.37,
+            "momio": 8.38,
             "ventaja_modelo": -0.004,
-            "valor_esperado": -0.088,
+            "valor_esperado": -0.087,
             "apuesta_de_valor": false
           },
           {
             "resultado": "empate",
             "prob_modelo": 0.231,
-            "prob_mercado": 0.242,
-            "momio": 3.92,
-            "ventaja_modelo": -0.011,
-            "valor_esperado": -0.094,
+            "prob_mercado": 0.241,
+            "momio": 3.93,
+            "ventaja_modelo": -0.01,
+            "valor_esperado": -0.092,
             "apuesta_de_valor": false
           },
           {
             "resultado": "visitante",
-            "prob_modelo": 0.659,
+            "prob_modelo": 0.66,
             "prob_mercado": 0.645,
             "momio": 1.47,
-            "ventaja_modelo": 0.014,
-            "valor_esperado": -0.031,
+            "ventaja_modelo": 0.015,
+            "valor_esperado": -0.03,
             "apuesta_de_valor": false
           }
         ]
@@ -1363,23 +1363,23 @@
       "status": "jugado",
       "real_score": "1-1",
       "p1x2": {
-        "home": 0.4,
+        "home": 0.401,
         "draw": 0.316,
         "away": 0.284
       },
       "xg": {
         "home": 1.28,
-        "away": 1.05,
-        "total": 2.33
+        "away": 1.06,
+        "total": 2.34
       },
       "over_under": {
-        "over_1.5": 0.71,
-        "over_2.5": 0.415,
-        "over_3.5": 0.196
+        "over_1.5": 0.711,
+        "over_2.5": 0.416,
+        "over_3.5": 0.197
       },
       "btts": {
-        "yes": 0.52,
-        "no": 0.48
+        "yes": 0.522,
+        "no": 0.478
       },
       "scorelines": [
         {
@@ -1413,7 +1413,7 @@
       "cards": {
         "expected_total": 5.0,
         "competitividad": 0.88,
-        "goles_esperados": 2.56,
+        "goles_esperados": 2.57,
         "over_under": {
           "over_3.5": 0.735,
           "over_4.5": 0.56,
@@ -1481,11 +1481,11 @@
         "mercados": [
           {
             "resultado": "local",
-            "prob_modelo": 0.4,
-            "prob_mercado": 0.39,
-            "momio": 2.43,
-            "ventaja_modelo": 0.01,
-            "valor_esperado": -0.028,
+            "prob_modelo": 0.401,
+            "prob_mercado": 0.392,
+            "momio": 2.42,
+            "ventaja_modelo": 0.009,
+            "valor_esperado": -0.03,
             "apuesta_de_valor": false
           },
           {
@@ -1522,21 +1522,21 @@
       "p1x2": {
         "home": 0.102,
         "draw": 0.224,
-        "away": 0.674
+        "away": 0.675
       },
       "xg": {
         "home": 0.69,
-        "away": 1.92,
-        "total": 2.61
+        "away": 1.93,
+        "total": 2.62
       },
       "over_under": {
-        "over_1.5": 0.768,
-        "over_2.5": 0.492,
-        "over_3.5": 0.257
+        "over_1.5": 0.769,
+        "over_2.5": 0.494,
+        "over_3.5": 0.258
       },
       "btts": {
-        "yes": 0.462,
-        "no": 0.538
+        "yes": 0.463,
+        "no": 0.537
       },
       "scorelines": [
         {
@@ -1545,11 +1545,11 @@
         },
         {
           "score": "0-1",
-          "p": 0.13
+          "p": 0.129
         },
         {
           "score": "1-1",
-          "p": 0.118
+          "p": 0.117
         },
         {
           "score": "1-2",
@@ -1570,7 +1570,7 @@
       "cards": {
         "expected_total": 4.2,
         "competitividad": 0.43,
-        "goles_esperados": 2.84,
+        "goles_esperados": 2.85,
         "over_under": {
           "over_3.5": 0.605,
           "over_4.5": 0.41,
@@ -1640,27 +1640,27 @@
             "resultado": "local",
             "prob_modelo": 0.102,
             "prob_mercado": 0.1,
-            "momio": 9.4,
+            "momio": 9.41,
             "ventaja_modelo": 0.002,
-            "valor_esperado": -0.041,
+            "valor_esperado": -0.04,
             "apuesta_de_valor": false
           },
           {
             "resultado": "empate",
             "prob_modelo": 0.224,
             "prob_mercado": 0.221,
-            "momio": 4.25,
+            "momio": 4.26,
             "ventaja_modelo": 0.003,
-            "valor_esperado": -0.048,
+            "valor_esperado": -0.046,
             "apuesta_de_valor": false
           },
           {
             "resultado": "visitante",
-            "prob_modelo": 0.674,
+            "prob_modelo": 0.675,
             "prob_mercado": 0.681,
             "momio": 1.38,
-            "ventaja_modelo": -0.007,
-            "valor_esperado": -0.07,
+            "ventaja_modelo": -0.006,
+            "valor_esperado": -0.069,
             "apuesta_de_valor": false
           }
         ]
@@ -1684,16 +1684,16 @@
       "xg": {
         "home": 1.05,
         "away": 1.29,
-        "total": 2.33
+        "total": 2.34
       },
       "over_under": {
-        "over_1.5": 0.71,
-        "over_2.5": 0.415,
-        "over_3.5": 0.196
+        "over_1.5": 0.712,
+        "over_2.5": 0.417,
+        "over_3.5": 0.197
       },
       "btts": {
-        "yes": 0.52,
-        "no": 0.48
+        "yes": 0.521,
+        "no": 0.479
       },
       "scorelines": [
         {
@@ -1710,7 +1710,7 @@
         },
         {
           "score": "0-0",
-          "p": 0.095
+          "p": 0.094
         }
       ],
       "corners": {
@@ -1839,27 +1839,27 @@
         "away": 0.015
       },
       "xg": {
-        "home": 3.14,
+        "home": 3.15,
         "away": 0.4,
-        "total": 3.54
+        "total": 3.55
       },
       "over_under": {
-        "over_1.5": 0.897,
-        "over_2.5": 0.71,
-        "over_3.5": 0.478
+        "over_1.5": 0.898,
+        "over_2.5": 0.712,
+        "over_3.5": 0.48
       },
       "btts": {
-        "yes": 0.33,
-        "no": 0.67
+        "yes": 0.331,
+        "no": 0.669
       },
       "scorelines": [
         {
           "score": "3-0",
-          "p": 0.164
+          "p": 0.163
         },
         {
           "score": "2-0",
-          "p": 0.148
+          "p": 0.147
         },
         {
           "score": "4-0",
@@ -1998,16 +1998,16 @@
       "xg": {
         "home": 0.95,
         "away": 1.42,
-        "total": 2.36
+        "total": 2.37
       },
       "over_under": {
-        "over_1.5": 0.717,
-        "over_2.5": 0.424,
-        "over_3.5": 0.203
+        "over_1.5": 0.719,
+        "over_2.5": 0.426,
+        "over_3.5": 0.204
       },
       "btts": {
-        "yes": 0.513,
-        "no": 0.487
+        "yes": 0.514,
+        "no": 0.486
       },
       "scorelines": [
         {
@@ -2016,7 +2016,7 @@
         },
         {
           "score": "0-1",
-          "p": 0.12
+          "p": 0.119
         },
         {
           "score": "1-2",
@@ -2155,16 +2155,16 @@
       "xg": {
         "home": 1.49,
         "away": 0.9,
-        "total": 2.39
+        "total": 2.4
       },
       "over_under": {
-        "over_1.5": 0.723,
-        "over_2.5": 0.431,
-        "over_3.5": 0.208
+        "over_1.5": 0.724,
+        "over_2.5": 0.433,
+        "over_3.5": 0.209
       },
       "btts": {
-        "yes": 0.507,
-        "no": 0.493
+        "yes": 0.509,
+        "no": 0.491
       },
       "scorelines": [
         {
@@ -2177,7 +2177,7 @@
         },
         {
           "score": "2-1",
-          "p": 0.106
+          "p": 0.107
         },
         {
           "score": "2-0",
@@ -2198,7 +2198,7 @@
       "cards": {
         "expected_total": 4.7,
         "competitividad": 0.7,
-        "goles_esperados": 2.62,
+        "goles_esperados": 2.63,
         "over_under": {
           "over_3.5": 0.69,
           "over_4.5": 0.505,
@@ -2306,31 +2306,31 @@
       "real_score": "5-1",
       "p1x2": {
         "home": 0.428,
-        "draw": 0.312,
+        "draw": 0.311,
         "away": 0.26
       },
       "xg": {
-        "home": 1.33,
+        "home": 1.34,
         "away": 1.01,
-        "total": 2.34
+        "total": 2.35
       },
       "over_under": {
-        "over_1.5": 0.712,
-        "over_2.5": 0.418,
-        "over_3.5": 0.198
+        "over_1.5": 0.714,
+        "over_2.5": 0.419,
+        "over_3.5": 0.199
       },
       "btts": {
-        "yes": 0.518,
-        "no": 0.482
+        "yes": 0.519,
+        "no": 0.481
       },
       "scorelines": [
         {
           "score": "1-1",
-          "p": 0.164
+          "p": 0.163
         },
         {
           "score": "1-0",
-          "p": 0.114
+          "p": 0.113
         },
         {
           "score": "2-1",
@@ -2338,7 +2338,7 @@
         },
         {
           "score": "0-0",
-          "p": 0.094
+          "p": 0.093
         }
       ],
       "corners": {
@@ -2432,9 +2432,9 @@
           },
           {
             "resultado": "empate",
-            "prob_modelo": 0.312,
-            "prob_mercado": 0.299,
-            "momio": 3.16,
+            "prob_modelo": 0.311,
+            "prob_mercado": 0.298,
+            "momio": 3.17,
             "ventaja_modelo": 0.013,
             "valor_esperado": -0.014,
             "apuesta_de_valor": false
@@ -2462,23 +2462,23 @@
       "status": "jugado",
       "real_score": "1-1",
       "p1x2": {
-        "home": 0.643,
+        "home": 0.644,
         "draw": 0.239,
         "away": 0.117
       },
       "xg": {
         "home": 1.84,
-        "away": 0.72,
-        "total": 2.56
+        "away": 0.73,
+        "total": 2.57
       },
       "over_under": {
-        "over_1.5": 0.757,
-        "over_2.5": 0.477,
-        "over_3.5": 0.245
+        "over_1.5": 0.759,
+        "over_2.5": 0.479,
+        "over_3.5": 0.246
       },
       "btts": {
-        "yes": 0.472,
-        "no": 0.528
+        "yes": 0.474,
+        "no": 0.526
       },
       "scorelines": [
         {
@@ -2487,7 +2487,7 @@
         },
         {
           "score": "1-0",
-          "p": 0.131
+          "p": 0.13
         },
         {
           "score": "1-1",
@@ -2495,7 +2495,7 @@
         },
         {
           "score": "2-1",
-          "p": 0.11
+          "p": 0.111
         }
       ],
       "corners": {
@@ -2580,29 +2580,29 @@
         "mercados": [
           {
             "resultado": "local",
-            "prob_modelo": 0.643,
+            "prob_modelo": 0.644,
             "prob_mercado": 0.687,
             "momio": 1.36,
-            "ventaja_modelo": -0.044,
-            "valor_esperado": -0.126,
+            "ventaja_modelo": -0.043,
+            "valor_esperado": -0.124,
             "apuesta_de_valor": false
           },
           {
             "resultado": "empate",
             "prob_modelo": 0.239,
-            "prob_mercado": 0.21,
-            "momio": 4.46,
-            "ventaja_modelo": 0.029,
-            "valor_esperado": 0.066,
+            "prob_mercado": 0.209,
+            "momio": 4.47,
+            "ventaja_modelo": 0.03,
+            "valor_esperado": 0.068,
             "apuesta_de_valor": true
           },
           {
             "resultado": "visitante",
             "prob_modelo": 0.117,
             "prob_mercado": 0.102,
-            "momio": 9.15,
+            "momio": 9.16,
             "ventaja_modelo": 0.015,
-            "valor_esperado": 0.071,
+            "valor_esperado": 0.072,
             "apuesta_de_valor": true
           }
         ]
@@ -2619,23 +2619,23 @@
       "status": "jugado",
       "real_score": "2-2",
       "p1x2": {
-        "home": 0.817,
+        "home": 0.818,
         "draw": 0.14,
         "away": 0.043
       },
       "xg": {
-        "home": 2.47,
+        "home": 2.48,
         "away": 0.52,
         "total": 3.0
       },
       "over_under": {
-        "over_1.5": 0.832,
-        "over_2.5": 0.59,
-        "over_3.5": 0.347
+        "over_1.5": 0.833,
+        "over_2.5": 0.592,
+        "over_3.5": 0.348
       },
       "btts": {
-        "yes": 0.398,
-        "no": 0.602
+        "yes": 0.4,
+        "no": 0.6
       },
       "scorelines": [
         {
@@ -2648,7 +2648,7 @@
         },
         {
           "score": "1-0",
-          "p": 0.111
+          "p": 0.11
         },
         {
           "score": "2-1",
@@ -2737,27 +2737,27 @@
         "mercados": [
           {
             "resultado": "local",
-            "prob_modelo": 0.817,
+            "prob_modelo": 0.818,
             "prob_mercado": 0.813,
             "momio": 1.16,
-            "ventaja_modelo": 0.004,
-            "valor_esperado": -0.052,
+            "ventaja_modelo": 0.005,
+            "valor_esperado": -0.051,
             "apuesta_de_valor": false
           },
           {
             "resultado": "empate",
             "prob_modelo": 0.14,
             "prob_mercado": 0.144,
-            "momio": 6.54,
+            "momio": 6.55,
             "ventaja_modelo": -0.004,
-            "valor_esperado": -0.084,
+            "valor_esperado": -0.083,
             "apuesta_de_valor": false
           },
           {
             "resultado": "visitante",
             "prob_modelo": 0.043,
             "prob_mercado": 0.041,
-            "momio": 23.06,
+            "momio": 23.08,
             "ventaja_modelo": 0.002,
             "valor_esperado": -0.008,
             "apuesta_de_valor": false
@@ -2781,18 +2781,18 @@
         "away": 0.007
       },
       "xg": {
-        "home": 3.64,
+        "home": 3.65,
         "away": 0.34,
         "total": 3.98
       },
       "over_under": {
         "over_1.5": 0.932,
-        "over_2.5": 0.786,
-        "over_3.5": 0.577
+        "over_2.5": 0.788,
+        "over_3.5": 0.579
       },
       "btts": {
-        "yes": 0.288,
-        "no": 0.712
+        "yes": 0.289,
+        "no": 0.711
       },
       "scorelines": [
         {
@@ -2805,7 +2805,7 @@
         },
         {
           "score": "2-0",
-          "p": 0.123
+          "p": 0.122
         },
         {
           "score": "5-0",
@@ -2826,7 +2826,7 @@
       "cards": {
         "expected_total": 3.5,
         "competitividad": 0.06,
-        "goles_esperados": 4.19,
+        "goles_esperados": 4.2,
         "over_under": {
           "over_3.5": 0.463,
           "over_4.5": 0.275,
@@ -2940,25 +2940,25 @@
       "xg": {
         "home": 0.62,
         "away": 2.11,
-        "total": 2.73
+        "total": 2.74
       },
       "over_under": {
-        "over_1.5": 0.789,
-        "over_2.5": 0.524,
-        "over_3.5": 0.284
+        "over_1.5": 0.791,
+        "over_2.5": 0.526,
+        "over_3.5": 0.286
       },
       "btts": {
-        "yes": 0.44,
-        "no": 0.56
+        "yes": 0.442,
+        "no": 0.558
       },
       "scorelines": [
         {
           "score": "0-2",
-          "p": 0.155
+          "p": 0.154
         },
         {
           "score": "0-1",
-          "p": 0.126
+          "p": 0.125
         },
         {
           "score": "0-3",
@@ -3091,22 +3091,22 @@
       "real_score": "3-1",
       "p1x2": {
         "home": 0.653,
-        "draw": 0.235,
+        "draw": 0.234,
         "away": 0.112
       },
       "xg": {
-        "home": 1.86,
+        "home": 1.87,
         "away": 0.71,
-        "total": 2.57
+        "total": 2.58
       },
       "over_under": {
-        "over_1.5": 0.76,
-        "over_2.5": 0.482,
-        "over_3.5": 0.248
+        "over_1.5": 0.762,
+        "over_2.5": 0.483,
+        "over_3.5": 0.25
       },
       "btts": {
-        "yes": 0.469,
-        "no": 0.531
+        "yes": 0.471,
+        "no": 0.529
       },
       "scorelines": [
         {
@@ -3140,7 +3140,7 @@
       "cards": {
         "expected_total": 4.2,
         "competitividad": 0.46,
-        "goles_esperados": 2.8,
+        "goles_esperados": 2.81,
         "over_under": {
           "over_3.5": 0.605,
           "over_4.5": 0.41,
@@ -3217,21 +3217,21 @@
           },
           {
             "resultado": "empate",
-            "prob_modelo": 0.235,
-            "prob_mercado": 0.238,
-            "momio": 3.94,
+            "prob_modelo": 0.234,
+            "prob_mercado": 0.237,
+            "momio": 3.96,
             "ventaja_modelo": -0.003,
-            "valor_esperado": -0.074,
+            "valor_esperado": -0.073,
             "apuesta_de_valor": false
           },
           {
             "resultado": "visitante",
             "prob_modelo": 0.112,
             "prob_mercado": 0.101,
-            "momio": 9.3,
+            "momio": 9.29,
             "ventaja_modelo": 0.011,
-            "valor_esperado": 0.042,
-            "apuesta_de_valor": true
+            "valor_esperado": 0.04,
+            "apuesta_de_valor": false
           }
         ]
       }
@@ -3252,23 +3252,23 @@
         "away": 0.531
       },
       "xg": {
-        "home": 0.86,
-        "away": 1.55,
-        "total": 2.41
+        "home": 0.87,
+        "away": 1.56,
+        "total": 2.42
       },
       "over_under": {
-        "over_1.5": 0.728,
-        "over_2.5": 0.438,
-        "over_3.5": 0.213
+        "over_1.5": 0.729,
+        "over_2.5": 0.44,
+        "over_3.5": 0.215
       },
       "btts": {
-        "yes": 0.502,
-        "no": 0.498
+        "yes": 0.503,
+        "no": 0.497
       },
       "scorelines": [
         {
           "score": "1-1",
-          "p": 0.15
+          "p": 0.149
         },
         {
           "score": "0-1",
@@ -3410,22 +3410,22 @@
       },
       "xg": {
         "home": 2.43,
-        "away": 0.53,
-        "total": 2.96
+        "away": 0.54,
+        "total": 2.97
       },
       "over_under": {
-        "over_1.5": 0.826,
-        "over_2.5": 0.582,
-        "over_3.5": 0.338
+        "over_1.5": 0.828,
+        "over_2.5": 0.583,
+        "over_3.5": 0.34
       },
       "btts": {
-        "yes": 0.404,
-        "no": 0.596
+        "yes": 0.405,
+        "no": 0.595
       },
       "scorelines": [
         {
           "score": "2-0",
-          "p": 0.163
+          "p": 0.162
         },
         {
           "score": "3-0",
@@ -3454,7 +3454,7 @@
       "cards": {
         "expected_total": 3.8,
         "competitividad": 0.24,
-        "goles_esperados": 3.18,
+        "goles_esperados": 3.19,
         "over_under": {
           "over_3.5": 0.527,
           "over_4.5": 0.332,
@@ -3561,23 +3561,23 @@
       "status": "jugado",
       "real_score": "3-1",
       "p1x2": {
-        "home": 0.673,
-        "draw": 0.225,
+        "home": 0.674,
+        "draw": 0.224,
         "away": 0.102
       },
       "xg": {
-        "home": 1.92,
+        "home": 1.93,
         "away": 0.69,
-        "total": 2.61
+        "total": 2.62
       },
       "over_under": {
-        "over_1.5": 0.767,
-        "over_2.5": 0.491,
-        "over_3.5": 0.256
+        "over_1.5": 0.769,
+        "over_2.5": 0.493,
+        "over_3.5": 0.258
       },
       "btts": {
-        "yes": 0.462,
-        "no": 0.538
+        "yes": 0.464,
+        "no": 0.536
       },
       "scorelines": [
         {
@@ -3586,7 +3586,7 @@
         },
         {
           "score": "1-0",
-          "p": 0.13
+          "p": 0.129
         },
         {
           "score": "1-1",
@@ -3679,18 +3679,18 @@
         "mercados": [
           {
             "resultado": "local",
-            "prob_modelo": 0.673,
+            "prob_modelo": 0.674,
             "prob_mercado": 0.683,
             "momio": 1.39,
-            "ventaja_modelo": -0.01,
-            "valor_esperado": -0.065,
+            "ventaja_modelo": -0.009,
+            "valor_esperado": -0.063,
             "apuesta_de_valor": false
           },
           {
             "resultado": "empate",
-            "prob_modelo": 0.225,
-            "prob_mercado": 0.22,
-            "momio": 4.32,
+            "prob_modelo": 0.224,
+            "prob_mercado": 0.219,
+            "momio": 4.34,
             "ventaja_modelo": 0.005,
             "valor_esperado": -0.028,
             "apuesta_de_valor": false
@@ -3719,22 +3719,22 @@
       "real_score": "1-1",
       "p1x2": {
         "home": 0.78,
-        "draw": 0.164,
+        "draw": 0.163,
         "away": 0.056
       },
       "xg": {
-        "home": 2.3,
+        "home": 2.31,
         "away": 0.57,
         "total": 2.87
       },
       "over_under": {
-        "over_1.5": 0.812,
-        "over_2.5": 0.559,
-        "over_3.5": 0.316
+        "over_1.5": 0.813,
+        "over_2.5": 0.56,
+        "over_3.5": 0.318
       },
       "btts": {
-        "yes": 0.418,
-        "no": 0.582
+        "yes": 0.419,
+        "no": 0.581
       },
       "scorelines": [
         {
@@ -3747,7 +3747,7 @@
         },
         {
           "score": "1-0",
-          "p": 0.119
+          "p": 0.118
         },
         {
           "score": "2-1",
@@ -3768,7 +3768,7 @@
       "cards": {
         "expected_total": 3.9,
         "competitividad": 0.28,
-        "goles_esperados": 3.09,
+        "goles_esperados": 3.1,
         "over_under": {
           "over_3.5": 0.547,
           "over_4.5": 0.352,
@@ -3845,20 +3845,20 @@
           },
           {
             "resultado": "empate",
-            "prob_modelo": 0.164,
+            "prob_modelo": 0.163,
             "prob_mercado": 0.154,
-            "momio": 6.11,
-            "ventaja_modelo": 0.01,
-            "valor_esperado": 0.002,
+            "momio": 6.14,
+            "ventaja_modelo": 0.009,
+            "valor_esperado": 0.001,
             "apuesta_de_valor": false
           },
           {
             "resultado": "visitante",
             "prob_modelo": 0.056,
             "prob_mercado": 0.046,
-            "momio": 20.55,
+            "momio": 20.53,
             "ventaja_modelo": 0.01,
-            "valor_esperado": 0.151,
+            "valor_esperado": 0.15,
             "apuesta_de_valor": true
           }
         ]
@@ -3877,30 +3877,30 @@
       "p1x2": {
         "home": 0.081,
         "draw": 0.2,
-        "away": 0.718
+        "away": 0.719
       },
       "xg": {
         "home": 0.64,
         "away": 2.07,
-        "total": 2.7
+        "total": 2.71
       },
       "over_under": {
-        "over_1.5": 0.784,
-        "over_2.5": 0.516,
-        "over_3.5": 0.278
+        "over_1.5": 0.786,
+        "over_2.5": 0.518,
+        "over_3.5": 0.279
       },
       "btts": {
-        "yes": 0.446,
-        "no": 0.554
+        "yes": 0.447,
+        "no": 0.553
       },
       "scorelines": [
         {
           "score": "0-2",
-          "p": 0.153
+          "p": 0.152
         },
         {
           "score": "0-1",
-          "p": 0.127
+          "p": 0.126
         },
         {
           "score": "1-2",
@@ -3925,7 +3925,7 @@
       "cards": {
         "expected_total": 4.0,
         "competitividad": 0.36,
-        "goles_esperados": 2.93,
+        "goles_esperados": 2.94,
         "over_under": {
           "over_3.5": 0.567,
           "over_4.5": 0.371,
@@ -3995,27 +3995,27 @@
             "resultado": "local",
             "prob_modelo": 0.081,
             "prob_mercado": 0.086,
-            "momio": 10.98,
+            "momio": 11.0,
             "ventaja_modelo": -0.005,
-            "valor_esperado": -0.111,
+            "valor_esperado": -0.109,
             "apuesta_de_valor": false
           },
           {
             "resultado": "empate",
             "prob_modelo": 0.2,
             "prob_mercado": 0.178,
-            "momio": 5.31,
+            "momio": 5.32,
             "ventaja_modelo": 0.022,
-            "valor_esperado": 0.062,
+            "valor_esperado": 0.064,
             "apuesta_de_valor": true
           },
           {
             "resultado": "visitante",
-            "prob_modelo": 0.718,
+            "prob_modelo": 0.719,
             "prob_mercado": 0.734,
             "momio": 1.29,
-            "ventaja_modelo": -0.016,
-            "valor_esperado": -0.074,
+            "ventaja_modelo": -0.015,
+            "valor_esperado": -0.072,
             "apuesta_de_valor": false
           }
         ]
@@ -4032,23 +4032,23 @@
       "status": "jugado",
       "real_score": "4-2",
       "p1x2": {
-        "home": 0.503,
+        "home": 0.504,
         "draw": 0.294,
         "away": 0.203
       },
       "xg": {
         "home": 1.49,
         "away": 0.9,
-        "total": 2.39
+        "total": 2.4
       },
       "over_under": {
-        "over_1.5": 0.723,
-        "over_2.5": 0.431,
-        "over_3.5": 0.208
+        "over_1.5": 0.724,
+        "over_2.5": 0.433,
+        "over_3.5": 0.209
       },
       "btts": {
-        "yes": 0.507,
-        "no": 0.493
+        "yes": 0.509,
+        "no": 0.491
       },
       "scorelines": [
         {
@@ -4057,11 +4057,11 @@
         },
         {
           "score": "1-0",
-          "p": 0.124
+          "p": 0.123
         },
         {
           "score": "2-1",
-          "p": 0.106
+          "p": 0.107
         },
         {
           "score": "2-0",
@@ -4082,7 +4082,7 @@
       "cards": {
         "expected_total": 4.7,
         "competitividad": 0.7,
-        "goles_esperados": 2.62,
+        "goles_esperados": 2.63,
         "over_under": {
           "over_3.5": 0.69,
           "over_4.5": 0.505,
@@ -4150,29 +4150,29 @@
         "mercados": [
           {
             "resultado": "local",
-            "prob_modelo": 0.503,
-            "prob_mercado": 0.464,
-            "momio": 2.06,
-            "ventaja_modelo": 0.039,
-            "valor_esperado": 0.036,
+            "prob_modelo": 0.504,
+            "prob_mercado": 0.466,
+            "momio": 2.05,
+            "ventaja_modelo": 0.038,
+            "valor_esperado": 0.033,
             "apuesta_de_valor": false
           },
           {
             "resultado": "empate",
             "prob_modelo": 0.294,
-            "prob_mercado": 0.322,
-            "momio": 2.97,
-            "ventaja_modelo": -0.028,
-            "valor_esperado": -0.127,
+            "prob_mercado": 0.321,
+            "momio": 2.98,
+            "ventaja_modelo": -0.027,
+            "valor_esperado": -0.124,
             "apuesta_de_valor": false
           },
           {
             "resultado": "visitante",
             "prob_modelo": 0.203,
             "prob_mercado": 0.214,
-            "momio": 4.46,
+            "momio": 4.47,
             "ventaja_modelo": -0.011,
-            "valor_esperado": -0.095,
+            "valor_esperado": -0.093,
             "apuesta_de_valor": false
           }
         ]
@@ -4190,22 +4190,22 @@
       "real_score": "1-0",
       "p1x2": {
         "home": 0.123,
-        "draw": 0.245,
+        "draw": 0.244,
         "away": 0.632
       },
       "xg": {
         "home": 0.74,
-        "away": 1.8,
-        "total": 2.54
+        "away": 1.81,
+        "total": 2.55
       },
       "over_under": {
-        "over_1.5": 0.754,
-        "over_2.5": 0.472,
-        "over_3.5": 0.241
+        "over_1.5": 0.755,
+        "over_2.5": 0.474,
+        "over_3.5": 0.242
       },
       "btts": {
-        "yes": 0.476,
-        "no": 0.524
+        "yes": 0.477,
+        "no": 0.523
       },
       "scorelines": [
         {
@@ -4214,7 +4214,7 @@
         },
         {
           "score": "0-1",
-          "p": 0.131
+          "p": 0.13
         },
         {
           "score": "1-1",
@@ -4239,7 +4239,7 @@
       "cards": {
         "expected_total": 4.3,
         "competitividad": 0.49,
-        "goles_esperados": 2.77,
+        "goles_esperados": 2.78,
         "over_under": {
           "over_3.5": 0.623,
           "over_4.5": 0.43,
@@ -4309,18 +4309,18 @@
             "resultado": "local",
             "prob_modelo": 0.123,
             "prob_mercado": 0.114,
-            "momio": 8.3,
+            "momio": 8.29,
             "ventaja_modelo": 0.009,
-            "valor_esperado": 0.021,
+            "valor_esperado": 0.02,
             "apuesta_de_valor": false
           },
           {
             "resultado": "empate",
-            "prob_modelo": 0.245,
-            "prob_mercado": 0.238,
-            "momio": 3.98,
+            "prob_modelo": 0.244,
+            "prob_mercado": 0.237,
+            "momio": 3.99,
             "ventaja_modelo": 0.007,
-            "valor_esperado": -0.025,
+            "valor_esperado": -0.026,
             "apuesta_de_valor": false
           },
           {
@@ -4351,18 +4351,18 @@
         "away": 0.218
       },
       "xg": {
-        "home": 1.44,
+        "home": 1.45,
         "away": 0.93,
-        "total": 2.37
+        "total": 2.38
       },
       "over_under": {
-        "over_1.5": 0.719,
-        "over_2.5": 0.426,
-        "over_3.5": 0.205
+        "over_1.5": 0.721,
+        "over_2.5": 0.428,
+        "over_3.5": 0.206
       },
       "btts": {
-        "yes": 0.511,
-        "no": 0.489
+        "yes": 0.512,
+        "no": 0.488
       },
       "scorelines": [
         {
@@ -4504,22 +4504,22 @@
       "real_score": "1-0",
       "p1x2": {
         "home": 0.541,
-        "draw": 0.282,
+        "draw": 0.281,
         "away": 0.177
       },
       "xg": {
         "home": 1.58,
         "away": 0.85,
-        "total": 2.42
+        "total": 2.43
       },
       "over_under": {
-        "over_1.5": 0.73,
-        "over_2.5": 0.441,
-        "over_3.5": 0.215
+        "over_1.5": 0.732,
+        "over_2.5": 0.442,
+        "over_3.5": 0.217
       },
       "btts": {
-        "yes": 0.5,
-        "no": 0.5
+        "yes": 0.501,
+        "no": 0.499
       },
       "scorelines": [
         {
@@ -4528,7 +4528,7 @@
         },
         {
           "score": "1-0",
-          "p": 0.127
+          "p": 0.126
         },
         {
           "score": "2-0",
@@ -4630,20 +4630,20 @@
           },
           {
             "resultado": "empate",
-            "prob_modelo": 0.282,
-            "prob_mercado": 0.286,
-            "momio": 3.28,
+            "prob_modelo": 0.281,
+            "prob_mercado": 0.285,
+            "momio": 3.29,
             "ventaja_modelo": -0.004,
-            "valor_esperado": -0.075,
+            "valor_esperado": -0.076,
             "apuesta_de_valor": false
           },
           {
             "resultado": "visitante",
             "prob_modelo": 0.177,
             "prob_mercado": 0.138,
-            "momio": 6.82,
+            "momio": 6.81,
             "ventaja_modelo": 0.039,
-            "valor_esperado": 0.207,
+            "valor_esperado": 0.205,
             "apuesta_de_valor": true
           }
         ]
@@ -4666,17 +4666,17 @@
       },
       "xg": {
         "home": 1.99,
-        "away": 0.66,
-        "total": 2.65
+        "away": 0.67,
+        "total": 2.66
       },
       "over_under": {
-        "over_1.5": 0.775,
-        "over_2.5": 0.503,
-        "over_3.5": 0.266
+        "over_1.5": 0.776,
+        "over_2.5": 0.504,
+        "over_3.5": 0.267
       },
       "btts": {
-        "yes": 0.455,
-        "no": 0.545
+        "yes": 0.456,
+        "no": 0.544
       },
       "scorelines": [
         {
@@ -4685,7 +4685,7 @@
         },
         {
           "score": "1-0",
-          "p": 0.129
+          "p": 0.128
         },
         {
           "score": "1-1",
@@ -4710,7 +4710,7 @@
       "cards": {
         "expected_total": 4.1,
         "competitividad": 0.4,
-        "goles_esperados": 2.88,
+        "goles_esperados": 2.89,
         "over_under": {
           "over_3.5": 0.586,
           "over_4.5": 0.391,
@@ -4817,23 +4817,23 @@
       "status": "jugado",
       "real_score": "6-0",
       "p1x2": {
-        "home": 0.546,
-        "draw": 0.28,
+        "home": 0.547,
+        "draw": 0.279,
         "away": 0.174
       },
       "xg": {
         "home": 1.59,
         "away": 0.84,
-        "total": 2.43
+        "total": 2.44
       },
       "over_under": {
-        "over_1.5": 0.731,
-        "over_2.5": 0.442,
-        "over_3.5": 0.217
+        "over_1.5": 0.733,
+        "over_2.5": 0.444,
+        "over_3.5": 0.218
       },
       "btts": {
-        "yes": 0.498,
-        "no": 0.502
+        "yes": 0.5,
+        "no": 0.5
       },
       "scorelines": [
         {
@@ -4867,7 +4867,7 @@
       "cards": {
         "expected_total": 4.5,
         "competitividad": 0.63,
-        "goles_esperados": 2.66,
+        "goles_esperados": 2.67,
         "over_under": {
           "over_3.5": 0.658,
           "over_4.5": 0.468,
@@ -4935,18 +4935,18 @@
         "mercados": [
           {
             "resultado": "local",
-            "prob_modelo": 0.546,
+            "prob_modelo": 0.547,
             "prob_mercado": 0.516,
             "momio": 1.83,
-            "ventaja_modelo": 0.03,
-            "valor_esperado": -0.001,
+            "ventaja_modelo": 0.031,
+            "valor_esperado": 0.001,
             "apuesta_de_valor": false
           },
           {
             "resultado": "empate",
-            "prob_modelo": 0.28,
-            "prob_mercado": 0.315,
-            "momio": 3.0,
+            "prob_modelo": 0.279,
+            "prob_mercado": 0.314,
+            "momio": 3.01,
             "ventaja_modelo": -0.035,
             "valor_esperado": -0.16,
             "apuesta_de_valor": false
@@ -4975,39 +4975,39 @@
       "real_score": "0-1",
       "p1x2": {
         "home": 0.118,
-        "draw": 0.24,
-        "away": 0.642
+        "draw": 0.239,
+        "away": 0.643
       },
       "xg": {
-        "home": 0.72,
-        "away": 1.83,
+        "home": 0.73,
+        "away": 1.84,
         "total": 2.56
       },
       "over_under": {
-        "over_1.5": 0.757,
-        "over_2.5": 0.477,
-        "over_3.5": 0.244
+        "over_1.5": 0.758,
+        "over_2.5": 0.479,
+        "over_3.5": 0.246
       },
       "btts": {
-        "yes": 0.473,
-        "no": 0.527
+        "yes": 0.474,
+        "no": 0.526
       },
       "scorelines": [
         {
           "score": "0-2",
-          "p": 0.138
+          "p": 0.137
         },
         {
           "score": "0-1",
-          "p": 0.131
+          "p": 0.13
         },
         {
           "score": "1-1",
-          "p": 0.126
+          "p": 0.125
         },
         {
           "score": "1-2",
-          "p": 0.11
+          "p": 0.111
         }
       ],
       "corners": {
@@ -5022,13 +5022,13 @@
         }
       },
       "cards": {
-        "expected_total": 4.3,
-        "competitividad": 0.48,
+        "expected_total": 4.2,
+        "competitividad": 0.47,
         "goles_esperados": 2.79,
         "over_under": {
-          "over_3.5": 0.623,
-          "over_4.5": 0.43,
-          "over_5.5": 0.263
+          "over_3.5": 0.605,
+          "over_4.5": 0.41,
+          "over_5.5": 0.247
         }
       },
       "form": {
@@ -5101,20 +5101,20 @@
           },
           {
             "resultado": "empate",
-            "prob_modelo": 0.24,
-            "prob_mercado": 0.216,
-            "momio": 4.43,
+            "prob_modelo": 0.239,
+            "prob_mercado": 0.215,
+            "momio": 4.45,
             "ventaja_modelo": 0.024,
-            "valor_esperado": 0.063,
+            "valor_esperado": 0.064,
             "apuesta_de_valor": true
           },
           {
             "resultado": "visitante",
-            "prob_modelo": 0.642,
+            "prob_modelo": 0.643,
             "prob_mercado": 0.679,
             "momio": 1.41,
-            "ventaja_modelo": -0.037,
-            "valor_esperado": -0.095,
+            "ventaja_modelo": -0.036,
+            "valor_esperado": -0.093,
             "apuesta_de_valor": false
           }
         ]
@@ -5136,18 +5136,18 @@
         "away": 0.009
       },
       "xg": {
-        "home": 3.49,
+        "home": 3.5,
         "away": 0.35,
-        "total": 3.84
+        "total": 3.85
       },
       "over_under": {
-        "over_1.5": 0.922,
-        "over_2.5": 0.764,
-        "over_3.5": 0.547
+        "over_1.5": 0.923,
+        "over_2.5": 0.766,
+        "over_3.5": 0.549
       },
       "btts": {
-        "yes": 0.3,
-        "no": 0.7
+        "yes": 0.301,
+        "no": 0.699
       },
       "scorelines": [
         {
@@ -5168,20 +5168,20 @@
         }
       ],
       "corners": {
-        "expected_total": 10.6,
-        "expected_home": 9.4,
+        "expected_total": 10.7,
+        "expected_home": 9.5,
         "expected_away": 1.2,
-        "tiros_esperados_total": 19.6,
+        "tiros_esperados_total": 19.8,
         "over_under": {
-          "over_8.5": 0.731,
-          "over_9.5": 0.615,
-          "over_10.5": 0.492
+          "over_8.5": 0.74,
+          "over_9.5": 0.626,
+          "over_10.5": 0.504
         }
       },
       "cards": {
         "expected_total": 3.5,
         "competitividad": 0.07,
-        "goles_esperados": 4.06,
+        "goles_esperados": 4.07,
         "over_under": {
           "over_3.5": 0.463,
           "over_4.5": 0.275,
@@ -5289,7 +5289,7 @@
       "real_score": "2-0",
       "p1x2": {
         "home": 0.533,
-        "draw": 0.285,
+        "draw": 0.284,
         "away": 0.183
       },
       "xg": {
@@ -5298,13 +5298,13 @@
         "total": 2.42
       },
       "over_under": {
-        "over_1.5": 0.728,
-        "over_2.5": 0.438,
-        "over_3.5": 0.214
+        "over_1.5": 0.73,
+        "over_2.5": 0.44,
+        "over_3.5": 0.215
       },
       "btts": {
-        "yes": 0.501,
-        "no": 0.499
+        "yes": 0.503,
+        "no": 0.497
       },
       "scorelines": [
         {
@@ -5321,7 +5321,7 @@
         },
         {
           "score": "2-1",
-          "p": 0.108
+          "p": 0.109
         }
       ],
       "corners": {
@@ -5415,11 +5415,11 @@
           },
           {
             "resultado": "empate",
-            "prob_modelo": 0.285,
+            "prob_modelo": 0.284,
             "prob_mercado": 0.301,
             "momio": 3.15,
-            "ventaja_modelo": -0.016,
-            "valor_esperado": -0.102,
+            "ventaja_modelo": -0.017,
+            "valor_esperado": -0.105,
             "apuesta_de_valor": false
           },
           {
@@ -5445,23 +5445,23 @@
       "status": "jugado",
       "real_score": "0-1",
       "p1x2": {
-        "home": 0.465,
+        "home": 0.466,
         "draw": 0.304,
-        "away": 0.23
+        "away": 0.231
       },
       "xg": {
         "home": 1.41,
-        "away": 0.95,
-        "total": 2.36
+        "away": 0.96,
+        "total": 2.37
       },
       "over_under": {
-        "over_1.5": 0.717,
-        "over_2.5": 0.423,
-        "over_3.5": 0.202
+        "over_1.5": 0.718,
+        "over_2.5": 0.425,
+        "over_3.5": 0.204
       },
       "btts": {
-        "yes": 0.513,
-        "no": 0.487
+        "yes": 0.515,
+        "no": 0.485
       },
       "scorelines": [
         {
@@ -5563,29 +5563,29 @@
         "mercados": [
           {
             "resultado": "local",
-            "prob_modelo": 0.465,
+            "prob_modelo": 0.466,
             "prob_mercado": 0.433,
             "momio": 2.2,
-            "ventaja_modelo": 0.032,
-            "valor_esperado": 0.023,
+            "ventaja_modelo": 0.033,
+            "valor_esperado": 0.025,
             "apuesta_de_valor": false
           },
           {
             "resultado": "empate",
             "prob_modelo": 0.304,
-            "prob_mercado": 0.315,
-            "momio": 3.02,
-            "ventaja_modelo": -0.011,
-            "valor_esperado": -0.082,
+            "prob_mercado": 0.314,
+            "momio": 3.03,
+            "ventaja_modelo": -0.01,
+            "valor_esperado": -0.079,
             "apuesta_de_valor": false
           },
           {
             "resultado": "visitante",
-            "prob_modelo": 0.23,
-            "prob_mercado": 0.252,
-            "momio": 3.78,
+            "prob_modelo": 0.231,
+            "prob_mercado": 0.253,
+            "momio": 3.77,
             "ventaja_modelo": -0.022,
-            "valor_esperado": -0.131,
+            "valor_esperado": -0.129,
             "apuesta_de_valor": false
           }
         ]
@@ -5602,8 +5602,8 @@
       "status": "jugado",
       "real_score": "2-1",
       "p1x2": {
-        "home": 0.636,
-        "draw": 0.243,
+        "home": 0.637,
+        "draw": 0.242,
         "away": 0.121
       },
       "xg": {
@@ -5612,13 +5612,13 @@
         "total": 2.55
       },
       "over_under": {
-        "over_1.5": 0.755,
-        "over_2.5": 0.474,
-        "over_3.5": 0.242
+        "over_1.5": 0.757,
+        "over_2.5": 0.476,
+        "over_3.5": 0.244
       },
       "btts": {
-        "yes": 0.475,
-        "no": 0.525
+        "yes": 0.476,
+        "no": 0.524
       },
       "scorelines": [
         {
@@ -5627,7 +5627,7 @@
         },
         {
           "score": "1-0",
-          "p": 0.131
+          "p": 0.13
         },
         {
           "score": "1-1",
@@ -5639,14 +5639,14 @@
         }
       ],
       "corners": {
-        "expected_total": 8.8,
-        "expected_home": 6.1,
+        "expected_total": 8.9,
+        "expected_home": 6.2,
         "expected_away": 2.7,
-        "tiros_esperados_total": 16.3,
+        "tiros_esperados_total": 16.5,
         "over_under": {
-          "over_8.5": 0.518,
-          "over_9.5": 0.386,
-          "over_10.5": 0.271
+          "over_8.5": 0.531,
+          "over_9.5": 0.399,
+          "over_10.5": 0.282
         }
       },
       "cards": {
@@ -5720,18 +5720,18 @@
         "mercados": [
           {
             "resultado": "local",
-            "prob_modelo": 0.636,
-            "prob_mercado": 0.658,
-            "momio": 1.45,
-            "ventaja_modelo": -0.022,
-            "valor_esperado": -0.078,
+            "prob_modelo": 0.637,
+            "prob_mercado": 0.663,
+            "momio": 1.44,
+            "ventaja_modelo": -0.026,
+            "valor_esperado": -0.083,
             "apuesta_de_valor": false
           },
           {
             "resultado": "empate",
-            "prob_modelo": 0.243,
-            "prob_mercado": 0.221,
-            "momio": 4.32,
+            "prob_modelo": 0.242,
+            "prob_mercado": 0.22,
+            "momio": 4.34,
             "ventaja_modelo": 0.022,
             "valor_esperado": 0.05,
             "apuesta_de_valor": true
@@ -5764,18 +5764,18 @@
         "away": 0.059
       },
       "xg": {
-        "home": 2.27,
-        "away": 0.57,
+        "home": 2.28,
+        "away": 0.58,
         "total": 2.85
       },
       "over_under": {
-        "over_1.5": 0.809,
-        "over_2.5": 0.553,
-        "over_3.5": 0.311
+        "over_1.5": 0.81,
+        "over_2.5": 0.555,
+        "over_3.5": 0.313
       },
       "btts": {
-        "yes": 0.421,
-        "no": 0.579
+        "yes": 0.423,
+        "no": 0.577
       },
       "scorelines": [
         {
@@ -5788,7 +5788,7 @@
         },
         {
           "score": "1-0",
-          "p": 0.12
+          "p": 0.119
         },
         {
           "score": "2-1",
@@ -5809,7 +5809,7 @@
       "cards": {
         "expected_total": 3.9,
         "competitividad": 0.29,
-        "goles_esperados": 3.07,
+        "goles_esperados": 3.08,
         "over_under": {
           "over_3.5": 0.547,
           "over_4.5": 0.352,
@@ -5921,18 +5921,18 @@
         "away": 0.112
       },
       "xg": {
-        "home": 1.86,
+        "home": 1.87,
         "away": 0.71,
         "total": 2.58
       },
       "over_under": {
-        "over_1.5": 0.761,
-        "over_2.5": 0.482,
-        "over_3.5": 0.249
+        "over_1.5": 0.762,
+        "over_2.5": 0.484,
+        "over_3.5": 0.25
       },
       "btts": {
-        "yes": 0.469,
-        "no": 0.531
+        "yes": 0.47,
+        "no": 0.53
       },
       "scorelines": [
         {
@@ -5966,7 +5966,7 @@
       "cards": {
         "expected_total": 4.2,
         "competitividad": 0.46,
-        "goles_esperados": 2.8,
+        "goles_esperados": 2.81,
         "over_under": {
           "over_3.5": 0.605,
           "over_4.5": 0.41,
@@ -6074,27 +6074,27 @@
       "real_score": "0-4",
       "p1x2": {
         "home": 0.108,
-        "draw": 0.231,
-        "away": 0.661
+        "draw": 0.23,
+        "away": 0.662
       },
       "xg": {
         "home": 0.7,
         "away": 1.89,
-        "total": 2.59
+        "total": 2.6
       },
       "over_under": {
-        "over_1.5": 0.763,
-        "over_2.5": 0.486,
-        "over_3.5": 0.251
+        "over_1.5": 0.765,
+        "over_2.5": 0.487,
+        "over_3.5": 0.253
       },
       "btts": {
-        "yes": 0.467,
-        "no": 0.533
+        "yes": 0.468,
+        "no": 0.532
       },
       "scorelines": [
         {
           "score": "0-2",
-          "p": 0.142
+          "p": 0.141
         },
         {
           "score": "0-1",
@@ -6200,20 +6200,20 @@
           },
           {
             "resultado": "empate",
-            "prob_modelo": 0.231,
-            "prob_mercado": 0.205,
-            "momio": 4.6,
+            "prob_modelo": 0.23,
+            "prob_mercado": 0.204,
+            "momio": 4.63,
             "ventaja_modelo": 0.026,
-            "valor_esperado": 0.063,
+            "valor_esperado": 0.065,
             "apuesta_de_valor": true
           },
           {
             "resultado": "visitante",
-            "prob_modelo": 0.661,
+            "prob_modelo": 0.662,
             "prob_mercado": 0.703,
             "momio": 1.34,
-            "ventaja_modelo": -0.042,
-            "valor_esperado": -0.114,
+            "ventaja_modelo": -0.041,
+            "valor_esperado": -0.113,
             "apuesta_de_valor": false
           }
         ]
@@ -6230,23 +6230,23 @@
       "status": "jugado",
       "real_score": "0-0",
       "p1x2": {
-        "home": 0.556,
+        "home": 0.557,
         "draw": 0.276,
         "away": 0.168
       },
       "xg": {
-        "home": 1.61,
+        "home": 1.62,
         "away": 0.83,
-        "total": 2.44
+        "total": 2.45
       },
       "over_under": {
-        "over_1.5": 0.734,
-        "over_2.5": 0.445,
-        "over_3.5": 0.219
+        "over_1.5": 0.735,
+        "over_2.5": 0.447,
+        "over_3.5": 0.22
       },
       "btts": {
-        "yes": 0.496,
-        "no": 0.504
+        "yes": 0.498,
+        "no": 0.502
       },
       "scorelines": [
         {
@@ -6255,11 +6255,11 @@
         },
         {
           "score": "1-0",
-          "p": 0.128
+          "p": 0.127
         },
         {
           "score": "2-0",
-          "p": 0.118
+          "p": 0.117
         },
         {
           "score": "2-1",
@@ -6280,7 +6280,7 @@
       "cards": {
         "expected_total": 4.5,
         "competitividad": 0.61,
-        "goles_esperados": 2.67,
+        "goles_esperados": 2.68,
         "over_under": {
           "over_3.5": 0.658,
           "over_4.5": 0.468,
@@ -6348,11 +6348,11 @@
         "mercados": [
           {
             "resultado": "local",
-            "prob_modelo": 0.556,
+            "prob_modelo": 0.557,
             "prob_mercado": 0.562,
             "momio": 1.68,
-            "ventaja_modelo": -0.006,
-            "valor_esperado": -0.066,
+            "ventaja_modelo": -0.005,
+            "valor_esperado": -0.064,
             "apuesta_de_valor": false
           },
           {
@@ -6368,9 +6368,9 @@
             "resultado": "visitante",
             "prob_modelo": 0.168,
             "prob_mercado": 0.18,
-            "momio": 5.24,
+            "momio": 5.25,
             "ventaja_modelo": -0.012,
-            "valor_esperado": -0.12,
+            "valor_esperado": -0.118,
             "apuesta_de_valor": false
           }
         ]
@@ -6389,21 +6389,21 @@
       "p1x2": {
         "home": 0.074,
         "draw": 0.191,
-        "away": 0.734
+        "away": 0.735
       },
       "xg": {
         "home": 0.62,
-        "away": 2.12,
-        "total": 2.74
+        "away": 2.13,
+        "total": 2.75
       },
       "over_under": {
-        "over_1.5": 0.791,
-        "over_2.5": 0.526,
-        "over_3.5": 0.286
+        "over_1.5": 0.792,
+        "over_2.5": 0.528,
+        "over_3.5": 0.288
       },
       "btts": {
-        "yes": 0.439,
-        "no": 0.561
+        "yes": 0.44,
+        "no": 0.56
       },
       "scorelines": [
         {
@@ -6507,9 +6507,9 @@
             "resultado": "local",
             "prob_modelo": 0.074,
             "prob_mercado": 0.065,
-            "momio": 14.37,
+            "momio": 14.39,
             "ventaja_modelo": 0.009,
-            "valor_esperado": 0.063,
+            "valor_esperado": 0.065,
             "apuesta_de_valor": true
           },
           {
@@ -6523,11 +6523,11 @@
           },
           {
             "resultado": "visitante",
-            "prob_modelo": 0.734,
+            "prob_modelo": 0.735,
             "prob_mercado": 0.735,
             "momio": 1.28,
-            "ventaja_modelo": -0.001,
-            "valor_esperado": -0.06,
+            "ventaja_modelo": 0.0,
+            "valor_esperado": -0.059,
             "apuesta_de_valor": false
           }
         ]
@@ -6545,22 +6545,22 @@
       "real_score": "4-0",
       "p1x2": {
         "home": 0.9,
-        "draw": 0.082,
+        "draw": 0.081,
         "away": 0.018
       },
       "xg": {
-        "home": 3.01,
+        "home": 3.02,
         "away": 0.42,
-        "total": 3.43
+        "total": 3.44
       },
       "over_under": {
-        "over_1.5": 0.886,
-        "over_2.5": 0.688,
-        "over_3.5": 0.452
+        "over_1.5": 0.887,
+        "over_2.5": 0.69,
+        "over_3.5": 0.454
       },
       "btts": {
-        "yes": 0.342,
-        "no": 0.658
+        "yes": 0.343,
+        "no": 0.657
       },
       "scorelines": [
         {
@@ -6569,7 +6569,7 @@
         },
         {
           "score": "2-0",
-          "p": 0.153
+          "p": 0.152
         },
         {
           "score": "4-0",
@@ -6577,7 +6577,7 @@
         },
         {
           "score": "1-0",
-          "p": 0.083
+          "p": 0.082
         }
       ],
       "corners": {
@@ -6594,7 +6594,7 @@
       "cards": {
         "expected_total": 3.6,
         "competitividad": 0.12,
-        "goles_esperados": 3.65,
+        "goles_esperados": 3.66,
         "over_under": {
           "over_3.5": 0.485,
           "over_4.5": 0.294,
@@ -6671,10 +6671,10 @@
           },
           {
             "resultado": "empate",
-            "prob_modelo": 0.082,
+            "prob_modelo": 0.081,
             "prob_mercado": 0.068,
-            "momio": 13.66,
-            "ventaja_modelo": 0.014,
+            "momio": 13.83,
+            "ventaja_modelo": 0.013,
             "valor_esperado": 0.12,
             "apuesta_de_valor": true
           },
@@ -6682,7 +6682,7 @@
             "resultado": "visitante",
             "prob_modelo": 0.018,
             "prob_mercado": 0.015,
-            "momio": 63.25,
+            "momio": 63.2,
             "ventaja_modelo": 0.003,
             "valor_esperado": 0.138,
             "apuesta_de_valor": true
@@ -6701,32 +6701,32 @@
       "status": "jugado",
       "real_score": "2-2",
       "p1x2": {
-        "home": 0.769,
-        "draw": 0.171,
+        "home": 0.77,
+        "draw": 0.17,
         "away": 0.06
       },
       "xg": {
         "home": 2.26,
         "away": 0.58,
-        "total": 2.83
+        "total": 2.84
       },
       "over_under": {
-        "over_1.5": 0.807,
-        "over_2.5": 0.55,
-        "over_3.5": 0.308
+        "over_1.5": 0.808,
+        "over_2.5": 0.552,
+        "over_3.5": 0.31
       },
       "btts": {
-        "yes": 0.423,
-        "no": 0.577
+        "yes": 0.424,
+        "no": 0.576
       },
       "scorelines": [
         {
           "score": "2-0",
-          "p": 0.16
+          "p": 0.159
         },
         {
           "score": "1-0",
-          "p": 0.121
+          "p": 0.12
         },
         {
           "score": "3-0",
@@ -6738,14 +6738,14 @@
         }
       ],
       "corners": {
-        "expected_total": 9.2,
-        "expected_home": 7.1,
+        "expected_total": 9.3,
+        "expected_home": 7.2,
         "expected_away": 2.1,
-        "tiros_esperados_total": 17.0,
+        "tiros_esperados_total": 17.2,
         "over_under": {
-          "over_8.5": 0.57,
-          "over_9.5": 0.439,
-          "over_10.5": 0.318
+          "over_8.5": 0.583,
+          "over_9.5": 0.452,
+          "over_10.5": 0.33
         }
       },
       "cards": {
@@ -6819,20 +6819,20 @@
         "mercados": [
           {
             "resultado": "local",
-            "prob_modelo": 0.769,
+            "prob_modelo": 0.77,
             "prob_mercado": 0.779,
             "momio": 1.22,
-            "ventaja_modelo": -0.01,
-            "valor_esperado": -0.062,
+            "ventaja_modelo": -0.009,
+            "valor_esperado": -0.061,
             "apuesta_de_valor": false
           },
           {
             "resultado": "empate",
-            "prob_modelo": 0.171,
-            "prob_mercado": 0.176,
-            "momio": 5.39,
+            "prob_modelo": 0.17,
+            "prob_mercado": 0.175,
+            "momio": 5.42,
             "ventaja_modelo": -0.005,
-            "valor_esperado": -0.078,
+            "valor_esperado": -0.079,
             "apuesta_de_valor": false
           },
           {
@@ -6863,18 +6863,18 @@
         "away": 0.012
       },
       "xg": {
-        "home": 3.27,
+        "home": 3.28,
         "away": 0.38,
-        "total": 3.65
+        "total": 3.66
       },
       "over_under": {
-        "over_1.5": 0.907,
-        "over_2.5": 0.731,
-        "over_3.5": 0.504
+        "over_1.5": 0.908,
+        "over_2.5": 0.733,
+        "over_3.5": 0.506
       },
       "btts": {
-        "yes": 0.318,
-        "no": 0.682
+        "yes": 0.319,
+        "no": 0.681
       },
       "scorelines": [
         {
@@ -6883,7 +6883,7 @@
         },
         {
           "score": "2-0",
-          "p": 0.142
+          "p": 0.141
         },
         {
           "score": "4-0",
@@ -6891,7 +6891,7 @@
         },
         {
           "score": "5-0",
-          "p": 0.082
+          "p": 0.083
         }
       ],
       "corners": {
@@ -6908,7 +6908,7 @@
       "cards": {
         "expected_total": 3.6,
         "competitividad": 0.09,
-        "goles_esperados": 3.87,
+        "goles_esperados": 3.88,
         "over_under": {
           "over_3.5": 0.485,
           "over_4.5": 0.294,
@@ -7022,25 +7022,25 @@
       "xg": {
         "home": 1.01,
         "away": 1.33,
-        "total": 2.34
+        "total": 2.35
       },
       "over_under": {
-        "over_1.5": 0.712,
-        "over_2.5": 0.417,
-        "over_3.5": 0.198
+        "over_1.5": 0.714,
+        "over_2.5": 0.419,
+        "over_3.5": 0.199
       },
       "btts": {
-        "yes": 0.518,
-        "no": 0.482
+        "yes": 0.519,
+        "no": 0.481
       },
       "scorelines": [
         {
           "score": "1-1",
-          "p": 0.164
+          "p": 0.163
         },
         {
           "score": "0-1",
-          "p": 0.114
+          "p": 0.113
         },
         {
           "score": "1-2",
@@ -7048,7 +7048,7 @@
         },
         {
           "score": "0-0",
-          "p": 0.094
+          "p": 0.093
         }
       ],
       "corners": {
@@ -7065,7 +7065,7 @@
       "cards": {
         "expected_total": 4.9,
         "competitividad": 0.83,
-        "goles_esperados": 2.57,
+        "goles_esperados": 2.58,
         "over_under": {
           "over_3.5": 0.721,
           "over_4.5": 0.542,
@@ -7173,22 +7173,22 @@
       "real_score": "2-0",
       "p1x2": {
         "home": 0.739,
-        "draw": 0.189,
+        "draw": 0.188,
         "away": 0.072
       },
       "xg": {
         "home": 2.14,
         "away": 0.61,
-        "total": 2.75
+        "total": 2.76
       },
       "over_under": {
-        "over_1.5": 0.793,
-        "over_2.5": 0.529,
-        "over_3.5": 0.289
+        "over_1.5": 0.794,
+        "over_2.5": 0.531,
+        "over_3.5": 0.291
       },
       "btts": {
-        "yes": 0.437,
-        "no": 0.563
+        "yes": 0.438,
+        "no": 0.562
       },
       "scorelines": [
         {
@@ -7197,7 +7197,7 @@
         },
         {
           "score": "1-0",
-          "p": 0.125
+          "p": 0.124
         },
         {
           "score": "3-0",
@@ -7299,9 +7299,9 @@
           },
           {
             "resultado": "empate",
-            "prob_modelo": 0.189,
-            "prob_mercado": 0.168,
-            "momio": 5.57,
+            "prob_modelo": 0.188,
+            "prob_mercado": 0.167,
+            "momio": 5.6,
             "ventaja_modelo": 0.021,
             "valor_esperado": 0.053,
             "apuesta_de_valor": true
@@ -7310,7 +7310,7 @@
             "resultado": "visitante",
             "prob_modelo": 0.072,
             "prob_mercado": 0.073,
-            "momio": 12.84,
+            "momio": 12.83,
             "ventaja_modelo": -0.001,
             "valor_esperado": -0.076,
             "apuesta_de_valor": false
@@ -7330,22 +7330,22 @@
       "real_score": "1-2",
       "p1x2": {
         "home": 0.141,
-        "draw": 0.259,
+        "draw": 0.258,
         "away": 0.6
       },
       "xg": {
-        "home": 0.77,
+        "home": 0.78,
         "away": 1.72,
-        "total": 2.49
+        "total": 2.5
       },
       "over_under": {
-        "over_1.5": 0.745,
-        "over_2.5": 0.46,
-        "over_3.5": 0.23
+        "over_1.5": 0.746,
+        "over_2.5": 0.462,
+        "over_3.5": 0.232
       },
       "btts": {
-        "yes": 0.485,
-        "no": 0.515
+        "yes": 0.487,
+        "no": 0.513
       },
       "scorelines": [
         {
@@ -7354,7 +7354,7 @@
         },
         {
           "score": "0-1",
-          "p": 0.13
+          "p": 0.129
         },
         {
           "score": "0-2",
@@ -7379,7 +7379,7 @@
       "cards": {
         "expected_total": 4.4,
         "competitividad": 0.54,
-        "goles_esperados": 2.72,
+        "goles_esperados": 2.73,
         "over_under": {
           "over_3.5": 0.641,
           "over_4.5": 0.449,
@@ -7449,27 +7449,27 @@
             "resultado": "local",
             "prob_modelo": 0.141,
             "prob_mercado": 0.144,
-            "momio": 6.64,
+            "momio": 6.63,
             "ventaja_modelo": -0.003,
-            "valor_esperado": -0.064,
+            "valor_esperado": -0.065,
             "apuesta_de_valor": false
           },
           {
             "resultado": "empate",
-            "prob_modelo": 0.259,
+            "prob_modelo": 0.258,
             "prob_mercado": 0.218,
-            "momio": 4.37,
-            "ventaja_modelo": 0.041,
-            "valor_esperado": 0.132,
+            "momio": 4.38,
+            "ventaja_modelo": 0.04,
+            "valor_esperado": 0.13,
             "apuesta_de_valor": true
           },
           {
             "resultado": "visitante",
             "prob_modelo": 0.6,
-            "prob_mercado": 0.636,
-            "momio": 1.5,
-            "ventaja_modelo": -0.036,
-            "valor_esperado": -0.1,
+            "prob_mercado": 0.64,
+            "momio": 1.49,
+            "ventaja_modelo": -0.04,
+            "valor_esperado": -0.106,
             "apuesta_de_valor": false
           }
         ]
@@ -7486,23 +7486,23 @@
       "status": "jugado",
       "real_score": "5-0",
       "p1x2": {
-        "home": 0.799,
-        "draw": 0.152,
+        "home": 0.8,
+        "draw": 0.151,
         "away": 0.049
       },
       "xg": {
         "home": 2.39,
-        "away": 0.54,
-        "total": 2.93
+        "away": 0.55,
+        "total": 2.94
       },
       "over_under": {
-        "over_1.5": 0.822,
-        "over_2.5": 0.574,
-        "over_3.5": 0.331
+        "over_1.5": 0.823,
+        "over_2.5": 0.576,
+        "over_3.5": 0.333
       },
       "btts": {
-        "yes": 0.408,
-        "no": 0.592
+        "yes": 0.409,
+        "no": 0.591
       },
       "scorelines": [
         {
@@ -7515,7 +7515,7 @@
         },
         {
           "score": "1-0",
-          "p": 0.115
+          "p": 0.114
         },
         {
           "score": "2-1",
@@ -7536,7 +7536,7 @@
       "cards": {
         "expected_total": 3.9,
         "competitividad": 0.25,
-        "goles_esperados": 3.15,
+        "goles_esperados": 3.16,
         "over_under": {
           "over_3.5": 0.547,
           "over_4.5": 0.352,
@@ -7604,20 +7604,20 @@
         "mercados": [
           {
             "resultado": "local",
-            "prob_modelo": 0.799,
-            "prob_mercado": 0.813,
-            "momio": 1.17,
-            "ventaja_modelo": -0.014,
-            "valor_esperado": -0.065,
+            "prob_modelo": 0.8,
+            "prob_mercado": 0.82,
+            "momio": 1.16,
+            "ventaja_modelo": -0.02,
+            "valor_esperado": -0.072,
             "apuesta_de_valor": false
           },
           {
             "resultado": "empate",
-            "prob_modelo": 0.152,
-            "prob_mercado": 0.148,
-            "momio": 6.45,
-            "ventaja_modelo": 0.004,
-            "valor_esperado": -0.02,
+            "prob_modelo": 0.151,
+            "prob_mercado": 0.146,
+            "momio": 6.5,
+            "ventaja_modelo": 0.005,
+            "valor_esperado": -0.019,
             "apuesta_de_valor": false
           },
           {
@@ -7644,22 +7644,22 @@
       "real_score": "1-0",
       "p1x2": {
         "home": 0.7,
-        "draw": 0.211,
+        "draw": 0.21,
         "away": 0.09
       },
       "xg": {
-        "home": 2.0,
+        "home": 2.01,
         "away": 0.66,
-        "total": 2.66
+        "total": 2.67
       },
       "over_under": {
-        "over_1.5": 0.777,
-        "over_2.5": 0.505,
-        "over_3.5": 0.268
+        "over_1.5": 0.778,
+        "over_2.5": 0.507,
+        "over_3.5": 0.27
       },
       "btts": {
-        "yes": 0.453,
-        "no": 0.547
+        "yes": 0.454,
+        "no": 0.546
       },
       "scorelines": [
         {
@@ -7693,7 +7693,7 @@
       "cards": {
         "expected_total": 4.1,
         "competitividad": 0.39,
-        "goles_esperados": 2.89,
+        "goles_esperados": 2.9,
         "over_under": {
           "over_3.5": 0.586,
           "over_4.5": 0.391,
@@ -7770,20 +7770,20 @@
           },
           {
             "resultado": "empate",
-            "prob_modelo": 0.211,
+            "prob_modelo": 0.21,
             "prob_mercado": 0.172,
-            "momio": 5.47,
-            "ventaja_modelo": 0.039,
-            "valor_esperado": 0.154,
+            "momio": 5.5,
+            "ventaja_modelo": 0.038,
+            "valor_esperado": 0.155,
             "apuesta_de_valor": true
           },
           {
             "resultado": "visitante",
             "prob_modelo": 0.09,
             "prob_mercado": 0.081,
-            "momio": 11.61,
+            "momio": 11.6,
             "ventaja_modelo": 0.009,
-            "valor_esperado": 0.045,
+            "valor_esperado": 0.044,
             "apuesta_de_valor": true
           }
         ]
@@ -7807,21 +7807,21 @@
       "xg": {
         "home": 3.38,
         "away": 0.37,
-        "total": 3.74
+        "total": 3.75
       },
       "over_under": {
-        "over_1.5": 0.914,
-        "over_2.5": 0.747,
-        "over_3.5": 0.525
+        "over_1.5": 0.915,
+        "over_2.5": 0.749,
+        "over_3.5": 0.526
       },
       "btts": {
-        "yes": 0.309,
-        "no": 0.691
+        "yes": 0.31,
+        "no": 0.69
       },
       "scorelines": [
         {
           "score": "3-0",
-          "p": 0.166
+          "p": 0.165
         },
         {
           "score": "4-0",
@@ -7829,7 +7829,7 @@
         },
         {
           "score": "2-0",
-          "p": 0.137
+          "p": 0.136
         },
         {
           "score": "5-0",
@@ -7850,7 +7850,7 @@
       "cards": {
         "expected_total": 3.5,
         "competitividad": 0.08,
-        "goles_esperados": 3.96,
+        "goles_esperados": 3.97,
         "over_under": {
           "over_3.5": 0.463,
           "over_4.5": 0.275,
@@ -7963,17 +7963,17 @@
       },
       "xg": {
         "home": 0.72,
-        "away": 1.84,
-        "total": 2.56
+        "away": 1.85,
+        "total": 2.57
       },
       "over_under": {
-        "over_1.5": 0.758,
-        "over_2.5": 0.478,
-        "over_3.5": 0.246
+        "over_1.5": 0.759,
+        "over_2.5": 0.48,
+        "over_3.5": 0.247
       },
       "btts": {
-        "yes": 0.472,
-        "no": 0.528
+        "yes": 0.473,
+        "no": 0.527
       },
       "scorelines": [
         {
@@ -7982,7 +7982,7 @@
         },
         {
           "score": "0-1",
-          "p": 0.131
+          "p": 0.13
         },
         {
           "score": "1-1",
@@ -7990,7 +7990,7 @@
         },
         {
           "score": "1-2",
-          "p": 0.11
+          "p": 0.111
         }
       ],
       "corners": {
@@ -8007,7 +8007,7 @@
       "cards": {
         "expected_total": 4.2,
         "competitividad": 0.47,
-        "goles_esperados": 2.79,
+        "goles_esperados": 2.8,
         "over_under": {
           "over_3.5": 0.605,
           "over_4.5": 0.41,
@@ -8115,22 +8115,22 @@
       "real_score": "0-3",
       "p1x2": {
         "home": 0.109,
-        "draw": 0.232,
-        "away": 0.659
+        "draw": 0.231,
+        "away": 0.66
       },
       "xg": {
-        "home": 0.7,
-        "away": 1.88,
+        "home": 0.71,
+        "away": 1.89,
         "total": 2.59
       },
       "over_under": {
-        "over_1.5": 0.763,
-        "over_2.5": 0.485,
-        "over_3.5": 0.251
+        "over_1.5": 0.764,
+        "over_2.5": 0.486,
+        "over_3.5": 0.252
       },
       "btts": {
-        "yes": 0.467,
-        "no": 0.533
+        "yes": 0.469,
+        "no": 0.531
       },
       "scorelines": [
         {
@@ -8164,7 +8164,7 @@
       "cards": {
         "expected_total": 4.2,
         "competitividad": 0.45,
-        "goles_esperados": 2.81,
+        "goles_esperados": 2.82,
         "over_under": {
           "over_3.5": 0.605,
           "over_4.5": 0.41,
@@ -8241,20 +8241,20 @@
           },
           {
             "resultado": "empate",
-            "prob_modelo": 0.232,
-            "prob_mercado": 0.24,
-            "momio": 3.98,
+            "prob_modelo": 0.231,
+            "prob_mercado": 0.239,
+            "momio": 4.0,
             "ventaja_modelo": -0.008,
-            "valor_esperado": -0.077,
+            "valor_esperado": -0.076,
             "apuesta_de_valor": false
           },
           {
             "resultado": "visitante",
-            "prob_modelo": 0.659,
+            "prob_modelo": 0.66,
             "prob_mercado": 0.649,
             "momio": 1.47,
-            "ventaja_modelo": 0.01,
-            "valor_esperado": -0.031,
+            "ventaja_modelo": 0.011,
+            "valor_esperado": -0.03,
             "apuesta_de_valor": false
           }
         ]
@@ -8272,27 +8272,27 @@
       "real_score": "1-0",
       "p1x2": {
         "home": 0.138,
-        "draw": 0.257,
+        "draw": 0.256,
         "away": 0.605
       },
       "xg": {
         "home": 0.77,
-        "away": 1.73,
-        "total": 2.5
+        "away": 1.74,
+        "total": 2.51
       },
       "over_under": {
-        "over_1.5": 0.746,
-        "over_2.5": 0.462,
-        "over_3.5": 0.232
+        "over_1.5": 0.747,
+        "over_2.5": 0.463,
+        "over_3.5": 0.233
       },
       "btts": {
-        "yes": 0.484,
-        "no": 0.516
+        "yes": 0.485,
+        "no": 0.515
       },
       "scorelines": [
         {
           "score": "1-1",
-          "p": 0.135
+          "p": 0.134
         },
         {
           "score": "0-1",
@@ -8321,7 +8321,7 @@
       "cards": {
         "expected_total": 4.4,
         "competitividad": 0.53,
-        "goles_esperados": 2.73,
+        "goles_esperados": 2.74,
         "over_under": {
           "over_3.5": 0.641,
           "over_4.5": 0.449,
@@ -8391,27 +8391,27 @@
             "resultado": "local",
             "prob_modelo": 0.138,
             "prob_mercado": 0.117,
-            "momio": 8.08,
+            "momio": 8.07,
             "ventaja_modelo": 0.021,
-            "valor_esperado": 0.115,
+            "valor_esperado": 0.114,
             "apuesta_de_valor": true
           },
           {
             "resultado": "empate",
-            "prob_modelo": 0.257,
-            "prob_mercado": 0.252,
-            "momio": 3.75,
+            "prob_modelo": 0.256,
+            "prob_mercado": 0.251,
+            "momio": 3.76,
             "ventaja_modelo": 0.005,
-            "valor_esperado": -0.036,
+            "valor_esperado": -0.037,
             "apuesta_de_valor": false
           },
           {
             "resultado": "visitante",
             "prob_modelo": 0.605,
-            "prob_mercado": 0.63,
-            "momio": 1.5,
-            "ventaja_modelo": -0.025,
-            "valor_esperado": -0.093,
+            "prob_mercado": 0.634,
+            "momio": 1.49,
+            "ventaja_modelo": -0.029,
+            "valor_esperado": -0.099,
             "apuesta_de_valor": false
           }
         ]
@@ -8428,23 +8428,23 @@
       "status": "jugado",
       "real_score": "2-1",
       "p1x2": {
-        "home": 0.488,
+        "home": 0.489,
         "draw": 0.298,
-        "away": 0.213
+        "away": 0.214
       },
       "xg": {
         "home": 1.46,
         "away": 0.92,
-        "total": 2.38
+        "total": 2.39
       },
       "over_under": {
-        "over_1.5": 0.72,
-        "over_2.5": 0.428,
-        "over_3.5": 0.206
+        "over_1.5": 0.722,
+        "over_2.5": 0.43,
+        "over_3.5": 0.207
       },
       "btts": {
-        "yes": 0.51,
-        "no": 0.49
+        "yes": 0.511,
+        "no": 0.489
       },
       "scorelines": [
         {
@@ -8453,11 +8453,11 @@
         },
         {
           "score": "1-0",
-          "p": 0.122
+          "p": 0.121
         },
         {
           "score": "2-1",
-          "p": 0.105
+          "p": 0.106
         },
         {
           "score": "2-0",
@@ -8478,7 +8478,7 @@
       "cards": {
         "expected_total": 4.7,
         "competitividad": 0.72,
-        "goles_esperados": 2.61,
+        "goles_esperados": 2.62,
         "over_under": {
           "over_3.5": 0.69,
           "over_4.5": 0.505,
@@ -8546,11 +8546,11 @@
         "mercados": [
           {
             "resultado": "local",
-            "prob_modelo": 0.488,
+            "prob_modelo": 0.489,
             "prob_mercado": 0.535,
             "momio": 1.76,
-            "ventaja_modelo": -0.047,
-            "valor_esperado": -0.141,
+            "ventaja_modelo": -0.046,
+            "valor_esperado": -0.139,
             "apuesta_de_valor": false
           },
           {
@@ -8564,11 +8564,11 @@
           },
           {
             "resultado": "visitante",
-            "prob_modelo": 0.213,
-            "prob_mercado": 0.183,
-            "momio": 5.13,
+            "prob_modelo": 0.214,
+            "prob_mercado": 0.184,
+            "momio": 5.12,
             "ventaja_modelo": 0.03,
-            "valor_esperado": 0.093,
+            "valor_esperado": 0.096,
             "apuesta_de_valor": true
           }
         ]
@@ -8595,13 +8595,13 @@
         "total": 2.33
       },
       "over_under": {
-        "over_1.5": 0.709,
-        "over_2.5": 0.414,
-        "over_3.5": 0.195
+        "over_1.5": 0.711,
+        "over_2.5": 0.416,
+        "over_3.5": 0.197
       },
       "btts": {
-        "yes": 0.521,
-        "no": 0.479
+        "yes": 0.522,
+        "no": 0.478
       },
       "scorelines": [
         {
@@ -8610,32 +8610,32 @@
         },
         {
           "score": "0-1",
-          "p": 0.108
-        },
-        {
-          "score": "0-0",
-          "p": 0.095
+          "p": 0.107
         },
         {
           "score": "1-2",
           "p": 0.095
+        },
+        {
+          "score": "0-0",
+          "p": 0.095
         }
       ],
       "corners": {
-        "expected_total": 8.5,
-        "expected_home": 3.9,
+        "expected_total": 8.6,
+        "expected_home": 4.0,
         "expected_away": 4.6,
-        "tiros_esperados_total": 15.7,
+        "tiros_esperados_total": 15.9,
         "over_under": {
-          "over_8.5": 0.477,
-          "over_9.5": 0.347,
-          "over_10.5": 0.237
+          "over_8.5": 0.491,
+          "over_9.5": 0.36,
+          "over_10.5": 0.248
         }
       },
       "cards": {
         "expected_total": 5.0,
         "competitividad": 0.9,
-        "goles_esperados": 2.56,
+        "goles_esperados": 2.57,
         "over_under": {
           "over_3.5": 0.735,
           "over_4.5": 0.56,
@@ -8743,22 +8743,22 @@
       "real_score": "0-3",
       "p1x2": {
         "home": 0.077,
-        "draw": 0.195,
+        "draw": 0.194,
         "away": 0.728
       },
       "xg": {
         "home": 0.63,
-        "away": 2.1,
+        "away": 2.11,
         "total": 2.73
       },
       "over_under": {
-        "over_1.5": 0.788,
-        "over_2.5": 0.522,
-        "over_3.5": 0.283
+        "over_1.5": 0.79,
+        "over_2.5": 0.524,
+        "over_3.5": 0.284
       },
       "btts": {
-        "yes": 0.442,
-        "no": 0.558
+        "yes": 0.443,
+        "no": 0.557
       },
       "scorelines": [
         {
@@ -8767,11 +8767,11 @@
         },
         {
           "score": "0-1",
-          "p": 0.126
+          "p": 0.125
         },
         {
           "score": "0-3",
-          "p": 0.105
+          "p": 0.106
         },
         {
           "score": "1-2",
@@ -8792,7 +8792,7 @@
       "cards": {
         "expected_total": 4.0,
         "competitividad": 0.35,
-        "goles_esperados": 2.95,
+        "goles_esperados": 2.96,
         "over_under": {
           "over_3.5": 0.567,
           "over_4.5": 0.371,
@@ -8862,18 +8862,18 @@
             "resultado": "local",
             "prob_modelo": 0.077,
             "prob_mercado": 0.072,
-            "momio": 13.08,
+            "momio": 13.07,
             "ventaja_modelo": 0.005,
-            "valor_esperado": 0.007,
+            "valor_esperado": 0.006,
             "apuesta_de_valor": false
           },
           {
             "resultado": "empate",
-            "prob_modelo": 0.195,
-            "prob_mercado": 0.181,
-            "momio": 5.19,
+            "prob_modelo": 0.194,
+            "prob_mercado": 0.18,
+            "momio": 5.21,
             "ventaja_modelo": 0.014,
-            "valor_esperado": 0.012,
+            "valor_esperado": 0.011,
             "apuesta_de_valor": false
           },
           {
@@ -8899,32 +8899,32 @@
       "status": "jugado",
       "real_score": "4-2",
       "p1x2": {
-        "home": 0.931,
-        "draw": 0.058,
+        "home": 0.932,
+        "draw": 0.057,
         "away": 0.011
       },
       "xg": {
-        "home": 3.34,
+        "home": 3.35,
         "away": 0.37,
-        "total": 3.71
+        "total": 3.72
       },
       "over_under": {
-        "over_1.5": 0.912,
-        "over_2.5": 0.742,
-        "over_3.5": 0.517
+        "over_1.5": 0.913,
+        "over_2.5": 0.743,
+        "over_3.5": 0.519
       },
       "btts": {
-        "yes": 0.312,
-        "no": 0.688
+        "yes": 0.313,
+        "no": 0.687
       },
       "scorelines": [
         {
           "score": "3-0",
-          "p": 0.166
+          "p": 0.165
         },
         {
           "score": "2-0",
-          "p": 0.139
+          "p": 0.138
         },
         {
           "score": "4-0",
@@ -9017,27 +9017,27 @@
         "mercados": [
           {
             "resultado": "local",
-            "prob_modelo": 0.931,
+            "prob_modelo": 0.932,
             "prob_mercado": 0.928,
             "momio": 1.03,
-            "ventaja_modelo": 0.003,
-            "valor_esperado": -0.041,
+            "ventaja_modelo": 0.004,
+            "valor_esperado": -0.04,
             "apuesta_de_valor": false
           },
           {
             "resultado": "empate",
-            "prob_modelo": 0.058,
-            "prob_mercado": 0.053,
-            "momio": 18.05,
+            "prob_modelo": 0.057,
+            "prob_mercado": 0.052,
+            "momio": 18.38,
             "ventaja_modelo": 0.005,
-            "valor_esperado": 0.047,
+            "valor_esperado": 0.048,
             "apuesta_de_valor": true
           },
           {
             "resultado": "visitante",
             "prob_modelo": 0.011,
             "prob_mercado": 0.016,
-            "momio": 59.57,
+            "momio": 59.58,
             "ventaja_modelo": -0.005,
             "valor_esperado": -0.345,
             "apuesta_de_valor": false
@@ -9057,7 +9057,7 @@
       "real_score": "3-2",
       "p1x2": {
         "home": 0.177,
-        "draw": 0.282,
+        "draw": 0.281,
         "away": 0.542
       },
       "xg": {
@@ -9066,22 +9066,22 @@
         "total": 2.43
       },
       "over_under": {
-        "over_1.5": 0.73,
-        "over_2.5": 0.441,
-        "over_3.5": 0.216
+        "over_1.5": 0.732,
+        "over_2.5": 0.443,
+        "over_3.5": 0.217
       },
       "btts": {
-        "yes": 0.499,
-        "no": 0.501
+        "yes": 0.501,
+        "no": 0.499
       },
       "scorelines": [
         {
           "score": "1-1",
-          "p": 0.148
+          "p": 0.147
         },
         {
           "score": "0-1",
-          "p": 0.127
+          "p": 0.126
         },
         {
           "score": "0-2",
@@ -9176,18 +9176,18 @@
             "resultado": "local",
             "prob_modelo": 0.177,
             "prob_mercado": 0.185,
-            "momio": 5.13,
+            "momio": 5.12,
             "ventaja_modelo": -0.008,
-            "valor_esperado": -0.092,
+            "valor_esperado": -0.094,
             "apuesta_de_valor": false
           },
           {
             "resultado": "empate",
-            "prob_modelo": 0.282,
-            "prob_mercado": 0.27,
-            "momio": 3.51,
+            "prob_modelo": 0.281,
+            "prob_mercado": 0.269,
+            "momio": 3.52,
             "ventaja_modelo": 0.012,
-            "valor_esperado": -0.01,
+            "valor_esperado": -0.011,
             "apuesta_de_valor": false
           },
           {
@@ -9215,21 +9215,21 @@
       "p1x2": {
         "home": 0.284,
         "draw": 0.316,
-        "away": 0.4
+        "away": 0.401
       },
       "xg": {
-        "home": 1.05,
+        "home": 1.06,
         "away": 1.28,
-        "total": 2.33
+        "total": 2.34
       },
       "over_under": {
-        "over_1.5": 0.71,
-        "over_2.5": 0.415,
-        "over_3.5": 0.196
+        "over_1.5": 0.711,
+        "over_2.5": 0.416,
+        "over_3.5": 0.197
       },
       "btts": {
-        "yes": 0.52,
-        "no": 0.48
+        "yes": 0.522,
+        "no": 0.478
       },
       "scorelines": [
         {
@@ -9263,7 +9263,7 @@
       "cards": {
         "expected_total": 5.0,
         "competitividad": 0.88,
-        "goles_esperados": 2.56,
+        "goles_esperados": 2.57,
         "over_under": {
           "over_3.5": 0.735,
           "over_4.5": 0.56,
@@ -9349,11 +9349,11 @@
           },
           {
             "resultado": "visitante",
-            "prob_modelo": 0.4,
-            "prob_mercado": 0.392,
-            "momio": 2.43,
-            "ventaja_modelo": 0.008,
-            "valor_esperado": -0.028,
+            "prob_modelo": 0.401,
+            "prob_mercado": 0.394,
+            "momio": 2.42,
+            "ventaja_modelo": 0.007,
+            "valor_esperado": -0.03,
             "apuesta_de_valor": false
           }
         ]
@@ -9371,22 +9371,22 @@
       "real_score": "0-2",
       "p1x2": {
         "home": 0.093,
-        "draw": 0.215,
-        "away": 0.692
+        "draw": 0.214,
+        "away": 0.693
       },
       "xg": {
         "home": 0.67,
-        "away": 1.98,
+        "away": 1.99,
         "total": 2.65
       },
       "over_under": {
-        "over_1.5": 0.774,
-        "over_2.5": 0.501,
-        "over_3.5": 0.265
+        "over_1.5": 0.776,
+        "over_2.5": 0.503,
+        "over_3.5": 0.266
       },
       "btts": {
-        "yes": 0.456,
-        "no": 0.544
+        "yes": 0.457,
+        "no": 0.543
       },
       "scorelines": [
         {
@@ -9395,11 +9395,11 @@
         },
         {
           "score": "0-1",
-          "p": 0.129
+          "p": 0.128
         },
         {
           "score": "1-1",
-          "p": 0.113
+          "p": 0.112
         },
         {
           "score": "1-2",
@@ -9420,7 +9420,7 @@
       "cards": {
         "expected_total": 4.1,
         "competitividad": 0.4,
-        "goles_esperados": 2.87,
+        "goles_esperados": 2.88,
         "over_under": {
           "over_3.5": 0.586,
           "over_4.5": 0.391,
@@ -9490,27 +9490,27 @@
             "resultado": "local",
             "prob_modelo": 0.093,
             "prob_mercado": 0.073,
-            "momio": 13.05,
+            "momio": 13.06,
             "ventaja_modelo": 0.02,
-            "valor_esperado": 0.214,
+            "valor_esperado": 0.215,
             "apuesta_de_valor": true
           },
           {
             "resultado": "empate",
-            "prob_modelo": 0.215,
-            "prob_mercado": 0.18,
-            "momio": 5.29,
+            "prob_modelo": 0.214,
+            "prob_mercado": 0.179,
+            "momio": 5.32,
             "ventaja_modelo": 0.035,
-            "valor_esperado": 0.137,
+            "valor_esperado": 0.138,
             "apuesta_de_valor": true
           },
           {
             "resultado": "visitante",
-            "prob_modelo": 0.692,
+            "prob_modelo": 0.693,
             "prob_mercado": 0.748,
             "momio": 1.27,
-            "ventaja_modelo": -0.056,
-            "valor_esperado": -0.121,
+            "ventaja_modelo": -0.055,
+            "valor_esperado": -0.12,
             "apuesta_de_valor": false
           }
         ]
@@ -9537,22 +9537,22 @@
         "total": 2.54
       },
       "over_under": {
-        "over_1.5": 0.753,
-        "over_2.5": 0.471,
-        "over_3.5": 0.24
+        "over_1.5": 0.754,
+        "over_2.5": 0.473,
+        "over_3.5": 0.241
       },
       "btts": {
-        "yes": 0.477,
-        "no": 0.523
+        "yes": 0.478,
+        "no": 0.522
       },
       "scorelines": [
         {
           "score": "0-2",
-          "p": 0.135
+          "p": 0.134
         },
         {
           "score": "0-1",
-          "p": 0.131
+          "p": 0.13
         },
         {
           "score": "1-1",
@@ -9577,7 +9577,7 @@
       "cards": {
         "expected_total": 4.3,
         "competitividad": 0.5,
-        "goles_esperados": 2.76,
+        "goles_esperados": 2.77,
         "over_under": {
           "over_3.5": 0.623,
           "over_4.5": 0.43,
@@ -9684,28 +9684,28 @@
       "status": "jugado",
       "real_score": "1-1",
       "p1x2": {
-        "home": 0.547,
-        "draw": 0.28,
+        "home": 0.548,
+        "draw": 0.279,
         "away": 0.173
       },
       "xg": {
         "home": 1.59,
         "away": 0.84,
-        "total": 2.43
+        "total": 2.44
       },
       "over_under": {
-        "over_1.5": 0.732,
-        "over_2.5": 0.442,
-        "over_3.5": 0.217
+        "over_1.5": 0.733,
+        "over_2.5": 0.444,
+        "over_3.5": 0.218
       },
       "btts": {
-        "yes": 0.498,
-        "no": 0.502
+        "yes": 0.5,
+        "no": 0.5
       },
       "scorelines": [
         {
           "score": "1-1",
-          "p": 0.147
+          "p": 0.146
         },
         {
           "score": "1-0",
@@ -9733,8 +9733,8 @@
       },
       "cards": {
         "expected_total": 4.5,
-        "competitividad": 0.63,
-        "goles_esperados": 2.66,
+        "competitividad": 0.62,
+        "goles_esperados": 2.67,
         "over_under": {
           "over_3.5": 0.658,
           "over_4.5": 0.468,
@@ -9802,20 +9802,20 @@
         "mercados": [
           {
             "resultado": "local",
-            "prob_modelo": 0.547,
+            "prob_modelo": 0.548,
             "prob_mercado": 0.559,
             "momio": 1.69,
-            "ventaja_modelo": -0.012,
-            "valor_esperado": -0.076,
+            "ventaja_modelo": -0.011,
+            "valor_esperado": -0.074,
             "apuesta_de_valor": false
           },
           {
             "resultado": "empate",
-            "prob_modelo": 0.28,
+            "prob_modelo": 0.279,
             "prob_mercado": 0.265,
-            "momio": 3.56,
-            "ventaja_modelo": 0.015,
-            "valor_esperado": -0.003,
+            "momio": 3.57,
+            "ventaja_modelo": 0.014,
+            "valor_esperado": -0.004,
             "apuesta_de_valor": false
           },
           {
@@ -9842,22 +9842,22 @@
       "real_score": "1-3",
       "p1x2": {
         "home": 0.04,
-        "draw": 0.135,
-        "away": 0.825
+        "draw": 0.134,
+        "away": 0.826
       },
       "xg": {
         "home": 0.51,
-        "away": 2.51,
-        "total": 3.03
+        "away": 2.52,
+        "total": 3.04
       },
       "over_under": {
-        "over_1.5": 0.836,
-        "over_2.5": 0.598,
-        "over_3.5": 0.354
+        "over_1.5": 0.837,
+        "over_2.5": 0.6,
+        "over_3.5": 0.356
       },
       "btts": {
-        "yes": 0.394,
-        "no": 0.606
+        "yes": 0.395,
+        "no": 0.605
       },
       "scorelines": [
         {
@@ -9870,7 +9870,7 @@
         },
         {
           "score": "0-1",
-          "p": 0.109
+          "p": 0.108
         },
         {
           "score": "1-2",
@@ -9890,7 +9890,7 @@
       },
       "cards": {
         "expected_total": 3.8,
-        "competitividad": 0.22,
+        "competitividad": 0.21,
         "goles_esperados": 3.25,
         "over_under": {
           "over_3.5": 0.527,
@@ -9968,20 +9968,20 @@
           },
           {
             "resultado": "empate",
-            "prob_modelo": 0.135,
-            "prob_mercado": 0.139,
-            "momio": 6.8,
+            "prob_modelo": 0.134,
+            "prob_mercado": 0.138,
+            "momio": 6.85,
             "ventaja_modelo": -0.004,
             "valor_esperado": -0.082,
             "apuesta_de_valor": false
           },
           {
             "resultado": "visitante",
-            "prob_modelo": 0.825,
+            "prob_modelo": 0.826,
             "prob_mercado": 0.827,
             "momio": 1.14,
-            "ventaja_modelo": -0.002,
-            "valor_esperado": -0.06,
+            "ventaja_modelo": -0.001,
+            "valor_esperado": -0.058,
             "apuesta_de_valor": false
           }
         ]
@@ -9998,9 +9998,9 @@
       "status": "jugado",
       "real_score": "1-1",
       "p1x2": {
-        "home": 0.292,
+        "home": 0.293,
         "draw": 0.317,
-        "away": 0.39
+        "away": 0.391
       },
       "xg": {
         "home": 1.07,
@@ -10008,13 +10008,13 @@
         "total": 2.33
       },
       "over_under": {
-        "over_1.5": 0.709,
-        "over_2.5": 0.414,
-        "over_3.5": 0.195
+        "over_1.5": 0.711,
+        "over_2.5": 0.415,
+        "over_3.5": 0.196
       },
       "btts": {
-        "yes": 0.521,
-        "no": 0.479
+        "yes": 0.522,
+        "no": 0.478
       },
       "scorelines": [
         {
@@ -10023,7 +10023,7 @@
         },
         {
           "score": "0-1",
-          "p": 0.108
+          "p": 0.107
         },
         {
           "score": "0-0",
@@ -10035,20 +10035,20 @@
         }
       ],
       "corners": {
-        "expected_total": 8.5,
-        "expected_home": 3.9,
+        "expected_total": 8.6,
+        "expected_home": 4.0,
         "expected_away": 4.6,
-        "tiros_esperados_total": 15.7,
+        "tiros_esperados_total": 15.9,
         "over_under": {
-          "over_8.5": 0.477,
-          "over_9.5": 0.347,
-          "over_10.5": 0.237
+          "over_8.5": 0.491,
+          "over_9.5": 0.36,
+          "over_10.5": 0.248
         }
       },
       "cards": {
         "expected_total": 5.0,
         "competitividad": 0.9,
-        "goles_esperados": 2.56,
+        "goles_esperados": 2.57,
         "over_under": {
           "over_3.5": 0.735,
           "over_4.5": 0.56,
@@ -10116,11 +10116,11 @@
         "mercados": [
           {
             "resultado": "local",
-            "prob_modelo": 0.292,
+            "prob_modelo": 0.293,
             "prob_mercado": 0.308,
             "momio": 3.07,
-            "ventaja_modelo": -0.016,
-            "valor_esperado": -0.104,
+            "ventaja_modelo": -0.015,
+            "valor_esperado": -0.1,
             "apuesta_de_valor": false
           },
           {
@@ -10134,11 +10134,11 @@
           },
           {
             "resultado": "visitante",
-            "prob_modelo": 0.39,
-            "prob_mercado": 0.394,
-            "momio": 2.4,
-            "ventaja_modelo": -0.004,
-            "valor_esperado": -0.064,
+            "prob_modelo": 0.391,
+            "prob_mercado": 0.396,
+            "momio": 2.39,
+            "ventaja_modelo": -0.005,
+            "valor_esperado": -0.066,
             "apuesta_de_valor": false
           }
         ]
@@ -10160,18 +10160,18 @@
         "away": 0.923
       },
       "xg": {
-        "home": 0.38,
+        "home": 0.39,
         "away": 3.24,
-        "total": 3.62
+        "total": 3.63
       },
       "over_under": {
-        "over_1.5": 0.904,
-        "over_2.5": 0.725,
-        "over_3.5": 0.497
+        "over_1.5": 0.905,
+        "over_2.5": 0.727,
+        "over_3.5": 0.499
       },
       "btts": {
-        "yes": 0.321,
-        "no": 0.679
+        "yes": 0.322,
+        "no": 0.678
       },
       "scorelines": [
         {
@@ -10180,7 +10180,7 @@
         },
         {
           "score": "0-2",
-          "p": 0.144
+          "p": 0.143
         },
         {
           "score": "0-4",
@@ -10313,8 +10313,8 @@
       "real_score": "0-0",
       "p1x2": {
         "home": 0.296,
-        "draw": 0.318,
-        "away": 0.386
+        "draw": 0.317,
+        "away": 0.387
       },
       "xg": {
         "home": 1.08,
@@ -10322,26 +10322,26 @@
         "total": 2.33
       },
       "over_under": {
-        "over_1.5": 0.709,
-        "over_2.5": 0.413,
-        "over_3.5": 0.195
+        "over_1.5": 0.71,
+        "over_2.5": 0.415,
+        "over_3.5": 0.196
       },
       "btts": {
-        "yes": 0.521,
-        "no": 0.479
+        "yes": 0.523,
+        "no": 0.477
       },
       "scorelines": [
         {
           "score": "1-1",
-          "p": 0.167
+          "p": 0.166
         },
         {
           "score": "0-1",
-          "p": 0.107
+          "p": 0.106
         },
         {
           "score": "0-0",
-          "p": 0.096
+          "p": 0.095
         },
         {
           "score": "1-2",
@@ -10349,20 +10349,20 @@
         }
       ],
       "corners": {
-        "expected_total": 8.5,
+        "expected_total": 8.6,
         "expected_home": 4.0,
-        "expected_away": 4.5,
-        "tiros_esperados_total": 15.7,
+        "expected_away": 4.6,
+        "tiros_esperados_total": 15.9,
         "over_under": {
-          "over_8.5": 0.477,
-          "over_9.5": 0.347,
-          "over_10.5": 0.237
+          "over_8.5": 0.491,
+          "over_9.5": 0.36,
+          "over_10.5": 0.248
         }
       },
       "cards": {
         "expected_total": 5.0,
         "competitividad": 0.91,
-        "goles_esperados": 2.56,
+        "goles_esperados": 2.57,
         "over_under": {
           "over_3.5": 0.735,
           "over_4.5": 0.56,
@@ -10439,20 +10439,20 @@
           },
           {
             "resultado": "empate",
-            "prob_modelo": 0.318,
-            "prob_mercado": 0.285,
-            "momio": 3.28,
+            "prob_modelo": 0.317,
+            "prob_mercado": 0.284,
+            "momio": 3.29,
             "ventaja_modelo": 0.033,
             "valor_esperado": 0.043,
             "apuesta_de_valor": true
           },
           {
             "resultado": "visitante",
-            "prob_modelo": 0.386,
-            "prob_mercado": 0.443,
-            "momio": 2.11,
-            "ventaja_modelo": -0.057,
-            "valor_esperado": -0.186,
+            "prob_modelo": 0.387,
+            "prob_mercado": 0.445,
+            "momio": 2.1,
+            "ventaja_modelo": -0.058,
+            "valor_esperado": -0.187,
             "apuesta_de_valor": false
           }
         ]
@@ -10470,31 +10470,31 @@
       "real_score": "0-1",
       "p1x2": {
         "home": 0.116,
-        "draw": 0.238,
-        "away": 0.646
+        "draw": 0.237,
+        "away": 0.647
       },
       "xg": {
         "home": 0.72,
-        "away": 1.84,
-        "total": 2.56
+        "away": 1.85,
+        "total": 2.57
       },
       "over_under": {
-        "over_1.5": 0.758,
-        "over_2.5": 0.479,
-        "over_3.5": 0.246
+        "over_1.5": 0.76,
+        "over_2.5": 0.48,
+        "over_3.5": 0.247
       },
       "btts": {
-        "yes": 0.471,
-        "no": 0.529
+        "yes": 0.473,
+        "no": 0.527
       },
       "scorelines": [
         {
           "score": "0-2",
-          "p": 0.139
+          "p": 0.138
         },
         {
           "score": "0-1",
-          "p": 0.131
+          "p": 0.13
         },
         {
           "score": "1-1",
@@ -10519,7 +10519,7 @@
       "cards": {
         "expected_total": 4.2,
         "competitividad": 0.47,
-        "goles_esperados": 2.79,
+        "goles_esperados": 2.8,
         "over_under": {
           "over_3.5": 0.605,
           "over_4.5": 0.41,
@@ -10596,20 +10596,20 @@
           },
           {
             "resultado": "empate",
-            "prob_modelo": 0.238,
-            "prob_mercado": 0.197,
-            "momio": 4.8,
+            "prob_modelo": 0.237,
+            "prob_mercado": 0.196,
+            "momio": 4.82,
             "ventaja_modelo": 0.041,
             "valor_esperado": 0.142,
             "apuesta_de_valor": true
           },
           {
             "resultado": "visitante",
-            "prob_modelo": 0.646,
+            "prob_modelo": 0.647,
             "prob_mercado": 0.696,
             "momio": 1.36,
-            "ventaja_modelo": -0.05,
-            "valor_esperado": -0.121,
+            "ventaja_modelo": -0.049,
+            "valor_esperado": -0.12,
             "apuesta_de_valor": false
           }
         ]
@@ -10627,22 +10627,22 @@
       "real_score": "1-4",
       "p1x2": {
         "home": 0.068,
-        "draw": 0.183,
+        "draw": 0.182,
         "away": 0.749
       },
       "xg": {
         "home": 0.6,
         "away": 2.18,
-        "total": 2.78
+        "total": 2.79
       },
       "over_under": {
-        "over_1.5": 0.798,
-        "over_2.5": 0.536,
-        "over_3.5": 0.295
+        "over_1.5": 0.799,
+        "over_2.5": 0.538,
+        "over_3.5": 0.297
       },
       "btts": {
-        "yes": 0.433,
-        "no": 0.567
+        "yes": 0.434,
+        "no": 0.566
       },
       "scorelines": [
         {
@@ -10676,7 +10676,7 @@
       "cards": {
         "expected_total": 4.0,
         "competitividad": 0.32,
-        "goles_esperados": 3.0,
+        "goles_esperados": 3.01,
         "over_under": {
           "over_3.5": 0.567,
           "over_4.5": 0.371,
@@ -10746,16 +10746,16 @@
             "resultado": "local",
             "prob_modelo": 0.068,
             "prob_mercado": 0.073,
-            "momio": 13.06,
+            "momio": 13.05,
             "ventaja_modelo": -0.005,
-            "valor_esperado": -0.112,
+            "valor_esperado": -0.113,
             "apuesta_de_valor": false
           },
           {
             "resultado": "empate",
-            "prob_modelo": 0.183,
-            "prob_mercado": 0.171,
-            "momio": 5.55,
+            "prob_modelo": 0.182,
+            "prob_mercado": 0.17,
+            "momio": 5.58,
             "ventaja_modelo": 0.012,
             "valor_esperado": 0.016,
             "apuesta_de_valor": false
@@ -10783,32 +10783,32 @@
       "status": "jugado",
       "real_score": "5-0",
       "p1x2": {
-        "home": 0.646,
-        "draw": 0.238,
+        "home": 0.647,
+        "draw": 0.237,
         "away": 0.116
       },
       "xg": {
-        "home": 1.84,
+        "home": 1.85,
         "away": 0.72,
-        "total": 2.56
+        "total": 2.57
       },
       "over_under": {
-        "over_1.5": 0.758,
-        "over_2.5": 0.479,
-        "over_3.5": 0.246
+        "over_1.5": 0.76,
+        "over_2.5": 0.48,
+        "over_3.5": 0.247
       },
       "btts": {
-        "yes": 0.471,
-        "no": 0.529
+        "yes": 0.473,
+        "no": 0.527
       },
       "scorelines": [
         {
           "score": "2-0",
-          "p": 0.139
+          "p": 0.138
         },
         {
           "score": "1-0",
-          "p": 0.131
+          "p": 0.13
         },
         {
           "score": "1-1",
@@ -10833,7 +10833,7 @@
       "cards": {
         "expected_total": 4.2,
         "competitividad": 0.47,
-        "goles_esperados": 2.79,
+        "goles_esperados": 2.8,
         "over_under": {
           "over_3.5": 0.605,
           "over_4.5": 0.41,
@@ -10901,18 +10901,18 @@
         "mercados": [
           {
             "resultado": "local",
-            "prob_modelo": 0.646,
+            "prob_modelo": 0.647,
             "prob_mercado": 0.666,
             "momio": 1.42,
-            "ventaja_modelo": -0.02,
-            "valor_esperado": -0.083,
+            "ventaja_modelo": -0.019,
+            "valor_esperado": -0.081,
             "apuesta_de_valor": false
           },
           {
             "resultado": "empate",
-            "prob_modelo": 0.238,
-            "prob_mercado": 0.216,
-            "momio": 4.37,
+            "prob_modelo": 0.237,
+            "prob_mercado": 0.215,
+            "momio": 4.39,
             "ventaja_modelo": 0.022,
             "valor_esperado": 0.04,
             "apuesta_de_valor": false
@@ -10950,22 +10950,22 @@
         "total": 2.34
       },
       "over_under": {
-        "over_1.5": 0.711,
-        "over_2.5": 0.416,
-        "over_3.5": 0.197
+        "over_1.5": 0.712,
+        "over_2.5": 0.418,
+        "over_3.5": 0.198
       },
       "btts": {
-        "yes": 0.519,
-        "no": 0.481
+        "yes": 0.521,
+        "no": 0.479
       },
       "scorelines": [
         {
           "score": "1-1",
-          "p": 0.165
+          "p": 0.164
         },
         {
           "score": "0-1",
-          "p": 0.112
+          "p": 0.111
         },
         {
           "score": "1-2",
@@ -10973,7 +10973,7 @@
         },
         {
           "score": "0-0",
-          "p": 0.095
+          "p": 0.094
         }
       ],
       "corners": {
@@ -10990,7 +10990,7 @@
       "cards": {
         "expected_total": 4.9,
         "competitividad": 0.86,
-        "goles_esperados": 2.57,
+        "goles_esperados": 2.58,
         "over_under": {
           "over_3.5": 0.721,
           "over_4.5": 0.542,
@@ -11103,17 +11103,17 @@
       },
       "xg": {
         "home": 0.31,
-        "away": 3.93,
-        "total": 4.23
+        "away": 3.94,
+        "total": 4.24
       },
       "over_under": {
-        "over_1.5": 0.947,
-        "over_2.5": 0.824,
-        "over_3.5": 0.632
+        "over_1.5": 0.948,
+        "over_2.5": 0.825,
+        "over_3.5": 0.634
       },
       "btts": {
-        "yes": 0.267,
-        "no": 0.733
+        "yes": 0.268,
+        "no": 0.732
       },
       "scorelines": [
         {
@@ -11126,11 +11126,11 @@
         },
         {
           "score": "0-5",
-          "p": 0.122
+          "p": 0.123
         },
         {
           "score": "0-2",
-          "p": 0.107
+          "p": 0.106
         }
       ],
       "corners": {
@@ -11147,7 +11147,7 @@
       "cards": {
         "expected_total": 3.5,
         "competitividad": 0.04,
-        "goles_esperados": 4.46,
+        "goles_esperados": 4.47,
         "over_under": {
           "over_3.5": 0.463,
           "over_4.5": 0.275,
@@ -11264,13 +11264,13 @@
         "total": 2.33
       },
       "over_under": {
-        "over_1.5": 0.709,
-        "over_2.5": 0.414,
-        "over_3.5": 0.195
+        "over_1.5": 0.711,
+        "over_2.5": 0.415,
+        "over_3.5": 0.196
       },
       "btts": {
-        "yes": 0.521,
-        "no": 0.479
+        "yes": 0.522,
+        "no": 0.478
       },
       "scorelines": [
         {
@@ -11279,32 +11279,32 @@
         },
         {
           "score": "0-1",
-          "p": 0.108
+          "p": 0.107
         },
         {
           "score": "0-0",
-          "p": 0.096
+          "p": 0.095
         },
         {
           "score": "1-2",
-          "p": 0.094
+          "p": 0.095
         }
       ],
       "corners": {
-        "expected_total": 8.5,
-        "expected_home": 3.9,
+        "expected_total": 8.6,
+        "expected_home": 4.0,
         "expected_away": 4.6,
-        "tiros_esperados_total": 15.7,
+        "tiros_esperados_total": 15.9,
         "over_under": {
-          "over_8.5": 0.477,
-          "over_9.5": 0.347,
-          "over_10.5": 0.237
+          "over_8.5": 0.491,
+          "over_9.5": 0.36,
+          "over_10.5": 0.248
         }
       },
       "cards": {
         "expected_total": 5.0,
         "competitividad": 0.9,
-        "goles_esperados": 2.56,
+        "goles_esperados": 2.57,
         "over_under": {
           "over_3.5": 0.735,
           "over_4.5": 0.56,
@@ -11412,22 +11412,22 @@
       "real_score": "3-1",
       "p1x2": {
         "home": 0.395,
-        "draw": 0.317,
+        "draw": 0.316,
         "away": 0.288
       },
       "xg": {
         "home": 1.27,
-        "away": 1.06,
-        "total": 2.33
+        "away": 1.07,
+        "total": 2.34
       },
       "over_under": {
-        "over_1.5": 0.709,
-        "over_2.5": 0.414,
-        "over_3.5": 0.195
+        "over_1.5": 0.711,
+        "over_2.5": 0.416,
+        "over_3.5": 0.197
       },
       "btts": {
-        "yes": 0.521,
-        "no": 0.479
+        "yes": 0.522,
+        "no": 0.478
       },
       "scorelines": [
         {
@@ -11439,29 +11439,29 @@
           "p": 0.108
         },
         {
-          "score": "0-0",
+          "score": "2-1",
           "p": 0.095
         },
         {
-          "score": "2-1",
+          "score": "0-0",
           "p": 0.095
         }
       ],
       "corners": {
-        "expected_total": 8.5,
+        "expected_total": 8.6,
         "expected_home": 4.6,
-        "expected_away": 3.9,
-        "tiros_esperados_total": 15.7,
+        "expected_away": 4.0,
+        "tiros_esperados_total": 15.9,
         "over_under": {
-          "over_8.5": 0.477,
-          "over_9.5": 0.347,
-          "over_10.5": 0.237
+          "over_8.5": 0.491,
+          "over_9.5": 0.36,
+          "over_10.5": 0.248
         }
       },
       "cards": {
         "expected_total": 5.0,
         "competitividad": 0.89,
-        "goles_esperados": 2.56,
+        "goles_esperados": 2.57,
         "over_under": {
           "over_3.5": 0.735,
           "over_4.5": 0.56,
@@ -11530,19 +11530,19 @@
           {
             "resultado": "local",
             "prob_modelo": 0.395,
-            "prob_mercado": 0.446,
-            "momio": 2.14,
-            "ventaja_modelo": -0.051,
-            "valor_esperado": -0.155,
+            "prob_mercado": 0.448,
+            "momio": 2.13,
+            "ventaja_modelo": -0.053,
+            "valor_esperado": -0.159,
             "apuesta_de_valor": false
           },
           {
             "resultado": "empate",
-            "prob_modelo": 0.317,
-            "prob_mercado": 0.277,
-            "momio": 3.45,
+            "prob_modelo": 0.316,
+            "prob_mercado": 0.276,
+            "momio": 3.46,
             "ventaja_modelo": 0.04,
-            "valor_esperado": 0.094,
+            "valor_esperado": 0.093,
             "apuesta_de_valor": true
           },
           {
@@ -11569,22 +11569,22 @@
       "real_score": "0-2",
       "p1x2": {
         "home": 0.038,
-        "draw": 0.131,
-        "away": 0.831
+        "draw": 0.13,
+        "away": 0.832
       },
       "xg": {
         "home": 0.51,
         "away": 2.55,
-        "total": 3.05
+        "total": 3.06
       },
       "over_under": {
-        "over_1.5": 0.84,
-        "over_2.5": 0.604,
-        "over_3.5": 0.36
+        "over_1.5": 0.841,
+        "over_2.5": 0.606,
+        "over_3.5": 0.362
       },
       "btts": {
-        "yes": 0.39,
-        "no": 0.61
+        "yes": 0.391,
+        "no": 0.609
       },
       "scorelines": [
         {
@@ -11618,7 +11618,7 @@
       "cards": {
         "expected_total": 3.8,
         "competitividad": 0.21,
-        "goles_esperados": 3.27,
+        "goles_esperados": 3.28,
         "over_under": {
           "over_3.5": 0.527,
           "over_4.5": 0.332,
@@ -11688,27 +11688,27 @@
             "resultado": "local",
             "prob_modelo": 0.038,
             "prob_mercado": 0.033,
-            "momio": 28.98,
+            "momio": 28.99,
             "ventaja_modelo": 0.005,
-            "valor_esperado": 0.101,
+            "valor_esperado": 0.102,
             "apuesta_de_valor": true
           },
           {
             "resultado": "empate",
-            "prob_modelo": 0.131,
-            "prob_mercado": 0.121,
-            "momio": 7.85,
+            "prob_modelo": 0.13,
+            "prob_mercado": 0.12,
+            "momio": 7.92,
             "ventaja_modelo": 0.01,
-            "valor_esperado": 0.028,
+            "valor_esperado": 0.03,
             "apuesta_de_valor": false
           },
           {
             "resultado": "visitante",
-            "prob_modelo": 0.831,
+            "prob_modelo": 0.832,
             "prob_mercado": 0.844,
             "momio": 1.13,
-            "ventaja_modelo": -0.013,
-            "valor_esperado": -0.061,
+            "ventaja_modelo": -0.012,
+            "valor_esperado": -0.06,
             "apuesta_de_valor": false
           }
         ]
@@ -11730,23 +11730,23 @@
         "away": 0.045
       },
       "xg": {
-        "home": 2.44,
+        "home": 2.45,
         "away": 0.53,
-        "total": 2.97
+        "total": 2.98
       },
       "over_under": {
-        "over_1.5": 0.828,
-        "over_2.5": 0.585,
-        "over_3.5": 0.341
+        "over_1.5": 0.829,
+        "over_2.5": 0.586,
+        "over_3.5": 0.343
       },
       "btts": {
-        "yes": 0.402,
-        "no": 0.598
+        "yes": 0.403,
+        "no": 0.597
       },
       "scorelines": [
         {
           "score": "2-0",
-          "p": 0.163
+          "p": 0.162
         },
         {
           "score": "3-0",
@@ -11775,7 +11775,7 @@
       "cards": {
         "expected_total": 3.8,
         "competitividad": 0.23,
-        "goles_esperados": 3.19,
+        "goles_esperados": 3.2,
         "over_under": {
           "over_3.5": 0.527,
           "over_4.5": 0.332,
@@ -11888,17 +11888,17 @@
       },
       "xg": {
         "home": 0.91,
-        "away": 1.47,
-        "total": 2.38
+        "away": 1.48,
+        "total": 2.39
       },
       "over_under": {
-        "over_1.5": 0.722,
-        "over_2.5": 0.429,
-        "over_3.5": 0.207
+        "over_1.5": 0.723,
+        "over_2.5": 0.431,
+        "over_3.5": 0.208
       },
       "btts": {
-        "yes": 0.508,
-        "no": 0.492
+        "yes": 0.51,
+        "no": 0.49
       },
       "scorelines": [
         {
@@ -11907,7 +11907,7 @@
         },
         {
           "score": "0-1",
-          "p": 0.123
+          "p": 0.122
         },
         {
           "score": "1-2",
@@ -11915,7 +11915,7 @@
         },
         {
           "score": "0-2",
-          "p": 0.103
+          "p": 0.102
         }
       ],
       "corners": {
@@ -12040,22 +12040,22 @@
       "real_score": null,
       "p1x2": {
         "home": 0.634,
-        "draw": 0.244,
+        "draw": 0.243,
         "away": 0.122
       },
       "xg": {
         "home": 1.81,
-        "away": 0.73,
-        "total": 2.54
+        "away": 0.74,
+        "total": 2.55
       },
       "over_under": {
-        "over_1.5": 0.754,
-        "over_2.5": 0.473,
-        "over_3.5": 0.241
+        "over_1.5": 0.756,
+        "over_2.5": 0.475,
+        "over_3.5": 0.243
       },
       "btts": {
-        "yes": 0.475,
-        "no": 0.525
+        "yes": 0.477,
+        "no": 0.523
       },
       "scorelines": [
         {
@@ -12064,7 +12064,7 @@
         },
         {
           "score": "1-0",
-          "p": 0.131
+          "p": 0.13
         },
         {
           "score": "1-1",
@@ -12076,20 +12076,20 @@
         }
       ],
       "corners": {
-        "expected_total": 8.8,
-        "expected_home": 6.1,
+        "expected_total": 8.9,
+        "expected_home": 6.2,
         "expected_away": 2.7,
-        "tiros_esperados_total": 16.3,
+        "tiros_esperados_total": 16.5,
         "over_under": {
-          "over_8.5": 0.518,
-          "over_9.5": 0.386,
-          "over_10.5": 0.271
+          "over_8.5": 0.531,
+          "over_9.5": 0.399,
+          "over_10.5": 0.282
         }
       },
       "cards": {
         "expected_total": 4.3,
         "competitividad": 0.49,
-        "goles_esperados": 2.77,
+        "goles_esperados": 2.78,
         "over_under": {
           "over_3.5": 0.623,
           "over_4.5": 0.43,
@@ -12166,9 +12166,9 @@
           },
           {
             "resultado": "empate",
-            "prob_modelo": 0.244,
-            "prob_mercado": 0.225,
-            "momio": 4.22,
+            "prob_modelo": 0.243,
+            "prob_mercado": 0.224,
+            "momio": 4.24,
             "ventaja_modelo": 0.019,
             "valor_esperado": 0.03,
             "apuesta_de_valor": false
@@ -12177,9 +12177,9 @@
             "resultado": "visitante",
             "prob_modelo": 0.122,
             "prob_mercado": 0.118,
-            "momio": 8.06,
+            "momio": 8.05,
             "ventaja_modelo": 0.004,
-            "valor_esperado": -0.017,
+            "valor_esperado": -0.018,
             "apuesta_de_valor": false
           }
         ]
@@ -12201,18 +12201,18 @@
         "away": 0.303
       },
       "xg": {
-        "home": 1.23,
+        "home": 1.24,
         "away": 1.09,
         "total": 2.33
       },
       "over_under": {
-        "over_1.5": 0.709,
-        "over_2.5": 0.413,
-        "over_3.5": 0.194
+        "over_1.5": 0.71,
+        "over_2.5": 0.415,
+        "over_3.5": 0.196
       },
       "btts": {
-        "yes": 0.522,
-        "no": 0.478
+        "yes": 0.523,
+        "no": 0.477
       },
       "scorelines": [
         {
@@ -12221,11 +12221,11 @@
         },
         {
           "score": "1-0",
-          "p": 0.106
+          "p": 0.105
         },
         {
           "score": "0-0",
-          "p": 0.096
+          "p": 0.095
         },
         {
           "score": "2-1",
@@ -12233,20 +12233,20 @@
         }
       ],
       "corners": {
-        "expected_total": 8.5,
+        "expected_total": 8.6,
         "expected_home": 4.5,
-        "expected_away": 4.0,
-        "tiros_esperados_total": 15.7,
+        "expected_away": 4.1,
+        "tiros_esperados_total": 15.9,
         "over_under": {
-          "over_8.5": 0.477,
-          "over_9.5": 0.347,
-          "over_10.5": 0.237
+          "over_8.5": 0.491,
+          "over_9.5": 0.36,
+          "over_10.5": 0.248
         }
       },
       "cards": {
         "expected_total": 5.1,
         "competitividad": 0.92,
-        "goles_esperados": 2.56,
+        "goles_esperados": 2.57,
         "over_under": {
           "over_3.5": 0.749,
           "over_4.5": 0.577,
@@ -12350,35 +12350,35 @@
       "ground": "Houston",
       "home": "Brazil",
       "away": "Japan",
-      "status": "pendiente",
-      "real_score": null,
+      "status": "jugado",
+      "real_score": "2-1",
       "p1x2": {
-        "home": 0.536,
+        "home": 0.537,
         "draw": 0.283,
         "away": 0.18
       },
       "xg": {
         "home": 1.57,
-        "away": 0.85,
-        "total": 2.42
+        "away": 0.86,
+        "total": 2.43
       },
       "over_under": {
-        "over_1.5": 0.729,
-        "over_2.5": 0.439,
-        "over_3.5": 0.214
+        "over_1.5": 0.731,
+        "over_2.5": 0.441,
+        "over_3.5": 0.216
       },
       "btts": {
-        "yes": 0.501,
-        "no": 0.499
+        "yes": 0.502,
+        "no": 0.498
       },
       "scorelines": [
         {
           "score": "1-1",
-          "p": 0.149
+          "p": 0.148
         },
         {
           "score": "1-0",
-          "p": 0.127
+          "p": 0.126
         },
         {
           "score": "2-0",
@@ -12403,7 +12403,7 @@
       "cards": {
         "expected_total": 4.6,
         "competitividad": 0.64,
-        "goles_esperados": 2.65,
+        "goles_esperados": 2.66,
         "over_under": {
           "over_3.5": 0.674,
           "over_4.5": 0.487,
@@ -12471,20 +12471,20 @@
         "mercados": [
           {
             "resultado": "local",
-            "prob_modelo": 0.536,
-            "prob_mercado": 0.562,
-            "momio": 1.7,
-            "ventaja_modelo": -0.026,
-            "valor_esperado": -0.089,
+            "prob_modelo": 0.537,
+            "prob_mercado": 0.566,
+            "momio": 1.69,
+            "ventaja_modelo": -0.029,
+            "valor_esperado": -0.092,
             "apuesta_de_valor": false
           },
           {
             "resultado": "empate",
             "prob_modelo": 0.283,
-            "prob_mercado": 0.256,
-            "momio": 3.74,
-            "ventaja_modelo": 0.027,
-            "valor_esperado": 0.058,
+            "prob_mercado": 0.255,
+            "momio": 3.75,
+            "ventaja_modelo": 0.028,
+            "valor_esperado": 0.061,
             "apuesta_de_valor": true
           },
           {
@@ -12517,16 +12517,16 @@
       "xg": {
         "home": 2.66,
         "away": 0.48,
-        "total": 3.14
+        "total": 3.15
       },
       "over_under": {
-        "over_1.5": 0.851,
-        "over_2.5": 0.624,
-        "over_3.5": 0.381
+        "over_1.5": 0.852,
+        "over_2.5": 0.626,
+        "over_3.5": 0.383
       },
       "btts": {
-        "yes": 0.378,
-        "no": 0.622
+        "yes": 0.379,
+        "no": 0.621
       },
       "scorelines": [
         {
@@ -12539,7 +12539,7 @@
         },
         {
           "score": "1-0",
-          "p": 0.102
+          "p": 0.101
         },
         {
           "score": "4-0",
@@ -12674,16 +12674,16 @@
       "xg": {
         "home": 1.02,
         "away": 1.32,
-        "total": 2.34
+        "total": 2.35
       },
       "over_under": {
-        "over_1.5": 0.712,
-        "over_2.5": 0.417,
-        "over_3.5": 0.197
+        "over_1.5": 0.713,
+        "over_2.5": 0.418,
+        "over_3.5": 0.199
       },
       "btts": {
-        "yes": 0.519,
-        "no": 0.481
+        "yes": 0.52,
+        "no": 0.48
       },
       "scorelines": [
         {
@@ -12692,11 +12692,11 @@
         },
         {
           "score": "0-1",
-          "p": 0.113
+          "p": 0.112
         },
         {
           "score": "1-2",
-          "p": 0.098
+          "p": 0.099
         },
         {
           "score": "0-0",
@@ -12717,7 +12717,7 @@
       "cards": {
         "expected_total": 4.9,
         "competitividad": 0.84,
-        "goles_esperados": 2.57,
+        "goles_esperados": 2.58,
         "over_under": {
           "over_3.5": 0.721,
           "over_4.5": 0.542,
@@ -12834,22 +12834,22 @@
         "total": 2.48
       },
       "over_under": {
-        "over_1.5": 0.741,
-        "over_2.5": 0.455,
-        "over_3.5": 0.227
+        "over_1.5": 0.742,
+        "over_2.5": 0.457,
+        "over_3.5": 0.228
       },
       "btts": {
-        "yes": 0.489,
-        "no": 0.511
+        "yes": 0.49,
+        "no": 0.51
       },
       "scorelines": [
         {
           "score": "1-1",
-          "p": 0.139
+          "p": 0.138
         },
         {
           "score": "1-0",
-          "p": 0.13
+          "p": 0.129
         },
         {
           "score": "2-0",
@@ -12857,18 +12857,18 @@
         },
         {
           "score": "2-1",
-          "p": 0.11
+          "p": 0.111
         }
       ],
       "corners": {
-        "expected_total": 8.7,
-        "expected_home": 5.8,
+        "expected_total": 8.8,
+        "expected_home": 5.9,
         "expected_away": 2.9,
-        "tiros_esperados_total": 16.1,
+        "tiros_esperados_total": 16.3,
         "over_under": {
-          "over_8.5": 0.504,
-          "over_9.5": 0.373,
-          "over_10.5": 0.259
+          "over_8.5": 0.518,
+          "over_9.5": 0.386,
+          "over_10.5": 0.271
         }
       },
       "cards": {
@@ -12981,23 +12981,23 @@
       "status": "pendiente",
       "real_score": null,
       "p1x2": {
-        "home": 0.835,
-        "draw": 0.128,
+        "home": 0.836,
+        "draw": 0.127,
         "away": 0.037
       },
       "xg": {
         "home": 2.57,
         "away": 0.5,
-        "total": 3.07
+        "total": 3.08
       },
       "over_under": {
-        "over_1.5": 0.842,
-        "over_2.5": 0.608,
-        "over_3.5": 0.364
+        "over_1.5": 0.843,
+        "over_2.5": 0.61,
+        "over_3.5": 0.366
       },
       "btts": {
-        "yes": 0.388,
-        "no": 0.612
+        "yes": 0.389,
+        "no": 0.611
       },
       "scorelines": [
         {
@@ -13006,7 +13006,7 @@
         },
         {
           "score": "3-0",
-          "p": 0.142
+          "p": 0.141
         },
         {
           "score": "1-0",
@@ -13031,7 +13031,7 @@
       "cards": {
         "expected_total": 3.8,
         "competitividad": 0.2,
-        "goles_esperados": 3.29,
+        "goles_esperados": 3.3,
         "over_under": {
           "over_3.5": 0.527,
           "over_4.5": 0.332,
@@ -13099,18 +13099,18 @@
         "mercados": [
           {
             "resultado": "local",
-            "prob_modelo": 0.835,
+            "prob_modelo": 0.836,
             "prob_mercado": 0.852,
             "momio": 1.12,
-            "ventaja_modelo": -0.017,
-            "valor_esperado": -0.065,
+            "ventaja_modelo": -0.016,
+            "valor_esperado": -0.064,
             "apuesta_de_valor": false
           },
           {
             "resultado": "empate",
-            "prob_modelo": 0.128,
-            "prob_mercado": 0.114,
-            "momio": 8.35,
+            "prob_modelo": 0.127,
+            "prob_mercado": 0.113,
+            "momio": 8.42,
             "ventaja_modelo": 0.014,
             "valor_esperado": 0.069,
             "apuesta_de_valor": true
@@ -13138,23 +13138,23 @@
       "status": "pendiente",
       "real_score": null,
       "p1x2": {
-        "home": 0.761,
+        "home": 0.762,
         "draw": 0.175,
         "away": 0.063
       },
       "xg": {
-        "home": 2.22,
+        "home": 2.23,
         "away": 0.59,
-        "total": 2.81
+        "total": 2.82
       },
       "over_under": {
-        "over_1.5": 0.803,
-        "over_2.5": 0.544,
-        "over_3.5": 0.303
+        "over_1.5": 0.804,
+        "over_2.5": 0.546,
+        "over_3.5": 0.305
       },
       "btts": {
-        "yes": 0.427,
-        "no": 0.573
+        "yes": 0.428,
+        "no": 0.572
       },
       "scorelines": [
         {
@@ -13163,7 +13163,7 @@
         },
         {
           "score": "1-0",
-          "p": 0.122
+          "p": 0.121
         },
         {
           "score": "3-0",
@@ -13171,7 +13171,7 @@
         },
         {
           "score": "2-1",
-          "p": 0.101
+          "p": 0.102
         }
       ],
       "corners": {
@@ -13188,7 +13188,7 @@
       "cards": {
         "expected_total": 3.9,
         "competitividad": 0.3,
-        "goles_esperados": 3.03,
+        "goles_esperados": 3.04,
         "over_under": {
           "over_3.5": 0.547,
           "over_4.5": 0.352,
@@ -13256,11 +13256,11 @@
         "mercados": [
           {
             "resultado": "local",
-            "prob_modelo": 0.761,
+            "prob_modelo": 0.762,
             "prob_mercado": 0.774,
             "momio": 1.23,
-            "ventaja_modelo": -0.013,
-            "valor_esperado": -0.064,
+            "ventaja_modelo": -0.012,
+            "valor_esperado": -0.063,
             "apuesta_de_valor": false
           },
           {
@@ -13276,9 +13276,9 @@
             "resultado": "visitante",
             "prob_modelo": 0.063,
             "prob_mercado": 0.055,
-            "momio": 17.37,
+            "momio": 17.39,
             "ventaja_modelo": 0.008,
-            "valor_esperado": 0.094,
+            "valor_esperado": 0.096,
             "apuesta_de_valor": true
           }
         ]
@@ -13295,28 +13295,28 @@
       "status": "pendiente",
       "real_score": null,
       "p1x2": {
-        "home": 0.5,
-        "draw": 0.295,
+        "home": 0.501,
+        "draw": 0.294,
         "away": 0.205
       },
       "xg": {
-        "home": 1.48,
-        "away": 0.9,
+        "home": 1.49,
+        "away": 0.91,
         "total": 2.39
       },
       "over_under": {
-        "over_1.5": 0.722,
-        "over_2.5": 0.43,
-        "over_3.5": 0.208
+        "over_1.5": 0.724,
+        "over_2.5": 0.432,
+        "over_3.5": 0.209
       },
       "btts": {
-        "yes": 0.508,
-        "no": 0.492
+        "yes": 0.509,
+        "no": 0.491
       },
       "scorelines": [
         {
           "score": "1-1",
-          "p": 0.155
+          "p": 0.154
         },
         {
           "score": "1-0",
@@ -13345,7 +13345,7 @@
       "cards": {
         "expected_total": 4.7,
         "competitividad": 0.7,
-        "goles_esperados": 2.62,
+        "goles_esperados": 2.63,
         "over_under": {
           "over_3.5": 0.69,
           "over_4.5": 0.505,
@@ -13413,18 +13413,18 @@
         "mercados": [
           {
             "resultado": "local",
-            "prob_modelo": 0.5,
-            "prob_mercado": 0.475,
-            "momio": 2.01,
-            "ventaja_modelo": 0.025,
-            "valor_esperado": 0.005,
+            "prob_modelo": 0.501,
+            "prob_mercado": 0.478,
+            "momio": 2.0,
+            "ventaja_modelo": 0.023,
+            "valor_esperado": 0.002,
             "apuesta_de_valor": false
           },
           {
             "resultado": "empate",
-            "prob_modelo": 0.295,
-            "prob_mercado": 0.314,
-            "momio": 3.04,
+            "prob_modelo": 0.294,
+            "prob_mercado": 0.313,
+            "momio": 3.05,
             "ventaja_modelo": -0.019,
             "valor_esperado": -0.103,
             "apuesta_de_valor": false
@@ -13452,23 +13452,23 @@
       "status": "pendiente",
       "real_score": null,
       "p1x2": {
-        "home": 0.398,
+        "home": 0.399,
         "draw": 0.316,
         "away": 0.285
       },
       "xg": {
-        "home": 1.27,
+        "home": 1.28,
         "away": 1.06,
-        "total": 2.33
+        "total": 2.34
       },
       "over_under": {
-        "over_1.5": 0.71,
-        "over_2.5": 0.414,
-        "over_3.5": 0.196
+        "over_1.5": 0.711,
+        "over_2.5": 0.416,
+        "over_3.5": 0.197
       },
       "btts": {
-        "yes": 0.52,
-        "no": 0.48
+        "yes": 0.522,
+        "no": 0.478
       },
       "scorelines": [
         {
@@ -13489,20 +13489,20 @@
         }
       ],
       "corners": {
-        "expected_total": 8.5,
-        "expected_home": 4.6,
+        "expected_total": 8.6,
+        "expected_home": 4.7,
         "expected_away": 3.9,
-        "tiros_esperados_total": 15.7,
+        "tiros_esperados_total": 15.9,
         "over_under": {
-          "over_8.5": 0.477,
-          "over_9.5": 0.347,
-          "over_10.5": 0.237
+          "over_8.5": 0.491,
+          "over_9.5": 0.36,
+          "over_10.5": 0.248
         }
       },
       "cards": {
         "expected_total": 5.0,
         "competitividad": 0.89,
-        "goles_esperados": 2.56,
+        "goles_esperados": 2.57,
         "over_under": {
           "over_3.5": 0.735,
           "over_4.5": 0.56,
@@ -13570,11 +13570,11 @@
         "mercados": [
           {
             "resultado": "local",
-            "prob_modelo": 0.398,
-            "prob_mercado": 0.41,
-            "momio": 2.3,
-            "ventaja_modelo": -0.012,
-            "valor_esperado": -0.085,
+            "prob_modelo": 0.399,
+            "prob_mercado": 0.412,
+            "momio": 2.29,
+            "ventaja_modelo": -0.013,
+            "valor_esperado": -0.086,
             "apuesta_de_valor": false
           },
           {
@@ -13609,23 +13609,23 @@
       "status": "pendiente",
       "real_score": null,
       "p1x2": {
-        "home": 0.74,
+        "home": 0.741,
         "draw": 0.188,
         "away": 0.072
       },
       "xg": {
-        "home": 2.14,
+        "home": 2.15,
         "away": 0.61,
         "total": 2.76
       },
       "over_under": {
-        "over_1.5": 0.794,
-        "over_2.5": 0.53,
-        "over_3.5": 0.29
+        "over_1.5": 0.795,
+        "over_2.5": 0.532,
+        "over_3.5": 0.291
       },
       "btts": {
-        "yes": 0.436,
-        "no": 0.564
+        "yes": 0.438,
+        "no": 0.562
       },
       "scorelines": [
         {
@@ -13634,7 +13634,7 @@
         },
         {
           "score": "1-0",
-          "p": 0.125
+          "p": 0.124
         },
         {
           "score": "3-0",
@@ -13659,7 +13659,7 @@
       "cards": {
         "expected_total": 4.0,
         "competitividad": 0.33,
-        "goles_esperados": 2.98,
+        "goles_esperados": 2.99,
         "over_under": {
           "over_3.5": 0.567,
           "over_4.5": 0.371,
@@ -13727,29 +13727,29 @@
         "mercados": [
           {
             "resultado": "local",
-            "prob_modelo": 0.74,
+            "prob_modelo": 0.741,
             "prob_mercado": 0.781,
             "momio": 1.22,
-            "ventaja_modelo": -0.041,
-            "valor_esperado": -0.097,
+            "ventaja_modelo": -0.04,
+            "valor_esperado": -0.096,
             "apuesta_de_valor": false
           },
           {
             "resultado": "empate",
             "prob_modelo": 0.188,
-            "prob_mercado": 0.164,
-            "momio": 5.83,
-            "ventaja_modelo": 0.024,
-            "valor_esperado": 0.096,
+            "prob_mercado": 0.163,
+            "momio": 5.84,
+            "ventaja_modelo": 0.025,
+            "valor_esperado": 0.098,
             "apuesta_de_valor": true
           },
           {
             "resultado": "visitante",
             "prob_modelo": 0.072,
             "prob_mercado": 0.054,
-            "momio": 17.67,
+            "momio": 17.69,
             "ventaja_modelo": 0.018,
-            "valor_esperado": 0.272,
+            "valor_esperado": 0.274,
             "apuesta_de_valor": true
           }
         ]
@@ -13766,32 +13766,32 @@
       "status": "pendiente",
       "real_score": null,
       "p1x2": {
-        "home": 0.525,
+        "home": 0.526,
         "draw": 0.287,
         "away": 0.188
       },
       "xg": {
         "home": 1.54,
         "away": 0.87,
-        "total": 2.41
+        "total": 2.42
       },
       "over_under": {
-        "over_1.5": 0.727,
-        "over_2.5": 0.436,
-        "over_3.5": 0.212
+        "over_1.5": 0.728,
+        "over_2.5": 0.438,
+        "over_3.5": 0.214
       },
       "btts": {
-        "yes": 0.503,
-        "no": 0.497
+        "yes": 0.504,
+        "no": 0.496
       },
       "scorelines": [
         {
           "score": "1-1",
-          "p": 0.151
+          "p": 0.15
         },
         {
           "score": "1-0",
-          "p": 0.126
+          "p": 0.125
         },
         {
           "score": "2-0",
@@ -13816,7 +13816,7 @@
       "cards": {
         "expected_total": 4.6,
         "competitividad": 0.66,
-        "goles_esperados": 2.64,
+        "goles_esperados": 2.65,
         "over_under": {
           "over_3.5": 0.674,
           "over_4.5": 0.487,
@@ -13884,29 +13884,29 @@
         "mercados": [
           {
             "resultado": "local",
-            "prob_modelo": 0.525,
+            "prob_modelo": 0.526,
             "prob_mercado": 0.564,
             "momio": 1.66,
-            "ventaja_modelo": -0.039,
-            "valor_esperado": -0.129,
+            "ventaja_modelo": -0.038,
+            "valor_esperado": -0.127,
             "apuesta_de_valor": false
           },
           {
             "resultado": "empate",
             "prob_modelo": 0.287,
-            "prob_mercado": 0.254,
-            "momio": 3.69,
-            "ventaja_modelo": 0.033,
-            "valor_esperado": 0.059,
+            "prob_mercado": 0.253,
+            "momio": 3.7,
+            "ventaja_modelo": 0.034,
+            "valor_esperado": 0.062,
             "apuesta_de_valor": true
           },
           {
             "resultado": "visitante",
             "prob_modelo": 0.188,
-            "prob_mercado": 0.183,
-            "momio": 5.13,
-            "ventaja_modelo": 0.005,
-            "valor_esperado": -0.036,
+            "prob_mercado": 0.182,
+            "momio": 5.14,
+            "ventaja_modelo": 0.006,
+            "valor_esperado": -0.034,
             "apuesta_de_valor": false
           }
         ]
@@ -13928,23 +13928,23 @@
         "away": 0.007
       },
       "xg": {
-        "home": 3.67,
+        "home": 3.68,
         "away": 0.33,
-        "total": 4.0
+        "total": 4.01
       },
       "over_under": {
         "over_1.5": 0.934,
-        "over_2.5": 0.791,
-        "over_3.5": 0.583
+        "over_2.5": 0.792,
+        "over_3.5": 0.585
       },
       "btts": {
-        "yes": 0.286,
-        "no": 0.714
+        "yes": 0.287,
+        "no": 0.713
       },
       "scorelines": [
         {
           "score": "3-0",
-          "p": 0.163
+          "p": 0.162
         },
         {
           "score": "4-0",
@@ -13973,7 +13973,7 @@
       "cards": {
         "expected_total": 3.5,
         "competitividad": 0.05,
-        "goles_esperados": 4.22,
+        "goles_esperados": 4.23,
         "over_under": {
           "over_3.5": 0.463,
           "over_4.5": 0.275,
@@ -14080,36 +14080,36 @@
       "status": "pendiente",
       "real_score": null,
       "p1x2": {
-        "home": 0.844,
-        "draw": 0.122,
+        "home": 0.845,
+        "draw": 0.121,
         "away": 0.034
       },
       "xg": {
-        "home": 2.62,
+        "home": 2.63,
         "away": 0.49,
-        "total": 3.11
+        "total": 3.12
       },
       "over_under": {
-        "over_1.5": 0.848,
-        "over_2.5": 0.617,
-        "over_3.5": 0.374
+        "over_1.5": 0.849,
+        "over_2.5": 0.619,
+        "over_3.5": 0.376
       },
       "btts": {
-        "yes": 0.382,
-        "no": 0.618
+        "yes": 0.383,
+        "no": 0.617
       },
       "scorelines": [
         {
           "score": "2-0",
-          "p": 0.163
+          "p": 0.162
         },
         {
           "score": "3-0",
-          "p": 0.145
+          "p": 0.144
         },
         {
           "score": "1-0",
-          "p": 0.104
+          "p": 0.103
         },
         {
           "score": "4-0",
@@ -14130,7 +14130,7 @@
       "cards": {
         "expected_total": 3.7,
         "competitividad": 0.19,
-        "goles_esperados": 3.33,
+        "goles_esperados": 3.34,
         "over_under": {
           "over_3.5": 0.506,
           "over_4.5": 0.313,
@@ -14198,27 +14198,27 @@
         "mercados": [
           {
             "resultado": "local",
-            "prob_modelo": 0.844,
-            "prob_mercado": 0.878,
-            "momio": 1.08,
-            "ventaja_modelo": -0.034,
-            "valor_esperado": -0.088,
+            "prob_modelo": 0.845,
+            "prob_mercado": 0.886,
+            "momio": 1.07,
+            "ventaja_modelo": -0.041,
+            "valor_esperado": -0.096,
             "apuesta_de_valor": false
           },
           {
             "resultado": "empate",
-            "prob_modelo": 0.122,
+            "prob_modelo": 0.121,
             "prob_mercado": 0.094,
-            "momio": 10.04,
-            "ventaja_modelo": 0.028,
-            "valor_esperado": 0.225,
+            "momio": 10.13,
+            "ventaja_modelo": 0.027,
+            "valor_esperado": 0.226,
             "apuesta_de_valor": true
           },
           {
             "resultado": "visitante",
             "prob_modelo": 0.034,
             "prob_mercado": 0.024,
-            "momio": 39.31,
+            "momio": 39.32,
             "ventaja_modelo": 0.01,
             "valor_esperado": 0.337,
             "apuesta_de_valor": true
@@ -14238,22 +14238,22 @@
       "real_score": null,
       "p1x2": {
         "home": 0.346,
-        "draw": 0.32,
+        "draw": 0.319,
         "away": 0.334
       },
       "xg": {
-        "home": 1.17,
+        "home": 1.18,
         "away": 1.15,
-        "total": 2.32
+        "total": 2.33
       },
       "over_under": {
-        "over_1.5": 0.708,
-        "over_2.5": 0.412,
-        "over_3.5": 0.194
+        "over_1.5": 0.709,
+        "over_2.5": 0.414,
+        "over_3.5": 0.195
       },
       "btts": {
-        "yes": 0.523,
-        "no": 0.477
+        "yes": 0.524,
+        "no": 0.476
       },
       "scorelines": [
         {
@@ -14266,7 +14266,7 @@
         },
         {
           "score": "0-1",
-          "p": 0.097
+          "p": 0.096
         },
         {
           "score": "0-0",
@@ -14287,7 +14287,7 @@
       "cards": {
         "expected_total": 5.2,
         "competitividad": 0.99,
-        "goles_esperados": 2.55,
+        "goles_esperados": 2.56,
         "over_under": {
           "over_3.5": 0.762,
           "over_4.5": 0.594,
@@ -14364,11 +14364,11 @@
           },
           {
             "resultado": "empate",
-            "prob_modelo": 0.32,
-            "prob_mercado": 0.34,
-            "momio": 2.76,
+            "prob_modelo": 0.319,
+            "prob_mercado": 0.339,
+            "momio": 2.77,
             "ventaja_modelo": -0.02,
-            "valor_esperado": -0.117,
+            "valor_esperado": -0.116,
             "apuesta_de_valor": false
           },
           {
