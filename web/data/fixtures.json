@@ -1,5 +1,5 @@
 {
- "fetched_at": "2026-07-01T11:40:40.571217+00:00",
+ "fetched_at": "2026-07-01T18:32:22.887888+00:00",
  "source": "openfootball/worldcup.json (dominio público)",
  "matches": [
   {
@@ -1358,8 +1358,8 @@
    "stage": "16vos",
    "stage_key": "r32",
    "group": null,
-   "score": null,
-   "status": "pendiente",
+   "score": "2-1",
+   "status": "jugado",
    "ground": "Atlanta"
   },
   {
@@ -1553,11 +1553,11 @@
    "match_id": 92,
    "date": "2026-07-05",
    "time": "18:00 UTC-6",
-   "home": null,
+   "home": "Mexico",
    "away": null,
-   "home_raw": "W79",
+   "home_raw": "Mexico",
    "away_raw": "W80",
-   "home_hint": "Ganador M79",
+   "home_hint": "Por definir",
    "away_hint": "Ganador M80",
    "stage": "8vos",
    "stage_key": "r16",
