@@ -1,5 +1,5 @@
 {
- "fetched_at": "2026-07-01T18:32:22.887888+00:00",
+ "fetched_at": "2026-07-02T10:19:17.543304+00:00",
  "source": "openfootball/worldcup.json (dominio público)",
  "matches": [
   {
@@ -1375,8 +1375,8 @@
    "stage": "16vos",
    "stage_key": "r32",
    "group": null,
-   "score": null,
-   "status": "pendiente",
+   "score": "2-0",
+   "status": "jugado",
    "ground": "San Francisco Bay Area (Santa Clara)"
   },
   {
@@ -1392,8 +1392,8 @@
    "stage": "16vos",
    "stage_key": "r32",
    "group": null,
-   "score": null,
-   "status": "pendiente",
+   "score": "2-2",
+   "status": "jugado",
    "ground": "Seattle"
   },
   {
@@ -1554,16 +1554,16 @@
    "date": "2026-07-05",
    "time": "18:00 UTC-6",
    "home": "Mexico",
-   "away": null,
+   "away": "England",
    "home_raw": "Mexico",
-   "away_raw": "W80",
+   "away_raw": "England",
    "home_hint": "Por definir",
-   "away_hint": "Ganador M80",
+   "away_hint": "Por definir",
    "stage": "8vos",
    "stage_key": "r16",
    "group": null,
    "score": null,
-   "status": "proximo",
+   "status": "pendiente",
    "ground": "Mexico City"
   },
   {
@@ -1587,17 +1587,17 @@
    "match_id": 94,
    "date": "2026-07-06",
    "time": "17:00 UTC-7",
-   "home": null,
-   "away": null,
-   "home_raw": "W81",
-   "away_raw": "W82",
-   "home_hint": "Ganador M81",
-   "away_hint": "Ganador M82",
+   "home": "United States",
+   "away": "Belgium",
+   "home_raw": "United States",
+   "away_raw": "Belgium",
+   "home_hint": "Por definir",
+   "away_hint": "Por definir",
    "stage": "8vos",
    "stage_key": "r16",
    "group": null,
    "score": null,
-   "status": "proximo",
+   "status": "pendiente",
    "ground": "Seattle"
   },
   {
