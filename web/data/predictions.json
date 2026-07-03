@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-07-03T10:15:14Z",
+    "generated_at": "2026-07-03T17:02:17Z",
     "n_matches": 104,
     "n_played": 85,
     "confederations": {
@@ -15049,10 +15049,156 @@
       "stage_key": "r16",
       "group": null,
       "ground": "Dallas (Arlington)",
-      "home": "Ganador M83",
-      "away": "Ganador M84",
-      "status": "proximo",
-      "real_score": null
+      "home": "Portugal",
+      "away": "Spain",
+      "status": "pendiente",
+      "real_score": null,
+      "p1x2": {
+        "home": 0.201,
+        "draw": 0.309,
+        "away": 0.49
+      },
+      "xg": {
+        "home": 0.86,
+        "away": 1.41,
+        "total": 2.27
+      },
+      "over_under": {
+        "over_1.5": 0.701,
+        "over_2.5": 0.396,
+        "over_3.5": 0.178
+      },
+      "btts": {
+        "yes": 0.494,
+        "no": 0.506
+      },
+      "scorelines": [
+        {
+          "score": "1-1",
+          "p": 0.166
+        },
+        {
+          "score": "0-1",
+          "p": 0.133
+        },
+        {
+          "score": "1-2",
+          "p": 0.107
+        },
+        {
+          "score": "0-2",
+          "p": 0.106
+        }
+      ],
+      "corners": {
+        "expected_total": 8.5,
+        "expected_home": 3.3,
+        "expected_away": 5.2,
+        "tiros_esperados_total": 15.7,
+        "over_under": {
+          "over_8.5": 0.477,
+          "over_9.5": 0.347,
+          "over_10.5": 0.237
+        }
+      },
+      "cards": {
+        "expected_total": 4.7,
+        "competitividad": 0.71,
+        "goles_esperados": 2.56,
+        "over_under": {
+          "over_3.5": 0.69,
+          "over_4.5": 0.505,
+          "over_5.5": 0.332
+        }
+      },
+      "form": {
+        "Portugal": {
+          "conf": "UEFA",
+          "conf_factor": 1.12,
+          "form": 1.22,
+          "form_label": "Excelente",
+          "style": 2.0,
+          "style_label": "Muy atacante"
+        },
+        "Spain": {
+          "conf": "UEFA",
+          "conf_factor": 1.12,
+          "form": 1.34,
+          "form_label": "Excelente",
+          "style": 2.0,
+          "style_label": "Muy atacante"
+        }
+      },
+      "scorers": {
+        "Portugal": [
+          [
+            "Cristiano Ronaldo",
+            0.372
+          ],
+          [
+            "Bruno Fernandes",
+            0.21
+          ],
+          [
+            "João Neves",
+            0.15
+          ],
+          [
+            "João Félix",
+            0.114
+          ]
+        ],
+        "Spain": [
+          [
+            "Mikel Oyarzabal",
+            0.39
+          ],
+          [
+            "Mikel Merino",
+            0.336
+          ],
+          [
+            "Ferran Torres",
+            0.191
+          ],
+          [
+            "Lamine Yamal",
+            0.17
+          ]
+        ]
+      },
+      "odds": {
+        "margen_casa": 0.048,
+        "mercados": [
+          {
+            "resultado": "local",
+            "prob_modelo": 0.201,
+            "prob_mercado": 0.2,
+            "momio": 4.76,
+            "ventaja_modelo": 0.001,
+            "valor_esperado": -0.043,
+            "apuesta_de_valor": false
+          },
+          {
+            "resultado": "empate",
+            "prob_modelo": 0.309,
+            "prob_mercado": 0.327,
+            "momio": 2.92,
+            "ventaja_modelo": -0.018,
+            "valor_esperado": -0.098,
+            "apuesta_de_valor": false
+          },
+          {
+            "resultado": "visitante",
+            "prob_modelo": 0.49,
+            "prob_mercado": 0.472,
+            "momio": 2.02,
+            "ventaja_modelo": 0.018,
+            "valor_esperado": -0.01,
+            "apuesta_de_valor": false
+          }
+        ]
+      }
     },
     {
       "date": "2026-07-06",
@@ -15228,7 +15374,7 @@
       "stage_key": "r16",
       "group": null,
       "ground": "Vancouver",
-      "home": "Ganador M85",
+      "home": "Por definir",
       "away": "Ganador M87",
       "status": "proximo",
       "real_score": null
