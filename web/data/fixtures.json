@@ -1,5 +1,5 @@
 {
- "fetched_at": "2026-07-04T09:09:00.889531+00:00",
+ "fetched_at": "2026-07-04T15:45:53.819717+00:00",
  "source": "openfootball/worldcup.json (dominio público)",
  "matches": [
   {
@@ -1604,17 +1604,17 @@
    "match_id": 95,
    "date": "2026-07-07",
    "time": "12:00 UTC-4",
-   "home": null,
-   "away": null,
-   "home_raw": "W86",
-   "away_raw": "W88",
-   "home_hint": "Ganador M86",
-   "away_hint": "Ganador M88",
+   "home": "Argentina",
+   "away": "Egypt",
+   "home_raw": "Argentina",
+   "away_raw": "Egypt",
+   "home_hint": "Por definir",
+   "away_hint": "Por definir",
    "stage": "8vos",
    "stage_key": "r16",
    "group": null,
    "score": null,
-   "status": "proximo",
+   "status": "pendiente",
    "ground": "Atlanta"
   },
   {
@@ -1622,16 +1622,16 @@
    "date": "2026-07-07",
    "time": "13:00 UTC-7",
    "home": "Switzerland",
-   "away": null,
+   "away": "Colombia",
    "home_raw": "Switzerland",
-   "away_raw": "W87",
+   "away_raw": "Colombia",
    "home_hint": "Por definir",
-   "away_hint": "Ganador M87",
+   "away_hint": "Por definir",
    "stage": "8vos",
    "stage_key": "r16",
    "group": null,
    "score": null,
-   "status": "proximo",
+   "status": "pendiente",
    "ground": "Vancouver"
   },
   {

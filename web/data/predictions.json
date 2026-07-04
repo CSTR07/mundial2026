@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-07-04T09:09:02Z",
+    "generated_at": "2026-07-04T15:45:56Z",
     "n_matches": 104,
     "n_played": 88,
     "confederations": {
@@ -287,15 +287,15 @@
           "qf": 0.9296,
           "sf": 0.7419,
           "final": 0.4726,
-          "champion": 0.2959
+          "champion": 0.2943
         },
         "Argentina": {
           "r32": 1.0,
-          "r16": 0.9661,
-          "qf": 0.8661,
-          "sf": 0.6409,
-          "final": 0.3996,
-          "champion": 0.2114
+          "r16": 1.0,
+          "qf": 0.8976,
+          "sf": 0.6643,
+          "final": 0.4146,
+          "champion": 0.2199
         },
         "Spain": {
           "r32": 1.0,
@@ -303,23 +303,23 @@
           "qf": 0.6582,
           "sf": 0.509,
           "final": 0.2751,
-          "champion": 0.1595
+          "champion": 0.1588
         },
         "England": {
           "r32": 1.0,
           "r16": 1.0,
           "qf": 0.5994,
           "sf": 0.3739,
-          "final": 0.1991,
-          "champion": 0.0948
+          "final": 0.1961,
+          "champion": 0.0929
         },
         "Brazil": {
           "r32": 1.0,
           "r16": 1.0,
           "qf": 0.7786,
           "sf": 0.3902,
-          "final": 0.1838,
-          "champion": 0.078
+          "final": 0.181,
+          "champion": 0.0769
         },
         "Portugal": {
           "r32": 1.0,
@@ -327,7 +327,7 @@
           "qf": 0.3418,
           "sf": 0.2184,
           "final": 0.0863,
-          "champion": 0.0399
+          "champion": 0.0396
         },
         "Morocco": {
           "r32": 1.0,
@@ -341,17 +341,17 @@
           "r32": 1.0,
           "r16": 1.0,
           "qf": 0.5688,
-          "sf": 0.1999,
-          "final": 0.0795,
-          "champion": 0.0259
+          "sf": 0.1906,
+          "final": 0.076,
+          "champion": 0.025
         },
         "Mexico": {
           "r32": 1.0,
           "r16": 1.0,
           "qf": 0.4007,
           "sf": 0.185,
-          "final": 0.0808,
-          "champion": 0.0246
+          "final": 0.0795,
+          "champion": 0.0241
         },
         "Belgium": {
           "r32": 1.0,
@@ -365,9 +365,9 @@
           "r32": 1.0,
           "r16": 1.0,
           "qf": 0.4312,
-          "sf": 0.1283,
-          "final": 0.0416,
-          "champion": 0.0109
+          "sf": 0.1207,
+          "final": 0.0389,
+          "champion": 0.01
         },
         "United States": {
           "r32": 1.0,
@@ -375,14 +375,14 @@
           "qf": 0.487,
           "sf": 0.1151,
           "final": 0.0272,
-          "champion": 0.0088
+          "champion": 0.0087
         },
         "Norway": {
           "r32": 1.0,
           "r16": 1.0,
           "qf": 0.2214,
           "sf": 0.051,
-          "final": 0.0107,
+          "final": 0.0103,
           "champion": 0.0015
         },
         "Canada": {
@@ -393,6 +393,14 @@
           "final": 0.006,
           "champion": 0.0008
         },
+        "Egypt": {
+          "r32": 1.0,
+          "r16": 1.0,
+          "qf": 0.1023,
+          "sf": 0.0244,
+          "final": 0.0036,
+          "champion": 0.0004
+        },
         "Paraguay": {
           "r32": 1.0,
           "r16": 1.0,
@@ -400,30 +408,6 @@
           "sf": 0.0211,
           "final": 0.0031,
           "champion": 0.0003
-        },
-        "Australia": {
-          "r32": 1.0,
-          "r16": 0.5038,
-          "qf": 0.0655,
-          "sf": 0.0164,
-          "final": 0.0027,
-          "champion": 0.0003
-        },
-        "Egypt": {
-          "r32": 1.0,
-          "r16": 0.4962,
-          "qf": 0.0591,
-          "sf": 0.0134,
-          "final": 0.0021,
-          "champion": 0.0003
-        },
-        "Cape Verde": {
-          "r32": 1.0,
-          "r16": 0.0339,
-          "qf": 0.0092,
-          "sf": 0.0011,
-          "final": 0.0001,
-          "champion": 0.0001
         },
         "South Africa": {
           "r32": 1.0,
@@ -434,6 +418,14 @@
           "champion": 0.0
         },
         "Bosnia and Herzegovina": {
+          "r32": 1.0,
+          "r16": 0.0,
+          "qf": 0.0,
+          "sf": 0.0,
+          "final": 0.0,
+          "champion": 0.0
+        },
+        "Cape Verde": {
           "r32": 1.0,
           "r16": 0.0,
           "qf": 0.0,
@@ -498,6 +490,14 @@
           "champion": 0.0
         },
         "Germany": {
+          "r32": 1.0,
+          "r16": 0.0,
+          "qf": 0.0,
+          "sf": 0.0,
+          "final": 0.0,
+          "champion": 0.0
+        },
+        "Australia": {
           "r32": 1.0,
           "r16": 0.0,
           "qf": 0.0,
@@ -15371,10 +15371,156 @@
       "stage_key": "r16",
       "group": null,
       "ground": "Atlanta",
-      "home": "Ganador M86",
-      "away": "Ganador M88",
-      "status": "proximo",
-      "real_score": null
+      "home": "Argentina",
+      "away": "Egypt",
+      "status": "pendiente",
+      "real_score": null,
+      "p1x2": {
+        "home": 0.796,
+        "draw": 0.161,
+        "away": 0.043
+      },
+      "xg": {
+        "home": 2.2,
+        "away": 0.48,
+        "total": 2.68
+      },
+      "over_under": {
+        "over_1.5": 0.795,
+        "over_2.5": 0.515,
+        "over_3.5": 0.264
+      },
+      "btts": {
+        "yes": 0.377,
+        "no": 0.623
+      },
+      "scorelines": [
+        {
+          "score": "2-0",
+          "p": 0.188
+        },
+        {
+          "score": "1-0",
+          "p": 0.137
+        },
+        {
+          "score": "3-0",
+          "p": 0.133
+        },
+        {
+          "score": "2-1",
+          "p": 0.101
+        }
+      ],
+      "corners": {
+        "expected_total": 9.2,
+        "expected_home": 7.2,
+        "expected_away": 2.0,
+        "tiros_esperados_total": 17.0,
+        "over_under": {
+          "over_8.5": 0.57,
+          "over_9.5": 0.439,
+          "over_10.5": 0.318
+        }
+      },
+      "cards": {
+        "expected_total": 3.9,
+        "competitividad": 0.25,
+        "goles_esperados": 3.01,
+        "over_under": {
+          "over_3.5": 0.547,
+          "over_4.5": 0.352,
+          "over_5.5": 0.199
+        }
+      },
+      "form": {
+        "Argentina": {
+          "conf": "CONMEBOL",
+          "conf_factor": 1.15,
+          "form": 1.22,
+          "form_label": "Excelente",
+          "style": 2.0,
+          "style_label": "Muy atacante"
+        },
+        "Egypt": {
+          "conf": "CAF",
+          "conf_factor": 0.88,
+          "form": 1.1,
+          "form_label": "Buena",
+          "style": 1.75,
+          "style_label": "Muy atacante"
+        }
+      },
+      "scorers": {
+        "Argentina": [
+          [
+            "Lionel Messi",
+            0.446
+          ],
+          [
+            "Lautaro Martínez",
+            0.294
+          ],
+          [
+            "Julián Alvarez",
+            0.161
+          ],
+          [
+            "Thiago Almada",
+            0.129
+          ]
+        ],
+        "Egypt": [
+          [
+            "Mohamed Salah",
+            0.237
+          ],
+          [
+            "Omar Marmoush",
+            0.087
+          ],
+          [
+            "Trézéguet",
+            0.067
+          ],
+          [
+            "Mostafa Mohamed",
+            0.054
+          ]
+        ]
+      },
+      "odds": {
+        "margen_casa": 0.049,
+        "mercados": [
+          {
+            "resultado": "local",
+            "prob_modelo": 0.796,
+            "prob_mercado": 0.822,
+            "momio": 1.16,
+            "ventaja_modelo": -0.026,
+            "valor_esperado": -0.077,
+            "apuesta_de_valor": false
+          },
+          {
+            "resultado": "empate",
+            "prob_modelo": 0.161,
+            "prob_mercado": 0.146,
+            "momio": 6.55,
+            "ventaja_modelo": 0.015,
+            "valor_esperado": 0.055,
+            "apuesta_de_valor": true
+          },
+          {
+            "resultado": "visitante",
+            "prob_modelo": 0.043,
+            "prob_mercado": 0.032,
+            "momio": 29.37,
+            "ventaja_modelo": 0.011,
+            "valor_esperado": 0.263,
+            "apuesta_de_valor": true
+          }
+        ]
+      }
     },
     {
       "date": "2026-07-07",
@@ -15382,10 +15528,156 @@
       "stage_key": "r16",
       "group": null,
       "ground": "Vancouver",
-      "home": "Por definir",
-      "away": "Ganador M87",
-      "status": "proximo",
-      "real_score": null
+      "home": "Switzerland",
+      "away": "Colombia",
+      "status": "pendiente",
+      "real_score": null,
+      "p1x2": {
+        "home": 0.267,
+        "draw": 0.344,
+        "away": 0.39
+      },
+      "xg": {
+        "home": 0.96,
+        "away": 1.18,
+        "total": 2.13
+      },
+      "over_under": {
+        "over_1.5": 0.675,
+        "over_2.5": 0.356,
+        "over_3.5": 0.147
+      },
+      "btts": {
+        "yes": 0.498,
+        "no": 0.502
+      },
+      "scorelines": [
+        {
+          "score": "1-1",
+          "p": 0.189
+        },
+        {
+          "score": "0-1",
+          "p": 0.124
+        },
+        {
+          "score": "0-0",
+          "p": 0.109
+        },
+        {
+          "score": "1-2",
+          "p": 0.096
+        }
+      ],
+      "corners": {
+        "expected_total": 8.4,
+        "expected_home": 3.8,
+        "expected_away": 4.6,
+        "tiros_esperados_total": 15.5,
+        "over_under": {
+          "over_8.5": 0.463,
+          "over_9.5": 0.334,
+          "over_10.5": 0.226
+        }
+      },
+      "cards": {
+        "expected_total": 5.0,
+        "competitividad": 0.88,
+        "goles_esperados": 2.48,
+        "over_under": {
+          "over_3.5": 0.735,
+          "over_4.5": 0.56,
+          "over_5.5": 0.384
+        }
+      },
+      "form": {
+        "Switzerland": {
+          "conf": "UEFA",
+          "conf_factor": 1.12,
+          "form": 1.34,
+          "form_label": "Excelente",
+          "style": 2.0,
+          "style_label": "Muy atacante"
+        },
+        "Colombia": {
+          "conf": "CONMEBOL",
+          "conf_factor": 1.15,
+          "form": 1.22,
+          "form_label": "Excelente",
+          "style": 2.0,
+          "style_label": "Muy atacante"
+        }
+      },
+      "scorers": {
+        "Switzerland": [
+          [
+            "Breel Embolo",
+            0.429
+          ],
+          [
+            "Johan Manzambi",
+            0.343
+          ],
+          [
+            "Granit Xhaka",
+            0.284
+          ],
+          [
+            "Dan Ndoye",
+            0.201
+          ]
+        ],
+        "Colombia": [
+          [
+            "Luis Díaz",
+            0.329
+          ],
+          [
+            "Luis Suárez",
+            0.198
+          ],
+          [
+            "Jhon Córdoba",
+            0.16
+          ],
+          [
+            "James Rodríguez",
+            0.135
+          ]
+        ]
+      },
+      "odds": {
+        "margen_casa": 0.059,
+        "mercados": [
+          {
+            "resultado": "local",
+            "prob_modelo": 0.267,
+            "prob_mercado": 0.252,
+            "momio": 3.75,
+            "ventaja_modelo": 0.015,
+            "valor_esperado": 0.001,
+            "apuesta_de_valor": false
+          },
+          {
+            "resultado": "empate",
+            "prob_modelo": 0.344,
+            "prob_mercado": 0.336,
+            "momio": 2.81,
+            "ventaja_modelo": 0.008,
+            "valor_esperado": -0.033,
+            "apuesta_de_valor": false
+          },
+          {
+            "resultado": "visitante",
+            "prob_modelo": 0.39,
+            "prob_mercado": 0.412,
+            "momio": 2.29,
+            "ventaja_modelo": -0.022,
+            "valor_esperado": -0.107,
+            "apuesta_de_valor": false
+          }
+        ]
+      }
     },
     {
       "date": "2026-07-09",
