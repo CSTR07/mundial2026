@@ -1,5 +1,5 @@
 {
- "fetched_at": "2026-07-04T15:45:53.819717+00:00",
+ "fetched_at": "2026-07-04T20:39:36.228379+00:00",
  "source": "openfootball/worldcup.json (dominio público)",
  "matches": [
   {
@@ -1528,8 +1528,8 @@
    "stage": "8vos",
    "stage_key": "r16",
    "group": null,
-   "score": null,
-   "status": "pendiente",
+   "score": "0-3",
+   "status": "jugado",
    "ground": "Houston"
   },
   {
