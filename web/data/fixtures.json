@@ -1,5 +1,5 @@
 {
- "fetched_at": "2026-07-03T21:43:17.723282+00:00",
+ "fetched_at": "2026-07-04T09:09:00.889531+00:00",
  "source": "openfootball/worldcup.json (dominio público)",
  "matches": [
   {
@@ -1460,8 +1460,8 @@
    "stage": "16vos",
    "stage_key": "r32",
    "group": null,
-   "score": null,
-   "status": "pendiente",
+   "score": "1-1",
+   "status": "jugado",
    "ground": "Miami (Miami Gardens)"
   },
   {
@@ -1477,8 +1477,8 @@
    "stage": "16vos",
    "stage_key": "r32",
    "group": null,
-   "score": null,
-   "status": "pendiente",
+   "score": "1-0",
+   "status": "jugado",
    "ground": "Kansas City"
   },
   {
