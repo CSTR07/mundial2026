@@ -62,5 +62,13 @@
   "brier": 0.5048,
   "logloss": 0.8564,
   "skill": 0.1835
+ },
+ {
+  "date": "2026-07-05",
+  "n_played": 90,
+  "accuracy": 0.6333,
+  "brier": 0.499,
+  "logloss": 0.8472,
+  "skill": 0.1955
  }
 ]
