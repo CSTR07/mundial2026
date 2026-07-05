@@ -1,5 +1,5 @@
 {
- "fetched_at": "2026-07-05T15:54:27.669379+00:00",
+ "fetched_at": "2026-07-05T21:37:24.008826+00:00",
  "source": "openfootball/worldcup.json (dominio público)",
  "matches": [
   {
@@ -1638,17 +1638,17 @@
    "match_id": 97,
    "date": "2026-07-09",
    "time": "16:00 UTC-4",
-   "home": null,
-   "away": null,
-   "home_raw": "W89",
-   "away_raw": "W90",
-   "home_hint": "Ganador M89",
-   "away_hint": "Ganador M90",
+   "home": "France",
+   "away": "Morocco",
+   "home_raw": "France",
+   "away_raw": "Morocco",
+   "home_hint": "Por definir",
+   "away_hint": "Por definir",
    "stage": "4tos",
    "stage_key": "qf",
    "group": null,
    "score": null,
-   "status": "proximo",
+   "status": "pendiente",
    "ground": "Boston (Foxborough)"
   },
   {
