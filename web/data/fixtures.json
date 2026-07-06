@@ -1,5 +1,5 @@
 {
- "fetched_at": "2026-07-06T14:04:05.435899+00:00",
+ "fetched_at": "2026-07-06T22:43:19.241938+00:00",
  "source": "openfootball/worldcup.json (dominio público)",
  "matches": [
   {
@@ -1579,8 +1579,8 @@
    "stage": "8vos",
    "stage_key": "r16",
    "group": null,
-   "score": null,
-   "status": "pendiente",
+   "score": "0-1",
+   "status": "jugado",
    "ground": "Dallas (Arlington)"
   },
   {
