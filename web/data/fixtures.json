@@ -1,5 +1,5 @@
 {
- "fetched_at": "2026-07-05T21:37:24.008826+00:00",
+ "fetched_at": "2026-07-06T14:04:05.435899+00:00",
  "source": "openfootball/worldcup.json (dominio público)",
  "matches": [
   {
@@ -1545,8 +1545,8 @@
    "stage": "8vos",
    "stage_key": "r16",
    "group": null,
-   "score": null,
-   "status": "pendiente",
+   "score": "1-2",
+   "status": "jugado",
    "ground": "New York/New Jersey (East Rutherford)"
   },
   {
@@ -1562,8 +1562,8 @@
    "stage": "8vos",
    "stage_key": "r16",
    "group": null,
-   "score": null,
-   "status": "pendiente",
+   "score": "2-3",
+   "status": "jugado",
    "ground": "Mexico City"
   },
   {
@@ -1672,17 +1672,17 @@
    "match_id": 99,
    "date": "2026-07-11",
    "time": "17:00 UTC-4",
-   "home": null,
-   "away": null,
-   "home_raw": "W91",
-   "away_raw": "W92",
-   "home_hint": "Ganador M91",
-   "away_hint": "Ganador M92",
+   "home": "Norway",
+   "away": "England",
+   "home_raw": "Norway",
+   "away_raw": "England",
+   "home_hint": "Por definir",
+   "away_hint": "Por definir",
    "stage": "4tos",
    "stage_key": "qf",
    "group": null,
    "score": null,
-   "status": "proximo",
+   "status": "pendiente",
    "ground": "Miami (Miami Gardens)"
   },
   {
