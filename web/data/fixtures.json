@@ -1,5 +1,5 @@
 {
- "fetched_at": "2026-07-06T22:43:19.241938+00:00",
+ "fetched_at": "2026-07-07T11:20:52.294254+00:00",
  "source": "openfootball/worldcup.json (dominio público)",
  "matches": [
   {
@@ -1596,8 +1596,8 @@
    "stage": "8vos",
    "stage_key": "r16",
    "group": null,
-   "score": null,
-   "status": "pendiente",
+   "score": "1-4",
+   "status": "jugado",
    "ground": "Seattle"
   },
   {
@@ -1655,17 +1655,17 @@
    "match_id": 98,
    "date": "2026-07-10",
    "time": "12:00 UTC-7",
-   "home": null,
-   "away": null,
-   "home_raw": "W93",
-   "away_raw": "W94",
-   "home_hint": "Ganador M93",
-   "away_hint": "Ganador M94",
+   "home": "Spain",
+   "away": "Belgium",
+   "home_raw": "Spain",
+   "away_raw": "Belgium",
+   "home_hint": "Por definir",
+   "away_hint": "Por definir",
    "stage": "4tos",
    "stage_key": "qf",
    "group": null,
    "score": null,
-   "status": "proximo",
+   "status": "pendiente",
    "ground": "Los Angeles (Inglewood)"
   },
   {
