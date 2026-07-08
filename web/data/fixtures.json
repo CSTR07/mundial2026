@@ -1,5 +1,5 @@
 {
- "fetched_at": "2026-07-08T09:15:28.727320+00:00",
+ "fetched_at": "2026-07-08T17:11:51.623820+00:00",
  "source": "openfootball/worldcup.json (dominio público)",
  "matches": [
   {
@@ -1689,17 +1689,17 @@
    "match_id": 100,
    "date": "2026-07-11",
    "time": "20:00 UTC-5",
-   "home": null,
-   "away": null,
-   "home_raw": "W95",
-   "away_raw": "W96",
-   "home_hint": "Ganador M95",
-   "away_hint": "Ganador M96",
+   "home": "Argentina",
+   "away": "Switzerland",
+   "home_raw": "Argentina",
+   "away_raw": "Switzerland",
+   "home_hint": "Por definir",
+   "away_hint": "Por definir",
    "stage": "4tos",
    "stage_key": "qf",
    "group": null,
    "score": null,
-   "status": "proximo",
+   "status": "pendiente",
    "ground": "Kansas City"
   },
   {

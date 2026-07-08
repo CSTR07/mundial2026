@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-07-08T09:15:30Z",
+    "generated_at": "2026-07-08T17:11:53Z",
     "n_matches": 104,
     "n_played": 96,
     "confederations": {
@@ -287,7 +287,15 @@
           "qf": 1.0,
           "sf": 0.7295,
           "final": 0.4184,
-          "champion": 0.246
+          "champion": 0.2451
+        },
+        "Argentina": {
+          "r32": 1.0,
+          "r16": 1.0,
+          "qf": 1.0,
+          "sf": 0.7776,
+          "final": 0.4713,
+          "champion": 0.2378
         },
         "Spain": {
           "r32": 1.0,
@@ -295,23 +303,15 @@
           "qf": 1.0,
           "sf": 0.7312,
           "final": 0.4,
-          "champion": 0.235
-        },
-        "Argentina": {
-          "r32": 1.0,
-          "r16": 1.0,
-          "qf": 1.0,
-          "sf": 0.7496,
-          "final": 0.4544,
-          "champion": 0.2298
+          "champion": 0.2346
         },
         "England": {
           "r32": 1.0,
           "r16": 1.0,
           "qf": 1.0,
           "sf": 0.7932,
-          "final": 0.4059,
-          "champion": 0.1919
+          "final": 0.4047,
+          "champion": 0.1915
         },
         "Morocco": {
           "r32": 1.0,
@@ -319,7 +319,7 @@
           "qf": 1.0,
           "sf": 0.2705,
           "final": 0.0935,
-          "champion": 0.0332
+          "champion": 0.0329
         },
         "Belgium": {
           "r32": 1.0,
@@ -327,31 +327,31 @@
           "qf": 1.0,
           "sf": 0.2687,
           "final": 0.0882,
-          "champion": 0.0309
+          "champion": 0.0308
         },
-        "Colombia": {
+        "Switzerland": {
           "r32": 1.0,
           "r16": 1.0,
-          "qf": 0.5598,
-          "sf": 0.151,
-          "final": 0.0567,
-          "champion": 0.0152
+          "qf": 1.0,
+          "sf": 0.2223,
+          "final": 0.0731,
+          "champion": 0.0177
         },
         "Norway": {
           "r32": 1.0,
           "r16": 1.0,
           "qf": 1.0,
           "sf": 0.2069,
-          "final": 0.0505,
+          "final": 0.0508,
           "champion": 0.0095
         },
-        "Switzerland": {
+        "Colombia": {
           "r32": 1.0,
           "r16": 1.0,
-          "qf": 0.4401,
-          "sf": 0.0994,
-          "final": 0.0325,
-          "champion": 0.0083
+          "qf": 0.0,
+          "sf": 0.0,
+          "final": 0.0,
+          "champion": 0.0
         },
         "South Africa": {
           "r32": 1.0,
@@ -16188,10 +16188,156 @@
       "stage_key": "qf",
       "group": null,
       "ground": "Kansas City",
-      "home": "Ganador M95",
-      "away": "Ganador M96",
-      "status": "proximo",
-      "real_score": null
+      "home": "Argentina",
+      "away": "Switzerland",
+      "status": "pendiente",
+      "real_score": null,
+      "p1x2": {
+        "home": 0.615,
+        "draw": 0.266,
+        "away": 0.119
+      },
+      "xg": {
+        "home": 1.66,
+        "away": 0.7,
+        "total": 2.36
+      },
+      "over_under": {
+        "over_1.5": 0.73,
+        "over_2.5": 0.423,
+        "over_3.5": 0.192
+      },
+      "btts": {
+        "yes": 0.466,
+        "no": 0.534
+      },
+      "scorelines": [
+        {
+          "score": "1-1",
+          "p": 0.147
+        },
+        {
+          "score": "1-0",
+          "p": 0.146
+        },
+        {
+          "score": "2-0",
+          "p": 0.143
+        },
+        {
+          "score": "2-1",
+          "p": 0.117
+        }
+      ],
+      "corners": {
+        "expected_total": 8.7,
+        "expected_home": 5.9,
+        "expected_away": 2.8,
+        "tiros_esperados_total": 16.1,
+        "over_under": {
+          "over_8.5": 0.504,
+          "over_9.5": 0.373,
+          "over_10.5": 0.259
+        }
+      },
+      "cards": {
+        "expected_total": 4.3,
+        "competitividad": 0.5,
+        "goles_esperados": 2.7,
+        "over_under": {
+          "over_3.5": 0.623,
+          "over_4.5": 0.43,
+          "over_5.5": 0.263
+        }
+      },
+      "form": {
+        "Argentina": {
+          "conf": "CONMEBOL",
+          "conf_factor": 1.15,
+          "form": 1.22,
+          "form_label": "Excelente",
+          "style": 2.0,
+          "style_label": "Muy atacante"
+        },
+        "Switzerland": {
+          "conf": "UEFA",
+          "conf_factor": 1.12,
+          "form": 1.22,
+          "form_label": "Excelente",
+          "style": 2.0,
+          "style_label": "Muy atacante"
+        }
+      },
+      "scorers": {
+        "Argentina": [
+          [
+            "Lionel Messi",
+            0.446
+          ],
+          [
+            "Lautaro Martínez",
+            0.294
+          ],
+          [
+            "Julián Alvarez",
+            0.161
+          ],
+          [
+            "Thiago Almada",
+            0.129
+          ]
+        ],
+        "Switzerland": [
+          [
+            "Breel Embolo",
+            0.429
+          ],
+          [
+            "Johan Manzambi",
+            0.343
+          ],
+          [
+            "Granit Xhaka",
+            0.284
+          ],
+          [
+            "Dan Ndoye",
+            0.201
+          ]
+        ]
+      },
+      "odds": {
+        "margen_casa": 0.051,
+        "mercados": [
+          {
+            "resultado": "local",
+            "prob_modelo": 0.615,
+            "prob_mercado": 0.606,
+            "momio": 1.57,
+            "ventaja_modelo": 0.009,
+            "valor_esperado": -0.034,
+            "apuesta_de_valor": false
+          },
+          {
+            "resultado": "empate",
+            "prob_modelo": 0.266,
+            "prob_mercado": 0.286,
+            "momio": 3.33,
+            "ventaja_modelo": -0.02,
+            "valor_esperado": -0.114,
+            "apuesta_de_valor": false
+          },
+          {
+            "resultado": "visitante",
+            "prob_modelo": 0.119,
+            "prob_mercado": 0.108,
+            "momio": 8.84,
+            "ventaja_modelo": 0.011,
+            "valor_esperado": 0.052,
+            "apuesta_de_valor": true
+          }
+        ]
+      }
     },
     {
       "date": "2026-07-14",
