@@ -1,5 +1,5 @@
 {
- "fetched_at": "2026-07-07T19:15:49.132762+00:00",
+ "fetched_at": "2026-07-08T09:15:28.727320+00:00",
  "source": "openfootball/worldcup.json (dominio público)",
  "matches": [
   {
@@ -1630,8 +1630,8 @@
    "stage": "8vos",
    "stage_key": "r16",
    "group": null,
-   "score": null,
-   "status": "pendiente",
+   "score": "0-0",
+   "status": "jugado",
    "ground": "Vancouver"
   },
   {
