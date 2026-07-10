@@ -1,5 +1,5 @@
 {
- "fetched_at": "2026-07-09T18:26:16.297885+00:00",
+ "fetched_at": "2026-07-10T10:40:35.557932+00:00",
  "source": "openfootball/worldcup.json (dominio público)",
  "matches": [
   {
@@ -1647,8 +1647,8 @@
    "stage": "4tos",
    "stage_key": "qf",
    "group": null,
-   "score": null,
-   "status": "pendiente",
+   "score": "2-0",
+   "status": "jugado",
    "ground": "Boston (Foxborough)"
   },
   {
