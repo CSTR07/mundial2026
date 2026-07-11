@@ -1,5 +1,5 @@
 {
- "fetched_at": "2026-07-10T18:07:43.798786+00:00",
+ "fetched_at": "2026-07-11T07:21:12.159126+00:00",
  "source": "openfootball/worldcup.json (dominio público)",
  "matches": [
   {
@@ -1664,8 +1664,8 @@
    "stage": "4tos",
    "stage_key": "qf",
    "group": null,
-   "score": null,
-   "status": "pendiente",
+   "score": "2-1",
+   "status": "jugado",
    "ground": "Los Angeles (Inglewood)"
   },
   {
