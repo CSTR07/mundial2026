@@ -1,5 +1,5 @@
 {
- "fetched_at": "2026-07-11T07:21:12.159126+00:00",
+ "fetched_at": "2026-07-11T15:32:30.187636+00:00",
  "source": "openfootball/worldcup.json (dominio público)",
  "matches": [
   {
@@ -1706,17 +1706,17 @@
    "match_id": 101,
    "date": "2026-07-14",
    "time": "14:00 UTC-5",
-   "home": null,
-   "away": null,
-   "home_raw": "W97",
-   "away_raw": "W98",
-   "home_hint": "Ganador M97",
-   "away_hint": "Ganador M98",
+   "home": "France",
+   "away": "Spain",
+   "home_raw": "France",
+   "away_raw": "Spain",
+   "home_hint": "Por definir",
+   "away_hint": "Por definir",
    "stage": "Semis",
    "stage_key": "sf",
    "group": null,
    "score": null,
-   "status": "proximo",
+   "status": "pendiente",
    "ground": "Dallas (Arlington)"
   },
   {
