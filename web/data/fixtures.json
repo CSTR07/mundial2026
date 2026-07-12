@@ -1,5 +1,5 @@
 {
- "fetched_at": "2026-07-12T07:49:32.754420+00:00",
+ "fetched_at": "2026-07-12T15:38:21.511601+00:00",
  "source": "openfootball/worldcup.json (dominio público)",
  "matches": [
   {
@@ -1723,17 +1723,17 @@
    "match_id": 102,
    "date": "2026-07-15",
    "time": "15:00 UTC-4",
-   "home": null,
-   "away": null,
-   "home_raw": "W99",
-   "away_raw": "W100",
-   "home_hint": "Ganador M99",
-   "away_hint": "Ganador M100",
+   "home": "England",
+   "away": "Argentina",
+   "home_raw": "England",
+   "away_raw": "Argentina",
+   "home_hint": "Por definir",
+   "away_hint": "Por definir",
    "stage": "Semis",
    "stage_key": "sf",
    "group": null,
    "score": null,
-   "status": "proximo",
+   "status": "pendiente",
    "ground": "Atlanta"
   },
   {
