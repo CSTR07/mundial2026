@@ -137,10 +137,10 @@
  },
  {
   "date": "2026-07-14",
-  "n_played": 100,
-  "accuracy": 0.62,
-  "brier": 0.5097,
-  "logloss": 0.8604,
-  "skill": 0.1912
+  "n_played": 101,
+  "accuracy": 0.6139,
+  "brier": 0.5115,
+  "logloss": 0.863,
+  "skill": 0.1908
  }
 ]
