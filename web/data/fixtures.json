@@ -1,5 +1,5 @@
 {
- "fetched_at": "2026-07-18T20:32:10.285212+00:00",
+ "fetched_at": "2026-07-19T07:49:15.827390+00:00",
  "source": "openfootball/worldcup.json (dominio público)",
  "matches": [
   {
@@ -1749,8 +1749,8 @@
    "stage": "3er lugar",
    "stage_key": "third",
    "group": null,
-   "score": null,
-   "status": "pendiente",
+   "score": "4-6",
+   "status": "jugado",
    "ground": "Miami (Miami Gardens)"
   },
   {
