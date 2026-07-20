@@ -1,5 +1,5 @@
 {
- "fetched_at": "2026-07-20T10:31:46.887762+00:00",
+ "fetched_at": "2026-07-20T17:07:33.030838+00:00",
  "source": "openfootball/worldcup.json (dominio público)",
  "matches": [
   {
@@ -1766,8 +1766,8 @@
    "stage": "Final",
    "stage_key": "final",
    "group": null,
-   "score": null,
-   "status": "pendiente",
+   "score": "0-0",
+   "status": "jugado",
    "ground": "New York/New Jersey (East Rutherford)"
   }
  ]
