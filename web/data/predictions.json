@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-07-23T21:38:03Z",
+    "generated_at": "2026-07-24T08:00:14Z",
     "n_matches": 104,
     "n_played": 104,
     "confederations": {
@@ -750,6 +750,14 @@
       },
       {
         "date": "2026-07-23",
+        "n_played": 104,
+        "accuracy": 0.6058,
+        "brier": 0.5177,
+        "logloss": 0.8721,
+        "skill": 0.1873
+      },
+      {
+        "date": "2026-07-24",
         "n_played": 104,
         "accuracy": 0.6058,
         "brier": 0.5177,
