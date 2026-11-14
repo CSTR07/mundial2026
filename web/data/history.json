@@ -1,13 +1,5 @@
 [
  {
-  "date": "2026-07-17",
-  "n_played": 102,
-  "accuracy": 0.6176,
-  "brier": 0.5126,
-  "logloss": 0.8649,
-  "skill": 0.1909
- },
- {
   "date": "2026-07-18",
   "n_played": 102,
   "accuracy": 0.6176,
@@ -953,6 +945,14 @@
  },
  {
   "date": "2026-11-13",
+  "n_played": 104,
+  "accuracy": 0.6058,
+  "brier": 0.5177,
+  "logloss": 0.8721,
+  "skill": 0.1873
+ },
+ {
+  "date": "2026-11-14",
   "n_played": 104,
   "accuracy": 0.6058,
   "brier": 0.5177,
